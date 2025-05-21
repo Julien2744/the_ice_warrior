@@ -1,0 +1,17 @@
+{
+	"pack": {
+		"pack_format": 48,
+		"description": "A cold warrior... waiting..."
+	},
+	"overlays": {
+		"entries": [
+			{
+				"directory": "animated_java",
+				"formats": {
+					"min_inclusive": 48,
+					"max_inclusive": 56
+				}
+			}
+		]
+	}
+}
