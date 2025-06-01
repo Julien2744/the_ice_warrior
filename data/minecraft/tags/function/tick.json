@@ -1,1 +1,3 @@
-{"values":["animated_java:global/on_tick","icewarrior:tick"]}
+{
+	"values": ["animated_java:global/on_tick", "icewarrior:tick"]
+}

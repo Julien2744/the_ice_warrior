@@ -1,0 +1,1 @@
+scoreboard players set #icew.load icew.loadScoreboard 0
