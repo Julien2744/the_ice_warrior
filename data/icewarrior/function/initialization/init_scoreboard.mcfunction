@@ -14,6 +14,10 @@ scoreboard objectives add icew.attCooldown dummy
 scoreboard objectives add icew.canAttack dummy
 scoreboard objectives add icew.health_pour dummy
 scoreboard objectives add icew.health dummy
+#0: false ; 1: true
+scoreboard objectives add icew.walking dummy
+scoreboard objectives add icew.motion.x dummy
+scoreboard objectives add icew.motion.z dummy
 #use for math
 scoreboard objectives add icew.math.mem dummy
 scoreboard objectives add icew.math.div dummy

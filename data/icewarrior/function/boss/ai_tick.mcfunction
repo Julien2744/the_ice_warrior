@@ -11,3 +11,6 @@ execute if score @s icew.entranceId matches 1 run execute on vehicle if entity @
 execute store result score @s icew.health run execute on vehicle run data get entity @s Health
 execute store result bossbar icew_bossbar value run scoreboard players get @s icew.health
 bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" - ","color":"gray"},{"score":{"name":"@s","objective":"icew.health"},"color":"red"},{"text":"❤","color":"dark_red"}]
+
+#walking anim
+execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking
