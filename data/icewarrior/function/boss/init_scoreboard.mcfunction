@@ -1,6 +1,7 @@
 scoreboard players set @s icew.attCooldown 20
 scoreboard players set @s icew.entranceId 0
 scoreboard players set @s icew.canAttack 1
+scoreboard players set @s icew.lookTarget 1
 scoreboard players set @s icew.health 120
 
 scoreboard players set @s icew.walking 0

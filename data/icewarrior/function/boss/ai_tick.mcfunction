@@ -14,3 +14,6 @@ bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" -
 
 #walking anim
 execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking
+
+#look at target
+execute if score @s icew.lookTarget matches 1 if entity @n[tag=icew.target,distance=..128] run execute facing entity @n[tag=icew.target,distance=..128] eyes run tp @s ~ ~ ~ ~ 0

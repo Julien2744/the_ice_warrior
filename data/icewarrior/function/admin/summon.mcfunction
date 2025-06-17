@@ -5,6 +5,7 @@ summon stray ~ ~ ~ {Silent:1b,Glowing:0b,DeathLootTable:"minecraft:empty",Persis
 execute unless entity @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..4] run say no hitbox
 execute if entity @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..4] run execute rotated as @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..4] run function animated_java:ice_warrior/summon {args:{}}
 execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run ride @s mount @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..4]
+execute as @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..4] at @s run function icewarrior:boss/looking_head
 
 execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/init_scoreboard
 
@@ -18,8 +19,10 @@ bossbar set icew_bossbar players @a[distance=..128]
 execute store result score @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] icew.math.mem run data get entity @n[type=stray,tag=icew.hitbox,distance=..4] Health
 scoreboard players operation @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] icew.math.mem /= @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] icew.math.div
 scoreboard players operation @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] icew.math.div = @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] icew.math.mem
-execute as @n[type=stray,tag=icew.hitbox,distance=..4] at @s run function icew:boss/update_health_pour
+execute as @n[type=stray,tag=icew.hitbox,distance=..4] at @s run function icewarrior:boss/update_health_pour
 
 #set bossbar
 execute store result bossbar icew_bossbar max run attribute @n[type=stray,tag=icew.hitbox,distance=..4] generic.max_health get
 execute store result bossbar icew_bossbar value run data get entity @n[type=stray,tag=icew.hitbox,distance=..4] Health
+
+tag @p[distance=..32] add icew.target
