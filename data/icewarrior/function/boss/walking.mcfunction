@@ -1,3 +1,6 @@
+#remove slowness if attCooldown is at 0
+execute on vehicle if entity @s[nbt={active_effects:[{id:"minecraft:slowness"}]}] run effect clear @s slowness
+
 execute store result score @s icew.motion.x run execute on vehicle run data get entity @s Motion[0] 10
 execute store result score @s icew.motion.z run execute on vehicle run data get entity @s Motion[2] 10
 
