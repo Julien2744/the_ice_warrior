@@ -2,7 +2,10 @@
 execute unless entity @s[predicate=icewarrior:check_hitbox] run function icewarrior:boss/death/begin_death
 
 #check if the boss was hurt
-execute on vehicle if entity @s[nbt={HurtTime:9s}] run function icewarrior:boss/hurt
+execute on vehicle if entity @s[nbt={HurtTime:9s}] at @s run function icewarrior:boss/hurt
+
+#auto-target using the hitbox mob target
+execute unless entity @e[tag=icew.target,distance=..128] run execute on vehicle at @s on target run function icewarrior:set_target
 
 #during entrance, check if boss stopped falling
 execute if score @s icew.entranceId matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/anim/stopped_falling
