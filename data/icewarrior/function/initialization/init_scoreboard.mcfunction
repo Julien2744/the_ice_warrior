@@ -12,6 +12,7 @@ scoreboard objectives add icew.entranceId dummy
 scoreboard objectives add icew.attCooldown dummy
 #0: false ; 1: true
 scoreboard objectives add icew.canAttack dummy
+scoreboard objectives add icew.combo dummy
 #0: phase1 (claw) ; 1: phase2 (trident)
 scoreboard objectives add icew.phase dummy
 #Id start at 1 (0 = no anim)
@@ -22,6 +23,8 @@ scoreboard objectives add icew.health_pour dummy
 scoreboard objectives add icew.health dummy
 #0: false ; 1: true
 scoreboard objectives add icew.walking dummy
+#0: false ; 1: true
+scoreboard objectives add icew.forceWalk dummy
 scoreboard objectives add icew.motion.x dummy
 scoreboard objectives add icew.motion.z dummy
 #use for math

@@ -5,7 +5,7 @@ summon stray ~ ~ ~ {Silent:1b,Glowing:0b,DeathLootTable:"minecraft:empty",Persis
 execute unless entity @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..4] run say no hitbox
 execute if entity @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..4] run execute rotated as @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..4] run function animated_java:ice_warrior/summon {args:{}}
 execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run ride @s mount @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..4]
-execute as @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..4] at @s run function icewarrior:boss/looking_head
+#execute as @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..4] at @s run function icewarrior:boss/looking_head
 
 execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/init_scoreboard
 
