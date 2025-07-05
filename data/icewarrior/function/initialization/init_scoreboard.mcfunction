@@ -12,6 +12,7 @@ scoreboard objectives add icew.entranceId dummy
 scoreboard objectives add icew.attCooldown dummy
 #0: false ; 1: true
 scoreboard objectives add icew.canAttack dummy
+#increase every hit; if set to 999.. can use special
 scoreboard objectives add icew.combo dummy
 #0: phase1 (claw) ; 1: phase2 (trident)
 scoreboard objectives add icew.phase dummy

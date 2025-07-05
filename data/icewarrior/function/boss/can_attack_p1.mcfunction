@@ -1,5 +1,8 @@
 #execute as @n[type=item_display,tag=aj.ice_warrior.root] at @s run
 ## -- PHASE 1 ATTACKS -- ##
+#ultimate
+execute if score @s icew.attCooldown matches 0 run execute if score @s icew.combo matches 999.. run function icewarrior:boss/execute_attack_p1 {ID:7}
+
 #parry
 execute if score @s icew.attCooldown matches 0 run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^0.5 run execute if entity @n[type=#icewarrior:can_parry,dx=0.6,dy=1.75,dz=0.5,tag=!icew.parry,nbt=!{inGround:1b}] run function icewarrior:boss/execute_attack_p1 {ID:1}
 
