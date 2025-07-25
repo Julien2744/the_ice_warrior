@@ -24,9 +24,11 @@ execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown ma
 #combo detector
 execute if score @s icew.phase matches 0 if score @s icew.combo matches 7..64 run function icewarrior:boss/effects/phase0_combo_reached
 
-#walking anim
-execute if score @s icew.attCooldown matches 0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking
-execute unless score @s icew.attCooldown matches 0 if score @s icew.forceWalk matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_forced
+#walking anim (phase 0)
+execute if score @s icew.attCooldown matches 0 if score @s icew.phase matches 0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking
+execute unless score @s icew.attCooldown matches 0 if score @s icew.forceWalk matches 1 if score @s icew.phase matches 0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_forced
+#walking anim (phase 1)
+execute if score @s icew.attCooldown matches 0 if score @s icew.phase matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_p1
 
 #look at target
 execute if score @s icew.lookTarget matches 1 if entity @n[tag=icew.target,distance=..128] run execute facing entity @n[tag=icew.target,distance=..128] eyes run tp @s ~ ~ ~ ~ 0
