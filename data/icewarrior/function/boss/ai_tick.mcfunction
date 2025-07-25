@@ -19,7 +19,8 @@ bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" -
 execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches 0 if score @s icew.phase matches 0 if score @s icew.health_pour matches 1..50 run function icewarrior:boss/effects/change_phase
 
 #attack
-execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches 0 if score @s icew.phase matches 0 if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/can_attack_p1
+execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches 0 if score @s icew.phase matches 0 if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/can_attack_p0
+execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches 0 if score @s icew.phase matches 1 if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/can_attack_p1
 execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches 0 run scoreboard players remove @s icew.attCooldown 1
 #combo detector
 execute if score @s icew.phase matches 0 if score @s icew.combo matches 7..64 run function icewarrior:boss/effects/phase0_combo_reached

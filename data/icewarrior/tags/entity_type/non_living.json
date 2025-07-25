@@ -1,0 +1,28 @@
+{
+    "values": [
+      "minecraft:tnt_minecart",
+      "minecraft:tnt",
+      "minecraft:marker",
+      "minecraft:text_display",
+      "minecraft:spawner_minecart",
+      "minecraft:hopper_minecart",
+      "minecraft:lightning_bolt",
+      "minecraft:leash_knot",
+      "minecraft:item_frame",
+      "minecraft:item_display",
+      "minecraft:item",
+      "minecraft:fishing_bobber",
+      "minecraft:interaction",
+      "minecraft:falling_block",
+      "minecraft:furnace_minecart",
+      "minecraft:evoker_fangs",
+      "minecraft:experience_orb",
+      "minecraft:command_block_minecart",
+      "minecraft:chest_minecart",
+      "minecraft:boat",
+      "minecraft:block_display",
+      "minecraft:armor_stand",
+      "minecraft:area_effect_cloud",
+      "#minecraft:impact_projectiles"
+    ]
+}
