@@ -15,6 +15,9 @@ execute store result score @s icew.health run execute on vehicle run data get en
 execute store result bossbar icew_bossbar value run scoreboard players get @s icew.health
 bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" - ","color":"gray"},{"score":{"name":"@s","objective":"icew.health"},"color":"red"},{"text":"❤","color":"dark_red"}]
 
+#change phase
+execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches 0 if score @s icew.phase matches 0 if score @s icew.health_pour matches 1..50 run function icewarrior:boss/effects/change_phase
+
 #attack
 execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches 0 if score @s icew.phase matches 0 if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/can_attack_p1
 execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches 0 run scoreboard players remove @s icew.attCooldown 1
