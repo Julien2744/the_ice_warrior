@@ -23,6 +23,6 @@
       "minecraft:block_display",
       "minecraft:armor_stand",
       "minecraft:area_effect_cloud",
-      "#minecraft:impact_projectiles"
+      "#icewarrior:can_parry"
     ]
 }

@@ -1,0 +1,2 @@
+function animated_java:ice_warrior/animations/trident_long/stop
+function animated_java:ice_warrior/animations/miss_trident_long/play
