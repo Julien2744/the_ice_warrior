@@ -1,5 +1,6 @@
 say death
 
+tag @n[tag=icew.target,distance=..256] remove icew.target
 function animated_java:ice_warrior/remove/this
 
 execute unless entity @e[type=item_display,tag=aj.ice_warrior.root,limit=1] run scoreboard players set #icew.global icew.spawned 0

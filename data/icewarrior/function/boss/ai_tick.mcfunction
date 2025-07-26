@@ -1,11 +1,15 @@
-#check mobhitbox
+#check mob-hitbox
 execute unless entity @s[predicate=icewarrior:check_hitbox] run function icewarrior:boss/death/begin_death
 
 #check if the boss was hurt
 execute on vehicle if entity @s[nbt={HurtTime:9s}] at @s run function icewarrior:boss/hurt
 
 #auto-target using the hitbox mob target
-execute unless entity @e[tag=icew.target,distance=..128] run execute on vehicle at @s on target run function icewarrior:set_target
+execute unless entity @n[tag=icew.target,distance=..128] run execute on vehicle at @s on target run execute if entity @s[tag=!icew.immune] run function icewarrior:set_target
+#auto-target by checking entity around
+execute unless entity @n[tag=icew.target,distance=..128] run execute if entity @n[type=#icewarrior:aggro_boss,tag=!icew.immune,distance=..64] run execute on vehicle at @s run damage @s 0 mob_attack by @n[type=#icewarrior:aggro_boss,tag=!icew.immune,distance=..128]
+#fix mob-hibox being able to damage mobs
+execute if entity @n[type=#icewarrior:aggro_boss,tag=icew.target,distance=..8,nbt={HurtTime:9s}] run execute as @n[type=#icewarrior:aggro_boss,tag=icew.target,distance=..8,nbt={HurtTime:9s}] on attacker if entity @s[type=stray,tag=icew.hitbox,tag=icew.immune] run execute as @n[type=#icewarrior:aggro_boss,tag=icew.target,distance=..8,nbt={HurtTime:9s}] run function icewarrior:boss/cancel_mobdamage
 
 #during entrance, check if boss stopped falling
 execute if score @s icew.entranceId matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/anim/stopped_falling
@@ -19,12 +23,14 @@ bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" -
 execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches 0 if score @s icew.phase matches 0 if score @s icew.health_pour matches 1..50 run function icewarrior:boss/effects/change_phase
 
 #attack
-execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches 0 if score @s icew.phase matches 0 if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/can_attack_p0
+#execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches 0 if score @s icew.phase matches 0 if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/can_attack_p0
 execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches 0 if score @s icew.phase matches 1 if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/can_attack_p1
 execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches 0 run scoreboard players remove @s icew.attCooldown 1
 #combo detector
 execute if score @s icew.phase matches 0 if score @s icew.combo matches 7..64 run function icewarrior:boss/effects/phase0_combo_reached
 
+#walking anim motor
+execute if score @s icew.attCooldown matches 0 if score @s icew.phase matches 0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_motor
 #walking anim (phase 0)
 execute if score @s icew.attCooldown matches 0 if score @s icew.phase matches 0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking
 execute unless score @s icew.attCooldown matches 0 if score @s icew.forceWalk matches 1 if score @s icew.phase matches 0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_forced
@@ -33,3 +39,5 @@ execute if score @s icew.attCooldown matches 0 if score @s icew.phase matches 1 
 
 #look at target
 execute if score @s icew.lookTarget matches 1 if entity @n[tag=icew.target,distance=..128] run execute facing entity @n[tag=icew.target,distance=..128] eyes run tp @s ~ ~ ~ ~ 0
+#use the rotation of the mob-hitbox if no target
+execute if score @s icew.lookTarget matches 1 unless entity @n[tag=icew.target,distance=..128] run execute positioned ~ ~-1 ~ rotated as @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..1] run tp @s ~ ~ ~ ~ 0
