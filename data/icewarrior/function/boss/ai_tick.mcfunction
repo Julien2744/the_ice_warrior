@@ -9,7 +9,7 @@ execute unless entity @n[tag=icew.target,distance=..128] run execute on vehicle 
 #auto-target by checking entity around
 execute unless entity @n[tag=icew.target,distance=..128] run execute if entity @n[type=#icewarrior:aggro_boss,tag=!icew.immune,distance=..64] run execute on vehicle run function icewarrior:boss/aggro_boss
 #fix mob-hibox being able to damage mobs
-execute if entity @n[type=#icewarrior:aggro_boss,tag=icew.target,distance=..8,nbt={HurtTime:9s}] run execute as @n[type=#icewarrior:aggro_boss,tag=icew.target,distance=..8,nbt={HurtTime:9s}] on attacker if entity @s[type=stray,tag=icew.hitbox,tag=icew.immune] run execute as @n[type=#icewarrior:aggro_boss,tag=icew.target,distance=..8,nbt={HurtTime:9s}] run function icewarrior:boss/cancel_mobdamage
+execute if entity @n[type=!#icewarrior:non_living,type=!player,tag=icew.target,tag=!icew.immune,distance=..128] run execute on vehicle run function icewarrior:boss/auto_disable_followrange
 
 #during entrance, check if boss stopped falling
 execute if score @s icew.entranceId matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/anim/stopped_falling
