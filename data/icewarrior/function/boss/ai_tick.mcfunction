@@ -28,6 +28,9 @@ execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matche
 execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches 0 run scoreboard players remove @s icew.attCooldown 1
 #combo detector
 execute if score @s icew.phase matches 0 if score @s icew.combo matches 7..64 run function icewarrior:boss/effects/phase0_combo_reached
+execute if score @s icew.phase matches 1 if score @s icew.combo matches 5..64 run function icewarrior:boss/effects/phase1_combo_reached
+
+execute if score @s icew.phase matches 1 if score @s icew.combo matches 999.. run execute on vehicle at @s run particle snowflake ~ ~ ~ 0.5 0.0 0.5 0 1 normal
 
 #walking anim motor
 execute if score @s icew.attCooldown matches 0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_motor
