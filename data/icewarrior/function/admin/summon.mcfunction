@@ -17,9 +17,6 @@ bossbar set icew_bossbar color blue
 bossbar set icew_bossbar players @a[distance=..128]
 
 #initiliaze boss health%
-execute store result score @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] icew.math.mem run data get entity @n[type=stray,tag=icew.hitbox,distance=..4] Health
-scoreboard players operation @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] icew.math.mem /= @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] icew.math.div
-scoreboard players operation @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] icew.math.div = @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] icew.math.mem
 execute as @n[type=stray,tag=icew.hitbox,distance=..4] at @s run function icewarrior:boss/update_health_pour
 
 #set bossbar
