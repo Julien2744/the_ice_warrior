@@ -10,3 +10,6 @@ execute if score @s icew.attCooldown matches 0 run execute positioned ~ ~-0.75 ~
 
 #trdient_smash
 execute if score @s icew.attCooldown matches 0 run execute positioned ~ ~-1 ~ positioned ^ ^ ^2.25 run execute if entity @n[tag=icew.target,distance=..1.5] run execute if predicate icewarrior:random_30 run function icewarrior:boss/execute_attack_p1 {ID:3}
+
+#trdient_upper
+execute if score @s icew.attCooldown matches 0 run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^1.25 run execute if entity @n[tag=icew.target,distance=..1.75] run execute if predicate icewarrior:random_25 run function icewarrior:boss/execute_attack_p1 {ID:4}
