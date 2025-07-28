@@ -1,0 +1,21 @@
+function icewarrior:boss/stop_walking
+execute if entity @s[tag=aj.ice_warrior.animation.start_falling.playing] run function animated_java:ice_warrior/animations/start_falling/stop
+execute if entity @s[tag=aj.ice_warrior.animation.stopped_falling.playing] run function animated_java:ice_warrior/animations/stopped_falling/stop
+execute if entity @s[tag=aj.ice_warrior.animation.parry.playing] run function animated_java:ice_warrior/animations/parry/stop
+execute if entity @s[tag=aj.ice_warrior.animation.regular_double_slash.playing] run function animated_java:ice_warrior/animations/regular_double_slash/stop
+execute if entity @s[tag=aj.ice_warrior.animation.high_slash.playing] run function animated_java:ice_warrior/animations/high_slash/stop
+execute if entity @s[tag=aj.ice_warrior.animation.long_claw.playing] run function animated_java:ice_warrior/animations/long_claw/stop
+execute if entity @s[tag=aj.ice_warrior.animation.foward_slash.playing] run function animated_java:ice_warrior/animations/foward_slash/stop
+execute if entity @s[tag=aj.ice_warrior.animation.crit_slash.playing] run function animated_java:ice_warrior/animations/crit_slash/stop
+execute if entity @s[tag=aj.ice_warrior.animation.claw_ultimate.playing] run function animated_java:ice_warrior/animations/claw_ultimate/stop
+execute if entity @s[tag=aj.ice_warrior.animation.switch_trident.playing] run function animated_java:ice_warrior/animations/switch_trident/stop
+execute if entity @s[tag=aj.ice_warrior.animation.trident_slash.playing] run function animated_java:ice_warrior/animations/trident_slash/stop
+execute if entity @s[tag=aj.ice_warrior.animation.miss_bottom_right.playing] run function animated_java:ice_warrior/animations/miss_bottom_right/stop
+execute if entity @s[tag=aj.ice_warrior.animation.trident_long.playing] run function animated_java:ice_warrior/animations/trident_long/stop
+execute if entity @s[tag=aj.ice_warrior.animation.miss_trident_long.playing] run function animated_java:ice_warrior/animations/miss_trident_long/stop
+execute if entity @s[tag=aj.ice_warrior.animation.trident_smash.playing] run function animated_java:ice_warrior/animations/trident_smash/stop
+execute if entity @s[tag=aj.ice_warrior.animation.trident_upper.playing] run function animated_java:ice_warrior/animations/trident_upper/stop
+execute if entity @s[tag=aj.ice_warrior.animation.trident_launch.playing] run function animated_java:ice_warrior/animations/trident_launch/stop
+execute if entity @s[tag=aj.ice_warrior.animation.miss_trident_launch.playing] run function animated_java:ice_warrior/animations/miss_trident_launch/stop
+execute if entity @s[tag=aj.ice_warrior.animation.trident_ultimate.playing] run function animated_java:ice_warrior/animations/trident_ultimate/stop
+execute if entity @s[tag=aj.ice_warrior.animation.trident_ult_parry.playing] run function animated_java:ice_warrior/animations/trident_ult_parry/stop

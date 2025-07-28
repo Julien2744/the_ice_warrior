@@ -1,5 +1,5 @@
-#check mob-hitbox
-execute unless entity @s[predicate=icewarrior:check_hitbox] run function icewarrior:boss/death/begin_death
+#check death
+execute unless entity @s[predicate=icewarrior:check_hitbox] if score @s icew.death matches 0 run function icewarrior:boss/death/begin_death
 
 #check if the boss was hurt
 execute on vehicle if entity @s[nbt={HurtTime:9s}] at @s run function icewarrior:boss/hurt
@@ -14,6 +14,9 @@ execute if entity @n[type=!#icewarrior:non_living,type=!player,tag=icew.target,t
 #during entrance, check if boss stopped falling
 execute if score @s icew.entranceId matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/anim/stopped_falling
 
+#nerf the boss if hes in warm biome
+execute if biome ~ ~-1 ~ #snow_golem_melts run execute on vehicle if entity @s[nbt={active_effects:[{id:"minecraft:slowness"}]}] run effect give @s slowness 7 1
+
 #refresh boss health bar (excluded from hurt because of regen and not updated when the boss die)
 execute store result score @s icew.health run execute on vehicle run data get entity @s Health
 execute store result bossbar icew_bossbar value run scoreboard players get @s icew.health
@@ -25,7 +28,9 @@ execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matche
 #attack
 execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches 0 if score @s icew.phase matches 0 if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/can_attack_p0
 execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches 0 if score @s icew.phase matches 1 if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/can_attack_p1
-execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches 0 run scoreboard players remove @s icew.attCooldown 1
+#cooldown
+execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches 0 unless biome ~ ~-1 ~ #snow_golem_melts run scoreboard players remove @s icew.attCooldown 1
+execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches 0 if biome ~ ~-1 ~ #snow_golem_melts if score @s icew.phase matches 0 run execute unless predicate icewarrior:random_25 run scoreboard players remove @s icew.attCooldown 1
 #combo detector
 execute if score @s icew.phase matches 0 if score @s icew.combo matches 7..64 run function icewarrior:boss/effects/phase0_combo_reached
 execute if score @s icew.phase matches 1 if score @s icew.combo matches 5..64 run function icewarrior:boss/effects/phase1_combo_reached

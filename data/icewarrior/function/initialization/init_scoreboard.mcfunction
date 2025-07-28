@@ -23,6 +23,8 @@ scoreboard objectives add icew.lookTarget dummy
 scoreboard objectives add icew.health_pour dummy
 scoreboard objectives add icew.health dummy
 #0: false ; 1: true
+scoreboard objectives add icew.death dummy
+#0: false ; 1: true
 scoreboard objectives add icew.walking dummy
 #0: false ; 1: true
 scoreboard objectives add icew.forceWalk dummy
