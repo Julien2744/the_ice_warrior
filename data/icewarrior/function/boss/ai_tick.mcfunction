@@ -11,7 +11,7 @@ execute unless entity @n[tag=icew.target,distance=..128] run execute if entity @
 #fix mob-hibox being able to damage mobs
 execute if entity @n[type=!#icewarrior:non_living,type=!player,tag=icew.target,tag=!icew.immune,distance=..128] run execute on vehicle run function icewarrior:boss/auto_disable_followrange
 
-#during entrance, check if boss stopped falling
+#during entrance, check if boss has stopped falling
 execute if score @s icew.entranceId matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/anim/stopped_falling
 
 #nerf the boss if hes in warm biome
@@ -45,6 +45,6 @@ execute unless score @s icew.attCooldown matches 0 if score @s icew.forceWalk ma
 execute if score @s icew.attCooldown matches 0 if score @s icew.phase matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_p1
 
 #look at target
-execute if score @s icew.lookTarget matches 1 if entity @n[tag=icew.target,distance=..128] run execute facing entity @n[tag=icew.target,distance=..128] eyes run tp @s ~ ~ ~ ~ 0
+execute if score @s icew.lookTarget matches 1 if entity @n[tag=icew.target,distance=..16] run execute facing entity @n[tag=icew.target,distance=..16] eyes run tp @s ~ ~ ~ ~ 0
 #use the rotation of the mob-hitbox if no target
-execute if score @s icew.lookTarget matches 1 unless entity @n[tag=icew.target,distance=..128] run execute positioned ~ ~-1 ~ rotated as @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..1] run tp @s ~ ~ ~ ~ 0
+execute if score @s icew.lookTarget matches 1 unless entity @n[tag=icew.target,distance=..16] run execute positioned ~ ~-1 ~ rotated as @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..1] run tp @s ~ ~ ~ ~ 0

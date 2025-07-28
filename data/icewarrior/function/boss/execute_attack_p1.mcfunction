@@ -2,7 +2,7 @@
 
 $scoreboard players set @s icew.abilityID $(ID)
 
-$say test p2 - $(ID)
+#$say test p2 - $(ID)
 #execute as @n[type=item_display,tag=aj.ice_warrior.root] at @s run function icewarrior:boss/execute_attack_p1 {ID:}
 
 function icewarrior:boss/stop_walking

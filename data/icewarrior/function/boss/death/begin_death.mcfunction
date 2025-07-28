@@ -1,4 +1,5 @@
 scoreboard players set @s icew.death 1
+scoreboard players set @s icew.lookTarget 0
 scoreboard players set @s icew.canAttack 0
 scoreboard players set @s icew.attCooldown 2
 function icewarrior:boss/death/stop_all_anim
