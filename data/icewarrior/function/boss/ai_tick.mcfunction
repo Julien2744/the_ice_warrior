@@ -29,7 +29,6 @@ execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown ma
 #combo detector
 execute if score @s icew.phase matches 0 if score @s icew.combo matches 7..64 run function icewarrior:boss/effects/phase0_combo_reached
 execute if score @s icew.phase matches 1 if score @s icew.combo matches 5..64 run function icewarrior:boss/effects/phase1_combo_reached
-
 execute if score @s icew.phase matches 1 if score @s icew.combo matches 999.. run execute on vehicle at @s run particle snowflake ~ ~ ~ 0.5 0.0 0.5 0 1 normal
 
 #walking anim motor

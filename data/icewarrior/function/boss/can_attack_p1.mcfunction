@@ -5,8 +5,9 @@ execute if score @s icew.attCooldown matches 0 run execute if score @s icew.comb
 #parry
 execute if score @s icew.attCooldown matches 0 run execute if score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^1.5 run execute if entity @n[type=#icewarrior:can_parry,tag=!icew.parry,nbt=!{inGround:1b},distance=..1.25] run function icewarrior:boss/execute_attack_p1 {ID:7}
 #launch
-execute if score @s icew.attCooldown matches 0 run execute if score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^1 run execute if entity @n[tag=icew.target,distance=3..32] run execute if predicate icewarrior:random_5 run function icewarrior:boss/execute_attack_p1 {ID:8}
+execute if score @s icew.attCooldown matches 0 run execute if score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^1 run execute if entity @n[tag=icew.target,distance=3..32] run execute if predicate icewarrior:random_2 run function icewarrior:boss/execute_attack_p1 {ID:8}
 #fix ultimate display not refreshing if the second att of the anim failed to hit
+execute if score @s icew.combo matches 0 if data entity @n[type=item_display,tag=aj.ice_warrior.bone.trident,distance=..4] item.components."minecraft:enchantment_glint_override" run execute on vehicle run attribute @s generic.movement_speed modifier remove icew.trident_ult_movement_speed
 execute if score @s icew.combo matches 0 if data entity @n[type=item_display,tag=aj.ice_warrior.bone.trident,distance=..4] item.components."minecraft:enchantment_glint_override" run data modify entity @n[type=item_display,tag=aj.ice_warrior.bone.trident,distance=..4] item.components."minecraft:enchantment_glint_override" set value 0b
 
 #trdient_slash
@@ -21,9 +22,9 @@ execute if score @s icew.attCooldown matches 0 unless score @s icew.combo matche
 execute if score @s icew.attCooldown matches 0 unless score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^1.25 run execute if entity @n[tag=icew.target,distance=..1.75] run execute if predicate icewarrior:random_25 run function icewarrior:boss/execute_attack_p1 {ID:4}
 
 #trdient_smash
-execute if score @s icew.attCooldown matches 0 unless score @s icew.combo matches 999.. run execute positioned ~ ~-1 ~ positioned ^ ^ ^2.25 run execute if entity @n[tag=icew.target,distance=..1.5] run execute if predicate icewarrior:random_15 run function icewarrior:boss/execute_attack_p1 {ID:3}
+execute if score @s icew.attCooldown matches 0 unless score @s icew.combo matches 999.. run execute positioned ~ ~-1 ~ positioned ^ ^ ^1.75 run execute if entity @n[tag=icew.target,distance=..1.5] run execute if predicate icewarrior:random_15 run function icewarrior:boss/execute_attack_p1 {ID:3}
 
 #trident_launch
-execute if score @s icew.attCooldown matches 0 unless score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^6 run execute if entity @n[tag=icew.target,distance=..1.5] run execute if predicate icewarrior:random_25 run function icewarrior:boss/execute_attack_p1 {ID:5}
-execute if score @s icew.attCooldown matches 0 unless score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^7 run execute if entity @n[tag=icew.target,distance=..1.5] run execute if predicate icewarrior:random_25 run function icewarrior:boss/execute_attack_p1 {ID:5}
-execute if score @s icew.attCooldown matches 0 unless score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^8 run execute if entity @n[tag=icew.target,distance=..1.5] run execute if predicate icewarrior:random_25 run function icewarrior:boss/execute_attack_p1 {ID:5}
+execute if score @s icew.attCooldown matches 0 unless score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^6.25 run execute if entity @n[tag=icew.target,distance=..1.5] run execute if predicate icewarrior:random_25 run function icewarrior:boss/execute_attack_p1 {ID:5}
+execute if score @s icew.attCooldown matches 0 unless score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^7.25 run execute if entity @n[tag=icew.target,distance=..1.5] run execute if predicate icewarrior:random_25 run function icewarrior:boss/execute_attack_p1 {ID:5}
+execute if score @s icew.attCooldown matches 0 unless score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^8.25 run execute if entity @n[tag=icew.target,distance=..1.5] run execute if predicate icewarrior:random_25 run function icewarrior:boss/execute_attack_p1 {ID:5}
