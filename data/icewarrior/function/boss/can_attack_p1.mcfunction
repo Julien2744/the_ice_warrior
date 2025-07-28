@@ -1,7 +1,11 @@
 #execute as @n[type=item_display,tag=aj.ice_warrior.root] at @s run
 ## -- PHASE 1 ATTACKS -- ##
 #ultimate
-execute if score @s icew.attCooldown matches 0 run execute if score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^1 run execute if entity @n[tag=icew.target,distance=..1.75] run function icewarrior:boss/execute_attack_p1 {ID:6}
+execute if score @s icew.attCooldown matches 0 run execute if score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^1 run execute if entity @n[tag=icew.target,distance=..1.5] run function icewarrior:boss/execute_attack_p1 {ID:6}
+#parry
+execute if score @s icew.attCooldown matches 0 run execute if score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^1.5 run execute if entity @n[type=#icewarrior:can_parry,tag=!icew.parry,nbt=!{inGround:1b},distance=..1.25] run function icewarrior:boss/execute_attack_p1 {ID:7}
+#launch
+execute if score @s icew.attCooldown matches 0 run execute if score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^1 run execute if entity @n[tag=icew.target,distance=3..32] run execute if predicate icewarrior:random_5 run function icewarrior:boss/execute_attack_p1 {ID:8}
 #fix ultimate display not refreshing if the second att of the anim failed to hit
 execute if score @s icew.combo matches 0 if data entity @n[type=item_display,tag=aj.ice_warrior.bone.trident,distance=..4] item.components."minecraft:enchantment_glint_override" run data modify entity @n[type=item_display,tag=aj.ice_warrior.bone.trident,distance=..4] item.components."minecraft:enchantment_glint_override" set value 0b
 

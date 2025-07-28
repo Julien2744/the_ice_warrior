@@ -31,5 +31,14 @@ execute if score @s icew.abilityID matches 5 run function animated_java:ice_warr
 execute if score @s icew.abilityID matches 6 run scoreboard players set @s icew.attCooldown 54
 execute if score @s icew.abilityID matches 6 run function animated_java:ice_warrior/animations/trident_ultimate/play
 
+#parry
+execute if score @s icew.abilityID matches 7 run scoreboard players set @s icew.attCooldown 22
+execute if score @s icew.abilityID matches 7 run function icewarrior:boss/attacks/trident_ult_parry
+execute if score @s icew.abilityID matches 7 run function animated_java:ice_warrior/animations/trident_ult_parry/play
+
+#launch
+execute if score @s icew.abilityID matches 8 run scoreboard players set @s icew.attCooldown 17
+execute if score @s icew.abilityID matches 8 run function icewarrior:boss/effects/launch_to_target
+
 #keep at end of file
 scoreboard players set @s icew.abilityID 0
