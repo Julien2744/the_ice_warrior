@@ -14,7 +14,7 @@ execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run 
 bossbar add icew_bossbar {"text":"Ice Warrior","color":"aqua"}
 bossbar set icew_bossbar style progress
 bossbar set icew_bossbar color blue
-bossbar set icew_bossbar players @a[distance=..128]
+bossbar set icew_bossbar players @a[distance=..75]
 
 #initiliaze boss health%
 execute as @n[type=stray,tag=icew.hitbox,distance=..4] at @s run function icewarrior:boss/update_health_pour

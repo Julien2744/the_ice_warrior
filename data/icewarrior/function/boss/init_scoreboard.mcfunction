@@ -15,4 +15,4 @@ scoreboard players set @s icew.motion.z 0
 scoreboard players add @s icew.math.div 100
 scoreboard players add @s icew.math.mem 100
 
-scoreboard players set #anniR.global icew.spawned 1
+scoreboard players set #icew.global icew.spawned 1
