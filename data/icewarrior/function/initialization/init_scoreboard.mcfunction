@@ -48,4 +48,9 @@ scoreboard players set #icew.load icew.scoreboardVersion 1
 #end of initialisating
 scoreboard players set #icew.load icew.loadScoreboard 1
 
-say scoreboard finished
+
+#fix wierd bug that when you create a new world, you need tp reload so that
+#the next animated java rig doesn't have bugged animation
+execute positioned 0 0 0 run reload
+
+#say scoreboard finished

@@ -1,6 +1,7 @@
 {
   "values": [
     "#minecraft:raiders",
+    "minecraft:player",
     "minecraft:vex",
     "minecraft:villager",
     "minecraft:wandering_trader",

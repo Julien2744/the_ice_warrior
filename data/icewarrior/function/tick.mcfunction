@@ -1,5 +1,13 @@
+## ------ The Ice Warrior Datapack ------ ##
+# Minecraft version: 1.21 - 1.21.1
+# datapack version: beta1-1
+# resourcepack version: v1.0
+# 
+# scoreboard version: 1
+##
+
 #initialize scoreboard only once
-execute unless score #icew.load icew.loadScoreboard matches 1 run function icewarrior:initialization/init_scoreboard
+execute unless score #icew.load icew.loadScoreboard matches 1 if entity @p run function icewarrior:initialization/init_scoreboard
 
 #place warrior insid the ice room
 execute if score #icew.global icew.tickmarker matches 1 run execute as @e[type=marker,tag=icew.summon_warrior] at @s run execute rotated 0 0 run function icewarrior:boss_summoner/replace_marker

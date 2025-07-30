@@ -469,3 +469,4 @@ particle minecraft:snowflake ^-1.755 ^0.292 ^ 0 0 0 0 0 normal
 particle minecraft:snowflake ^-1.755 ^-0.195 ^ 0 0 0 0 0 normal
 particle minecraft:snowflake ^-1.852 ^0.292 ^ 0 0 0 0 0 normal
 particle minecraft:snowflake ^-1.852 ^-0.195 ^ 0 0 0 0 0 normal
+playsound minecraft:block.trial_spawner.spawn_item hostile @a[distance=..8] ~ ~ ~ 2 0
