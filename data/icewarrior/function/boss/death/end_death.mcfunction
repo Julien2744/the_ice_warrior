@@ -1,4 +1,4 @@
-playsound minecraft:entity.breeze.death hostile @a[distance=..8] ~ ~ ~ 2 0
+playsound minecraft:entity.breeze.death hostile @a[distance=..16] ~ ~ ~ 4 0
 particle minecraft:snowflake ~ ~-1 ~ 0 0 0 0.1 17 normal
 particle minecraft:poof ~ ~-1 ~ 0.25 0.25 0.25 0 25 normal
 
