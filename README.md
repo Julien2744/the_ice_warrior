@@ -5,7 +5,7 @@
 ### Minecraft datapack that add an ice themed boss
 
 > [!WARNING]
-> This datapack require a resourcepack (link)
+> This datapack require a resourcepack [link](https://modrinth.com/datapack/the-ice-warrior/version/beta1-1_mc1.21.1)
 >
 > Require [launch-command](https://modrinth.com/mod/launch-command)
 >
@@ -14,7 +14,7 @@
 All animations in this datapack where made using [Animated Java](https://animated-java.dev/)
 
 The `animated_java` files are not included due to how many there are (1100+ files), and because the files are 99% models and animations.
-You can found them on the [modrinth] page where you can download the datapack
+You can found them on the [modrinth](https://modrinth.com/datapack/the-ice-warrior) page where you can download the datapack
 
 ## features
 
