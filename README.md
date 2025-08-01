@@ -52,13 +52,13 @@ Or you can summon the boss anywere in your wold using the command `function icew
 
 The boss cannot target/damage a mob if it has the tag `icew.immune`.
 
-You can change his target with mod that let you change mob target.
+You can change his target with any mod that let you change mob target.
 
 ## Other informations
 
 Because the boss use a stray has is hitbox/health, any mod that modify stray can affect the boss and ***might*** cause issues. Hoewer I already fixed this issue for some mod, if those allowed me to blacklist the mob from getting any modification.
 
-Also because the boss use a stray has his hitbox/health, the boss has some difficulty when attacking mob with big hitbox.
+Also because the boss use a stray has his hitbox/health, he has some difficulty when attacking mob with wide hitbox.
 
 You can modify:
 - items can melt the boss ice in `data/icewarrior/tags/item/can_melt_ice_room.json`
