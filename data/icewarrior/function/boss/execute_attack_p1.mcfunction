@@ -9,10 +9,12 @@ function icewarrior:boss/stop_walking
 
 #trident_slash
 execute if score @s icew.abilityID matches 1 run scoreboard players set @s icew.attCooldown 46
+execute if score @s icew.abilityID matches 1 run scoreboard players set @s icew.forceWalk 1
 execute if score @s icew.abilityID matches 1 run function animated_java:ice_warrior/animations/trident_slash/play
 
 #trident_long
 execute if score @s icew.abilityID matches 2 run scoreboard players set @s icew.attCooldown 80
+execute if score @s icew.abilityID matches 2 run scoreboard players set @s icew.forceWalk 1
 execute if score @s icew.abilityID matches 2 run function animated_java:ice_warrior/animations/trident_long/play
 
 #trdient_smash
@@ -20,7 +22,7 @@ execute if score @s icew.abilityID matches 3 run scoreboard players set @s icew.
 execute if score @s icew.abilityID matches 3 run function animated_java:ice_warrior/animations/trident_smash/play
 
 #trdient_upper
-execute if score @s icew.abilityID matches 4 run scoreboard players set @s icew.attCooldown 50
+execute if score @s icew.abilityID matches 4 run scoreboard players set @s icew.attCooldown 45
 execute if score @s icew.abilityID matches 4 run function animated_java:ice_warrior/animations/trident_upper/play
 
 #trdient_launch

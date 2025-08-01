@@ -13,7 +13,7 @@ execute if score @s icew.abilityID matches 1 run function icewarrior:boss/attack
 execute if score @s icew.abilityID matches 1 run function animated_java:ice_warrior/animations/parry/play
 
 #regular_double_slash
-execute if score @s icew.abilityID matches 2 run scoreboard players set @s icew.attCooldown 43
+execute if score @s icew.abilityID matches 2 run scoreboard players set @s icew.attCooldown 40
 execute if score @s icew.abilityID matches 2 run function animated_java:ice_warrior/animations/regular_double_slash/play
 
 #high_slash
