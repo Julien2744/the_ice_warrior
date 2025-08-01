@@ -39,7 +39,7 @@ scoreboard objectives add icew.math.div dummy
 
 
 #initialize (only for global)
-#boss
+#boss_summoner
 scoreboard players set #icew.global icew.tickmarker 1
 
 ## scoreboard version ##

@@ -45,6 +45,7 @@ Or you can summon the boss anywere in your wold using the command `function icew
 - will use his ultimate attack at 5 combos
   - no longer use his other attack
   - can parry projectile
+  - can launch himself to the target
 
 > [!NOTE]
 > The boss isn't that strong, and all his attacks are dodgeable. I personally recommend to face him with a full set of diamond armor.
