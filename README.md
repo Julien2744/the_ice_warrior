@@ -62,8 +62,5 @@ Also because the boss use a stray has his hitbox/health, the boss has some diffi
 You can modify:
 - items can melt the boss ice in `data/icewarrior/tags/item/can_melt_ice_room.json`
 - mob will aggro the boss in `data/icewarrior/tags/entity_type/aggro_boss.json`
-<<<<<<< HEAD
 - entity that can be parried in `data/icewarrior/tags/entity_type/can_parry.json`
-=======
 - entity that can be parried in `data/icewarrior/tags/entity_type/can_parry.json`
->>>>>>> 8bbf904a9bfe279251cc31bf745f123d256825ed
