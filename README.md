@@ -58,7 +58,7 @@ For target bug fixing purposes, all Ice Warrior will share the same target.
 
 Because the boss use a stray has is hitbox/health, any mod that modify stray can affect the boss and ***might*** cause issues. Hoewer I already fixed this issue for some mod, if those allowed me to blacklist the mob from getting any modification.
 
-Also because the boss use a stray has his hitbox/health, he has some difficulty when attacking mob with wide hitbox.
+Because working with vanilla mob with datapack can be an absolute nightmare, all Ice Warrior share the same target.
 
 You can modify:
 - items can melt the boss ice in `data/icewarrior/tags/item/can_melt_ice_room.json`
