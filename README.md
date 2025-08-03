@@ -52,7 +52,7 @@ Or you can summon the boss anywere in your wold using the command `function icew
 
 The boss cannot target/damage a mob if it has the tag `icew.immune`.
 
-You can change his target with any mod that let you change mob target.
+For target bug fixing purposes, all Ice Warrior will share the same target.
 
 ## Other informations
 
