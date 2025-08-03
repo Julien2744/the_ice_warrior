@@ -26,8 +26,9 @@ execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matche
 execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1 if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/can_attack_p1
 
 #cooldown
-execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches -20..0 unless biome ~ ~-1 ~ #snow_golem_melts run scoreboard players remove @s icew.attCooldown 1
-execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches -20..0 if biome ~ ~-1 ~ #snow_golem_melts if score @s icew.phase matches 0 run execute unless predicate icewarrior:random_25 run scoreboard players remove @s icew.attCooldown 1
+execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 unless biome ~ ~-1 ~ #snow_golem_melts run scoreboard players remove @s icew.attCooldown 1
+execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 if biome ~ ~-1 ~ #snow_golem_melts run execute unless predicate icewarrior:random_25 run scoreboard players remove @s icew.attCooldown 1
+execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1 run scoreboard players remove @s icew.attCooldown 1
 #boredom cooldown (make the boss use special ability if he just stand here and do nothing while having a target
 execute if entity @n[tag=icew.target,distance=..8] run execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -19..0 run execute if score @s icew.walking matches 0 on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run scoreboard players remove @s icew.attCooldown 1
 
