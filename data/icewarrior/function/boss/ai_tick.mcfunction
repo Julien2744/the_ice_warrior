@@ -1,14 +1,8 @@
 #check death
 execute unless entity @s[predicate=icewarrior:check_hitbox] if score @s icew.death matches 0 run function icewarrior:boss/death/begin_death
 
-#auto-target using the hitbox mob target
-execute if entity @s[predicate=icewarrior:check_hitbox] unless entity @n[tag=icew.target,distance=..128] run execute on vehicle on target run execute if entity @s[tag=!icew.immune] run function icewarrior:set_target
-#auto-target by checking entity around
-execute if entity @s[predicate=icewarrior:check_hitbox] unless entity @n[tag=icew.target,distance=..128] run execute if entity @n[type=#icewarrior:aggro_boss,tag=!icew.immune,distance=..24] run execute on vehicle if entity @s[nbt={HurtTime:0s}] unless entity @s[tag=icew.aggro_dmg] run function icewarrior:boss/aggro_boss
-#fix mob-hibox being able to damage mobs
-execute if entity @s[predicate=icewarrior:check_hitbox] if entity @n[type=!#icewarrior:non_living,tag=icew.target,tag=!icew.immune,distance=..75] run execute on vehicle if entity @s[nbt={HurtTime:0s}] unless entity @s[tag=icew.aggro_dmg] run function icewarrior:boss/auto_disable_followrange
-#re give the mob-hitbox his follow range if there no target
-execute if entity @s[predicate=icewarrior:check_hitbox] unless entity @n[tag=icew.target,distance=..128] unless entity @n[tag=icew.immune,tag=!icew.hitbox,distance=..8] run execute on vehicle if entity @s[nbt={attributes:[{id:"minecraft:generic.follow_range",base:0.0}]}] run data merge entity @s {attributes:[{id:"minecraft:generic.follow_range",base:75}]}
+#95% of target bug come here
+execute if entity @s[predicate=icewarrior:check_hitbox] run function icewarrior:boss/target_tick
 
 #check if the boss was hurt
 execute on vehicle if entity @s[nbt={HurtTime:9s}] at @s run function icewarrior:boss/hurt
