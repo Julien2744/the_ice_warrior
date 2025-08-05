@@ -18,7 +18,7 @@ You can found them on the [modrinth](https://modrinth.com/datapack/the-ice-warri
 
 ## Features
 
-To find the boss, you will need to go to find the `ice_guard_tower` structure located in the `ice_spikes` biome.
+To find the boss, you will need to find the `ice_guard_tower` structure located in the `ice_spikes` biome.
 
 When entering the tower you will see the ice warrior encased in ice. To release him you will need to use a lava bucket in order to melt the ice (right-click).
 
@@ -26,7 +26,7 @@ Or you can summon the boss anywere in your wold using the command `/function ice
 
 Or you can summon the boss encased in ice with `/function icewarrior:boss_summoner/summon`
 
-### **Boss behavior:**
+### **<ins>Boss behavior:</ins>**
 
 - 2 phases
 - 170 health
@@ -50,9 +50,9 @@ Or you can summon the boss encased in ice with `/function icewarrior:boss_summon
   - can launch himself to the target
 
 > [!NOTE]
-> The boss isn't that strong, and all his attacks are dodgeable. I personally recommend to face him with a full set of diamond armor. with a full set of diamond armor.
+> The boss isn't that strong, and all his attacks are dodgeable. I personally recommend to face him with a full set of diamond armor.
 
-The boss cannot target/damage a mob if it has the tag `icew.immune`.
+The boss cannot target/damage mobs that have the tag `icew.immune`.
 
 Because working with vanilla mob with datapack can be an absolute nightmare, all Ice Warrior share the same target.
 
