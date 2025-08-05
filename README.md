@@ -1,30 +1,32 @@
 # The Ice Warrior
 
-## description
+## Description
 
 ### Minecraft datapack that add an ice themed boss
 
 > [!WARNING]
-> This datapack require a resourcepack [link](https://modrinth.com/datapack/the-ice-warrior/version/beta1-1_mc1.21.1)
+> This datapack require a resourcepack [link](https://modrinth.com/datapack/the-ice-warrior/version/beta1-2_mc1.21.1)
 >
-> Require [launch-command](https://modrinth.com/mod/launch-command)
+> **Require the mod [launch-command](https://modrinth.com/mod/launch-command)**
 >
-> Current version work for `Minecraft 1.21 - 1.21.1`
+> Current version work for `Minecraft 1.21.1`
 
 All animations in this datapack where made using [Animated Java](https://animated-java.dev/)
 
 The `animated_java` files are not included due to how many there are (1100+ files), and because the files are 99% models and animations.
 You can found them on the [modrinth](https://modrinth.com/datapack/the-ice-warrior) page where you can download the datapack
 
-## features
+## Features
 
 To find the boss, you will need to go to find the `ice_guard_tower` structure located in the `ice_spikes` biome.
 
 When entering the tower you will see the ice warrior encased in ice. To release him you will need to use a lava bucket in order to melt the ice (right-click).
 
-Or you can summon the boss anywere in your wold using the command `function icewarrior:admin/summon`
+Or you can summon the boss anywere in your wold using the command `/function icewarrior:admin/summon`
 
-### boss behavior
+Or you can summon the boss encased in ice with `/function icewarrior:boss_summoner/summon`
+
+### **Boss behavior:**
 
 - 2 phases
 - 170 health
@@ -48,7 +50,7 @@ Or you can summon the boss anywere in your wold using the command `function icew
   - can launch himself to the target
 
 > [!NOTE]
-> The boss isn't that strong, and all his attacks are dodgeable. I personally recommend to face him with a full set of diamond armor.
+> The boss isn't that strong, and all his attacks are dodgeable. I personally recommend to face him with a full set of diamond armor. with a full set of diamond armor.
 
 The boss cannot target/damage a mob if it has the tag `icew.immune`.
 
@@ -62,6 +64,5 @@ Also because the boss use a stray has his hitbox/health, he has some difficulty 
 
 You can modify:
 - items can melt the boss ice in `data/icewarrior/tags/item/can_melt_ice_room.json`
-- mob will aggro the boss in `data/icewarrior/tags/entity_type/aggro_boss.json`
-- entity that can be parried in `data/icewarrior/tags/entity_type/can_parry.json`
-- entity that can be parried in `data/icewarrior/tags/entity_type/can_parry.json`
+- mobs that aggro the boss in `data/icewarrior/tags/entity_type/aggro_boss.json`
+- entities that can be parried in `data/icewarrior/tags/entity_type/can_parry.json`
