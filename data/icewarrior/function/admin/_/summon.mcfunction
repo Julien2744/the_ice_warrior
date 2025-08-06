@@ -10,17 +10,17 @@ data modify entity @n[type=item_display,tag=aj.ice_warrior.bone.trident,distance
 #initialize scoreboard
 execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/init_scoreboard
 
-#boss bar
-bossbar add icew_bossbar {"text":"Ice Warrior","color":"aqua"}
-bossbar set icew_bossbar style notched_6
-bossbar set icew_bossbar color blue
-bossbar set icew_bossbar players @a[distance=..75]
-
 #initiliaze boss health%
 execute as @n[type=stray,tag=icew.hitbox,distance=..4] at @s run function icewarrior:boss/update_health_pour
 
-#set bossbar
-execute store result bossbar icew_bossbar max run attribute @n[type=stray,tag=icew.hitbox,distance=..4] generic.max_health get
-execute store result bossbar icew_bossbar value run data get entity @n[type=stray,tag=icew.hitbox,distance=..4] Health
+#boss bar
+execute if score #icew.config icew.config.bossbar matches 0 run bossbar add icew_bossbar {"text":"Ice Warrior","color":"aqua"}
+execute if score #icew.config icew.config.bossbar matches 0 run bossbar set icew_bossbar style notched_6
+execute if score #icew.config icew.config.bossbar matches 0 run bossbar set icew_bossbar color blue
+execute if score #icew.config icew.config.bossbar matches 0 run bossbar set icew_bossbar players @a[distance=..75]
+
+#set bossbar max value
+execute if score #icew.config icew.config.bossbar matches 0 run execute store result bossbar icew_bossbar max run attribute @n[type=stray,tag=icew.hitbox,distance=..4] generic.max_health get
+execute if score #icew.config icew.config.bossbar matches 0 run execute store result bossbar icew_bossbar value run data get entity @n[type=stray,tag=icew.hitbox,distance=..4] Health
 
 #tag @p[distance=..32] add icew.target

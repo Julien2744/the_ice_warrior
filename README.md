@@ -18,11 +18,13 @@ You can found them on the [modrinth](https://modrinth.com/datapack/the-ice-warri
 
 ## Features
 
+**This datapack has a config wich you can access it with `/function icewarrior:admin/_/config`**
+
 To find the boss, you will need to find the `ice_guard_tower` structure located in the `ice_spikes` biome.
 
 When entering the tower you will see the ice warrior encased in ice. To release him you will need to use a lava bucket in order to melt the ice (right-click).
 
-Or you can summon the boss anywere in your wold using the command `/function icewarrior:admin/summon`
+Or you can summon the boss anywere in your wold using the command `/function icewarrior:admin/_/summon`
 
 Or you can summon the boss encased in ice with `/function icewarrior:boss_summoner/summon`
 

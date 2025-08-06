@@ -1,4 +1,4 @@
-#global
+## global
 #boss
 #0: false ; 1: true
 scoreboard objectives add icew.tickmarker dummy
@@ -7,8 +7,19 @@ scoreboard objectives add icew.spawned dummy
 #gamerule
 #0: false ; 1: true
 scoreboard objectives add icew.checkMobLoot dummy
+#config
+#no_bossbar #0: false (off) ; 1: true (on)
+scoreboard objectives add icew.config.bossbar dummy
+#no_bossbar #0: false ; 1: true
+scoreboard objectives add icew.config.can_change_phase dummy
+#take any number between 1 and 100 (inclusive)
+scoreboard objectives add icew.config.change_phase dummy
+#take any positive number that smaller than 999
+scoreboard objectives add icew.config.phase1_combo dummy
+#take any positive number that smaller than 999
+scoreboard objectives add icew.config.phase2_combo dummy
 
-#local
+## local
 #boss
 #0: no entrance anim; 1: falling, 2: threathen player
 scoreboard objectives add icew.entranceId dummy
@@ -42,15 +53,21 @@ scoreboard objectives add icew.math.div dummy
 #boss_summoner
 scoreboard players set #icew.global icew.tickmarker 1
 
+#initialize (only for config)
+scoreboard players set #icew.config icew.config.bossbar 0
+scoreboard players set #icew.config icew.config.can_change_phase 1
+scoreboard players set #icew.config icew.config.change_phase 50
+scoreboard players set #icew.config icew.config.phase1_combo 7
+scoreboard players set #icew.config icew.config.phase2_combo 5
+
 ## scoreboard version ##
-scoreboard players set #icew.load icew.scoreboardVersion 1
-
-#end of initialisating
-scoreboard players set #icew.load icew.loadScoreboard 1
-
+scoreboard players set #icew.load icew.scoreboardVersion 2
 
 #fix wierd bug that when you create a new world you need to /reload so that
 #the next animated java rig doesn't have bugged animation
-execute positioned 0 0 0 run reload
+execute unless score #icew.load icew.loadScoreboard matches 1 run execute positioned 0 0 0 run reload
+
+#end of initialisating
+scoreboard players set #icew.load icew.loadScoreboard 1
 
 #say scoreboard finished
