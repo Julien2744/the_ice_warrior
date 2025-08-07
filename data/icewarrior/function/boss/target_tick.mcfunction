@@ -1,17 +1,23 @@
-# [1] auto-target using the hitbox mob target
+#tp the bait to the target
+execute positioned as @n[type=!player,tag=icew.target,distance=..128] run tp @n[type=bat,tag=icew.bait] ~ ~ ~
+
+# auto set_target using the mob-hitbox target
 execute unless entity @n[tag=icew.target,distance=..128] run execute on vehicle on target if entity @s[tag=!icew.immune] run function icewarrior:set_target
 
-# [2] auto-target by checking entity around
-execute unless entity @n[tag=icew.target,distance=..128] run execute if entity @n[type=#icewarrior:aggro_boss,tag=!icew.immune,distance=..24] run execute on vehicle if entity @s[nbt={HurtTime:0s}] unless entity @s[tag=icew.aggro_dmg] run function icewarrior:boss/aggro_boss
+#auto set_target by checking if there entity that aggro the boss
+execute unless entity @n[type=!player,tag=icew.target,distance=..128] run execute if entity @n[type=#icewarrior:aggro_boss,tag=!icew.immune,distance=..24] run execute on vehicle if entity @s[nbt={HurtTime:0s}] run execute as @n[type=#icewarrior:aggro_boss,tag=!icew.immune,distance=..24] run function icewarrior:set_target
 
-#remove mob-hitbox target if it doesn't have the tag icew.target
-execute if entity @n[tag=icew.target,distance=..128] run execute on vehicle at @s unless entity @s[nbt={attributes:[{id:"minecraft:generic.follow_range",base:0.0}]}] if entity @s[predicate=icewarrior:has_target] on target unless entity @s[tag=icew.target] run data merge entity @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..2] {attributes:[{id:"minecraft:generic.follow_range",base:0}]}
+#remove mob-hitbox target if his target isn't the bait
+execute if entity @n[type=!player,tag=icew.target,distance=..128] run execute on vehicle unless entity @s[nbt={attributes:[{id:"minecraft:generic.follow_range",modifiers:[{id:"minecraft:icew.forget_target"}]}]}] if entity @s[predicate=icewarrior:has_target] on target unless entity @s[type=bat,tag=icew.bait] run attribute @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..2] generic.follow_range modifier add icew.forget_target -999 add_value
 
-#fix mob-hibox being able to damage mobs
-execute if entity @n[type=!#icewarrior:non_living,tag=icew.target,tag=!icew.immune,distance=..75] run execute on vehicle if entity @s[nbt={HurtTime:0s}] unless entity @s[tag=icew.aggro_dmg] run function icewarrior:boss/auto_disable_followrange
+#re-give followrange if the mob-hitbox doesn't have a target
+execute on vehicle if entity @s[nbt={attributes:[{id:"minecraft:generic.follow_range",modifiers:[{id:"minecraft:icew.forget_target"}]}]}] unless entity @s[predicate=icewarrior:has_target] run attribute @s minecraft:generic.follow_range modifier remove icew.forget_target
 
-#re give the mob-hitbox his follow range if there no target
-execute unless entity @n[tag=icew.target,distance=..128] unless entity @n[tag=icew.immune,tag=!icew.hitbox,distance=..8] run execute on vehicle if entity @s[nbt={attributes:[{id:"minecraft:generic.follow_range",base:0.0}]}] run data merge entity @s {attributes:[{id:"minecraft:generic.follow_range",base:75}]}
+#make the mob-hitbox target the bait
+execute if entity @n[type=!player,tag=icew.target,distance=..128] run execute on vehicle unless entity @s[predicate=icewarrior:has_target] if entity @s[nbt={HurtTime:0s}] run damage @s 0 icewarrior:aggro_boss by @n[type=bat,tag=icew.bait,distance=..128]
 
-#auto-target the mob-hitbox if there already a mob that have the tag icew.target
-execute if entity @n[tag=icew.target,distance=..128] run execute on vehicle if entity @s[nbt={HurtTime:0s}] unless entity @s[tag=icew.aggro_dmg] unless entity @s[predicate=icewarrior:has_target] run function icewarrior:boss/aggro_by_target
+#kill bait if no target
+execute if entity @n[type=bat,tag=icew.bait,distance=..128] unless entity @n[tag=icew.target] run kill @n[type=bat,tag=icew.bait,distance=..128]
+
+#revome target on creative/spectator player
+execute if entity @n[type=player,tag=icew.target,gamemode=!survival,gamemode=!adventure,distance=..128] run tag @p[tag=icew.target,gamemode=!survival,gamemode=!adventure,distance=..128] remove icew.target

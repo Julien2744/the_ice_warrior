@@ -1,7 +1,7 @@
 #check death
 execute unless entity @s[predicate=icewarrior:check_hitbox] if score @s icew.death matches 0 run function icewarrior:boss/death/begin_death
 
-#95% of target bug come here
+#99% of target bug come here
 execute if entity @s[predicate=icewarrior:check_hitbox] run function icewarrior:boss/target_tick
 
 #check if the boss was hurt
@@ -19,7 +19,7 @@ execute if score #icew.config icew.config.bossbar matches 0 run execute store re
 execute if score #icew.config icew.config.bossbar matches 0 run bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" - ","color":"gray"},{"score":{"name":"@s","objective":"icew.health"},"color":"red"},{"text":"❤","color":"dark_red"}]
 
 #change phase
-execute if score @s icew.canAttack matches 1 if score #icew.config icew.config.can_change_phase matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 if score @s icew.health_pour <= #icew.config icew.config.change_phase run function icewarrior:boss/effects/change_phase
+execute unless score @s icew.health_pour matches 0 if score @s icew.canAttack matches 1 if score #icew.config icew.config.can_change_phase matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 if score @s icew.health_pour <= #icew.config icew.config.change_phase run function icewarrior:boss/effects/change_phase
 
 #attack
 execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/can_attack_p0
