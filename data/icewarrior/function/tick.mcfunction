@@ -1,11 +1,3 @@
-## ------ The Ice Warrior Datapack ------ ##
-# Minecraft version: 1.21.1
-# datapack version: beta1-4
-# resourcepack version: v1.0
-# 
-# scoreboard version: 2
-##
-
 #initialize scoreboard only once
 execute unless score #icew.load icew.loadScoreboard matches 1 if entity @p run function icewarrior:initialization/init_scoreboard
 
