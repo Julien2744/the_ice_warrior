@@ -16,10 +16,13 @@ execute if biome ~ ~-1 ~ #snow_golem_melts run execute on vehicle if entity @s[n
 #refresh boss health bar (excluded from hurt because of regen and not updated when the boss die)
 execute store result score @s icew.health run execute on vehicle run data get entity @s Health
 execute if score #icew.config icew.config.bossbar matches 0 run execute store result bossbar icew_bossbar value run scoreboard players get @s icew.health
-execute if score #icew.config icew.config.bossbar matches 0 run bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" - ","color":"gray"},{"score":{"name":"@s","objective":"icew.health"},"color":"red"},{"text":"❤","color":"dark_red"}]
+execute if score #icew.config icew.config.bossbar matches 0 if entity @s[tag=!icew.broken_armor] run bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" - ","color":"gray"},{"score":{"name":"@s","objective":"icew.health"},"color":"red"},{"text":"❤","color":"dark_red"}]
+execute if score #icew.config icew.config.bossbar matches 0 if entity @s[tag=icew.broken_armor] run bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" - ","color":"gray"},{"score":{"name":"@s","objective":"icew.health"},"color":"red"},{"text":"💔","color":"dark_red"}]
 
-#change phase
+#change from phase0 to phase1
 execute unless score @s icew.health_pour matches 0 if score @s icew.canAttack matches 1 if score #icew.config icew.config.can_change_phase matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 if score @s icew.health_pour <= #icew.config icew.config.change_phase run function icewarrior:boss/effects/change_phase
+#change from phase1 to phase2 (if enraged)
+execute unless score @s icew.health_pour matches 0 if entity @s[tag=icew.enraged] if score @s icew.canAttack matches 1 if score #icew.config icew.config.can_change_phase matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1 if score @s icew.health_pour <= #icew.config icew.config.change_phase run function icewarrior:boss/effects/change_to_phase2
 
 #attack
 execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/can_attack_p0
@@ -41,8 +44,8 @@ execute if score @s icew.phase matches 1 if score @s icew.combo matches 999.. ru
 execute if score @s icew.attCooldown matches -20..0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_motor
 #walking anim (phase 0)
 execute if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking
-#walking anim (phase 1)
-execute if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_p1
+#walking anim (phase 1&2)
+execute if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1..2 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_p1
 #walking anim when attacking
 execute unless score @s icew.attCooldown matches -20..0 if score @s icew.forceWalk matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_forced
 
@@ -52,4 +55,4 @@ execute if score @s icew.lookTarget matches 1 if entity @n[tag=icew.target,dista
 execute if score @s icew.lookTarget matches 1 unless entity @n[tag=icew.target,distance=..16] run execute positioned ~ ~-1 ~ rotated as @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..1] run tp @s ~ ~ ~ ~ 0
 
 #phase 2 regen if there no target
-execute if score @s icew.phase matches 1 unless entity @n[tag=icew.target,distance=..64] if score @s icew.health_pour matches 1..100 if score @s icew.attCooldown matches 0 run function icewarrior:boss/effects/phase1_regen
+execute if score @s icew.phase matches 1 if entity @s[tag=!icew.enraged] unless entity @n[tag=icew.target,distance=..64] if score @s icew.health_pour matches 1..100 if score @s icew.attCooldown matches 0 run function icewarrior:boss/effects/phase1_regen
