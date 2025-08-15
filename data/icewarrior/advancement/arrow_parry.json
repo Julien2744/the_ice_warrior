@@ -1,0 +1,38 @@
+{
+  "parent": "icewarrior:cold_death",
+  "criteria": {
+    "icew.arrow_parry": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "blocked": false,
+          "source_entity": {
+            "type": "minecraft:player"
+          },
+          "type": {
+            "tags": [],
+            "direct_entity": {
+              "type": "#icewarrior:can_parry",
+              "nbt": "{Tags:[\"icew.parry\"]}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "display": {
+    "description": "Get hit by your projectile that was parried by an Ice Warrior",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:arrow"
+    },
+    "title": "+PARRY",
+    "hidden": true
+  },
+  "requirements": [
+    [
+      "icew.arrow_parry"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

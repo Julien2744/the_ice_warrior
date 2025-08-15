@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "icew.cold_death": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:stray",
+          "nbt": "{Tags:[\"icew.hitbox\",\"icew.immune\"]}"
+        }
+      }
+    }
+  },
+  "display": {
+    "description": "Kill an Ice warrior",
+    "icon": {
+      "components": {
+        "minecraft:profile": {
+          "name": "textures",
+          "properties": [
+            {
+              "name": "textures",
+              "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2E1NDU1ZTQ4ODVkM2IyZjcxZjJiOTY0ZDQzMmNkNDYyMjk4NTE0ODNiMmI0MGI5ODFjZDg4ZjRlZWUyNmU5MSJ9fX0="
+            }
+          ]
+        }
+      },
+      "count": 1,
+      "id": "minecraft:player_head"
+    },
+    "title": "Cold Death",
+    "frame": "goal",
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "icew.cold_death"
+    ]
+  ],
+  "rewards": {
+    "experience": 75
+  },
+  "sends_telemetry_event": false
+}
