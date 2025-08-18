@@ -1,0 +1,24 @@
+{
+  "parent": "icewarrior:cold_death",
+  "criteria": {
+    "icew.waking_up_enraged": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": "Enrage an Ice Warrior by summoning one while having an Ice Warrior Head near it on the ground",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:trident"
+    },
+    "title": "Waking Up Enraged",
+    "frame": "goal",
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "icew.waking_up_enraged"
+    ]
+  ],
+  "sends_telemetry_event": false
+}
