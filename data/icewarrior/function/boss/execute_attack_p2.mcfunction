@@ -12,5 +12,10 @@ execute if score @s icew.abilityID matches 1 run scoreboard players set @s icew.
 execute if score @s icew.abilityID matches 1 run scoreboard players set @s icew.forceWalk 1
 execute if score @s icew.abilityID matches 1 run function animated_java:ice_warrior/animations/trident_slash_p2/play
 
+#trdient_smash
+execute if score @s icew.abilityID matches 2 run scoreboard players set @s icew.attCooldown 65
+execute if score @s icew.abilityID matches 2 run function animated_java:ice_warrior/animations/trident_smash_p2/play
+
+
 #keep at end of file
 scoreboard players set @s icew.abilityID 0

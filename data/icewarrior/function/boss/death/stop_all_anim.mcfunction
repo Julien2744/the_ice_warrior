@@ -22,3 +22,4 @@ execute if entity @s[tag=aj.ice_warrior.animation.trident_ult_parry.playing] run
 execute if entity @s[tag=aj.ice_warrior.animation.switch_phase2.playing] run function animated_java:ice_warrior/animations/switch_phase2/stop
 execute if entity @s[tag=aj.ice_warrior.animation.stopped_falling_phase2.playing] run function animated_java:ice_warrior/animations/stopped_falling_phase2/stop
 execute if entity @s[tag=aj.ice_warrior.animation.trident_slash_p2.playing] run function animated_java:ice_warrior/animations/trident_slash_p2/stop
+execute if entity @s[tag=aj.ice_warrior.animation.trident_smash_p2.playing] run function animated_java:ice_warrior/animations/trident_smash_p2/stop
