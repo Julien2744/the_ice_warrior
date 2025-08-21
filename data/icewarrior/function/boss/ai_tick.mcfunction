@@ -39,8 +39,8 @@ execute if entity @n[tag=icew.target,distance=..8] run execute if score @s icew.
 
 #combo detector
 execute if score @s icew.phase matches 0 if score @s icew.combo = #icew.config icew.config.phase1_combo run function icewarrior:boss/effects/phase0_combo_reached
-execute if score @s icew.phase matches 1 if score @s icew.combo = #icew.config icew.config.phase2_combo run function icewarrior:boss/effects/phase1_combo_reached
-execute if score @s icew.phase matches 1 if score @s icew.combo matches 999.. run execute on vehicle at @s run particle snowflake ~ ~ ~ 0.5 0.0 0.5 0 1 normal
+execute if score @s icew.phase matches 1..2 if score @s icew.combo = #icew.config icew.config.phase2_combo run function icewarrior:boss/effects/phase1_combo_reached
+execute if score @s icew.phase matches 1..2 if score @s icew.combo matches 999.. run execute on vehicle at @s run particle snowflake ~ ~ ~ 0.5 0.0 0.5 0 1 normal
 
 #walking anim motor
 execute if score @s icew.attCooldown matches -20..0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_motor
