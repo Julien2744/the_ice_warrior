@@ -1,0 +1,2 @@
+item modify entity @s weapon.mainhand {function:"minecraft:set_components",components:{"minecraft:item_name":"\"Soul Ice Pickaxe\"","minecraft:custom_model_data":41782,"minecraft:tool":{rules:[{blocks:"#minecraft:mineable/pickaxe",speed:7,correct_for_drops:1b}]}}}
+scoreboard players set @s icew.player.toolCooldown 10

@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:prismarine_shard",
+      "components": {
+        "minecraft:custom_model_data": 41780
+      }
+    },
+    "title": "Colder Death",
+    "description": "Obtain a Soul Ice Shard",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "icewarrior:waking_up_enraged",
+  "criteria": {
+    "icew.pickup_soul_ice_shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:prismarine_shard",
+            "components": {
+              "minecraft:custom_data": {
+                "ice_warrior_item": "soul_ice_shard"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "icew.pickup_soul_ice_shard"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

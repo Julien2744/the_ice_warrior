@@ -1,0 +1,26 @@
+{
+  "criteria": {
+    "icew.use.soul_ice_tool": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:prismarine_shard",
+          "components": {
+            "minecraft:custom_data": {
+              "ice_warrior_item": "soul_ice_tool"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "icew.use.soul_ice_tool"
+    ]
+  ],
+  "rewards": {
+    "function": "icewarrior:soul_ice_tools/switch_tool"
+  },
+  "sends_telemetry_event": false
+}

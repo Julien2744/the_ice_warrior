@@ -4,6 +4,8 @@
 scoreboard objectives add icew.tickmarker dummy
 #0: false ; 1: true
 scoreboard objectives add icew.spawned dummy
+#player
+scoreboard objectives add icew.player.toolCooldown dummy
 #gamerule
 #0: false ; 1: true
 scoreboard objectives add icew.checkMobLoot dummy

@@ -1,0 +1,40 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:prismarine_shard",
+      "components": {
+        "minecraft:custom_model_data": 41782
+      }
+    },
+    "title": "4 in 1 Tool",
+    "description": "Craft a Soul Ice tool by dropping a Soul Ice Shard and any diamond tool on an ice block",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "icewarrior:colder_death",
+  "criteria": {
+    "icew.craft_soul_ice_tool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:prismarine_shard",
+            "components": {
+              "minecraft:custom_data": {
+                "ice_warrior_item": "soul_ice_tool"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "icew.craft_soul_ice_tool"
+    ]
+  ],
+  "sends_telemetry_event": false
+}
