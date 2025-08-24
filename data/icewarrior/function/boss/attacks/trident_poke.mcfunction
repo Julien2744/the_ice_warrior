@@ -1,11 +1,6 @@
-execute positioned ~ ~-0.75 ~ positioned ^ ^ ^1.5 if entity @n[tag=icew.target,distance=..2.25] run scoreboard players add @s icew.combo 1
-execute positioned ~ ~-0.75 ~ positioned ^ ^ ^1.5 unless entity @n[tag=icew.target,distance=..2.25] run scoreboard players set @s icew.combo 0
-
 playsound minecraft:item.trident.throw hostile @a[distance=..16] ~ ~ ~ 2 2
 
-execute on vehicle run data merge entity @s {HandItems:[{id:"minecraft:wooden_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_model_data":1}},{}],HandDropChances:[0.000F,0.085F]}
-execute on vehicle at @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] run execute positioned ~ ~-0.75 ~ run execute at @e[type=!#icewarrior:non_living,tag=!icew.immune,distance=..1.5] run damage @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.5] 10 icewarrior:ice_warrior_attack by @s
-execute on vehicle at @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^1 run execute at @e[type=!#icewarrior:non_living,tag=!icew.immune,distance=..1.5] run damage @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.5] 10 icewarrior:ice_warrior_attack by @s
-execute on vehicle at @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^2 run execute at @e[type=!#icewarrior:non_living,tag=!icew.immune,distance=..1.5] run damage @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.5] 10 icewarrior:ice_warrior_attack by @s
-execute on vehicle at @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^3 run execute at @e[type=!#icewarrior:non_living,tag=!icew.immune,distance=..1.5] run damage @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.5] 10 icewarrior:ice_warrior_attack by @s
+execute on vehicle at @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] positioned ~ ~-0.75 ~ run function icewarrior:boss/attacks/damage/trident_poke
+execute if entity @n[tag=icew.target,distance=..3.5] unless entity @n[tag=icew.target,distance=..3.5,nbt={HurtTime:0s}] run scoreboard players add @s icew.combo 1
+execute if entity @n[tag=icew.target,distance=..24,nbt={HurtTime:0s}] run scoreboard players set @s icew.combo 0
 execute on vehicle run data remove entity @s HandItems[0].id

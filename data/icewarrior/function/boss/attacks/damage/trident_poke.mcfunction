@@ -1,0 +1,6 @@
+data merge entity @s {HandItems:[{id:"minecraft:wooden_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_model_data":1}},{}],HandDropChances:[0.000F,0.085F]}
+
+execute at @e[type=!#icewarrior:non_living,tag=!icew.immune,distance=..1.5] run damage @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.5] 10 icewarrior:ice_warrior_attack by @s
+execute positioned ^ ^ ^1 run execute at @e[type=!#icewarrior:non_living,tag=!icew.immune,distance=..1.5] run damage @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.5] 10 icewarrior:ice_warrior_attack by @s
+execute positioned ^ ^ ^2 run execute at @e[type=!#icewarrior:non_living,tag=!icew.immune,distance=..1.5] run damage @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.5] 10 icewarrior:ice_warrior_attack by @s
+execute positioned ^ ^ ^3 run execute at @e[type=!#icewarrior:non_living,tag=!icew.immune,distance=..1.5] run damage @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.5] 10 icewarrior:ice_warrior_attack by @s

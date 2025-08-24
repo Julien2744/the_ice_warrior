@@ -1,0 +1,1 @@
+return run damage @n[tag=icew.target,distance=..1.9] 18 icewarrior:ice_warrior_attack by @s
