@@ -1,7 +1,4 @@
-#initialize scoreboard only once
-execute unless score #icew.load icew.loadScoreboard matches 1 if entity @p run function icewarrior:initialization/init_scoreboard
-
-#place warrior insid the ice room
+#place warrior inside the ice room
 execute if score #icew.global icew.tickmarker matches 1 run execute as @e[type=marker,tag=icew.summon_warrior] at @s run execute rotated 0 0 run function icewarrior:boss_summoner/replace_marker
 
 #ice room interaction
