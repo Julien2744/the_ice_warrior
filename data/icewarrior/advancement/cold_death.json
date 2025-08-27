@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:adventure/root",
+  "parent": "icewarrior:cold_map",
   "criteria": {
     "icew.cold_death": {
       "trigger": "minecraft:player_killed_entity",
@@ -30,7 +30,7 @@
     },
     "title": "Cold Death",
     "frame": "goal",
-    "hidden": false
+    "hidden": true
   },
   "requirements": [
     [

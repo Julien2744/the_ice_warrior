@@ -69,6 +69,8 @@ scoreboard players set #icew.load icew.scoreboardVersion 2
 #the next animated java rig doesn't have bugged animation
 execute unless score #icew.load icew.loadScoreboard matches 1 run execute positioned 0 0 0 run reload
 
+execute unless score #icew.load icew.loadScoreboard matches 1 run schedule function icewarrior:tentick 10t
+
 #end of initialisating
 scoreboard players set #icew.load icew.loadScoreboard 1
 
