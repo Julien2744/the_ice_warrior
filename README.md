@@ -5,7 +5,7 @@
 ### Minecraft datapack that add an ice themed boss
 
 > [!WARNING]
-> This datapack require a resourcepack [link](https://modrinth.com/datapack/the-ice-warrior/version/beta1-2_mc1.21.1)
+> This datapack require a resourcepack [link](https://modrinth.com/datapack/the-ice-warrior/version/r1.0_mc1.21.1)
 >
 > **Require the mod [launch-command](https://modrinth.com/mod/launch-command)**
 >
@@ -13,7 +13,7 @@
 
 All animations in this datapack where made using [Animated Java](https://animated-java.dev/)
 
-The `animated_java` files are not included due to how many there are (1100+ files), and because the files are 99% models and animations.
+The `animated_java` files are not included due to how many there are (1500+ files), and because the files are 99% models and animations.
 You can found them on the [modrinth](https://modrinth.com/datapack/the-ice-warrior) page where you can download the datapack
 
 ## Features
@@ -21,6 +21,9 @@ You can found them on the [modrinth](https://modrinth.com/datapack/the-ice-warri
 **This datapack has a config wich you can access it with `/function icewarrior:admin/_/config`**
 
 To find the boss, you will need to find the `ice_guard_tower` structure located in the `ice_spikes` biome.
+
+> [!NOTE]
+> You can craft a map that will show you the structure by dropping a `Woodland explorer map` inside a `powder_snow`
 
 When entering the tower you will see the ice warrior encased in ice. To release him you will need to use a lava bucket in order to melt the ice (right-click).
 
