@@ -18,7 +18,7 @@ tellraw @s [{"text":" "}]
 tellraw @s [{"text":" "}]
 
 #upper text
-tellraw @s [{"color":"#9FC0FA","text":"❄"},{"bold":true,"color":"aqua","text":" The Ice Warrior "},{"bold":false,"color":"#9FC0FA","text":"❄"},{"bold":false,"color":"dark_gray","text":" beta1-3 mc1.21.1"},{"bold":false,"color":"aqua","text":" config:"}]
+tellraw @s [{"color":"#9FC0FA","text":"❄"},{"bold":true,"color":"aqua","text":" The Ice Warrior "},{"bold":false,"color":"#9FC0FA","text":"❄"},{"bold":false,"color":"dark_gray","text":" r1.0 mc1.21.1"},{"bold":false,"color":"aqua","text":" config:"}]
 tellraw @s [{"text":" "}]
 
 #no_bossbar
