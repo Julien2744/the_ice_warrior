@@ -20,7 +20,7 @@ You can found them on the [modrinth](https://modrinth.com/datapack/the-ice-warri
 
 **This datapack has a config wich you can access it with `/function icewarrior:admin/_/config`**
 
-To find the boss, you will need to find the `ice_guard_tower` structure located in the `ice_spikes` biome.
+To find the boss, you will need to find the `ice_guard_tower` structure located in an `ice_spikes` biome.
 
 > [!NOTE]
 > You can craft a map that will show you the structure by dropping a `Woodland explorer map` inside a `powder_snow`
@@ -63,11 +63,11 @@ Because working with vanilla mob with datapack can be an absolute nightmare, all
 
 ## Other informations
 
-Because the boss use a stray has is hitbox/health, any mod that modify stray can affect the boss and ***might*** cause issues. Hoewer I already fixed this issue for some mod, if those allowed me to blacklist the mob from getting any modification.
+Because the boss use a stray as its hitbox/health, any mod that modify stray can affect the boss and ***might*** cause issues. Hoewer I already fixed this issue for some mod, if those allowed me to blacklist the mob from getting any modification.
 
-Also because the boss use a stray has his hitbox/health, he has some difficulty when attacking mob with wide hitbox.
+Also because the boss use a stray as its hitbox/health, he has some difficulty when attacking mob with wide hitbox.
 
 You can modify:
-- items can melt the boss ice in `data/icewarrior/tags/item/can_melt_ice_room.json`
+- items that can melt the boss ice in `data/icewarrior/tags/item/can_melt_ice_room.json`
 - mobs that aggro the boss in `data/icewarrior/tags/entity_type/aggro_boss.json`
 - entities that can be parried in `data/icewarrior/tags/entity_type/can_parry.json`
