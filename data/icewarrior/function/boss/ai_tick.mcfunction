@@ -1,17 +1,8 @@
-#check death
-execute unless entity @s[predicate=icewarrior:check_hitbox] if score @s icew.death matches 0 run function icewarrior:boss/death/begin_death
-
 #99% of target bug come here
 execute if entity @s[predicate=icewarrior:check_hitbox] run function icewarrior:boss/target_tick
 
 #check if the boss was hurt
 execute on vehicle if entity @s[nbt={HurtTime:9s}] at @s run function icewarrior:boss/hurt
-
-#during entrance, check if boss has stopped falling
-execute if score @s icew.entranceId matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/anim/stopped_falling
-
-#nerf the boss if hes in warm biome
-execute if biome ~ ~-1 ~ #snow_golem_melts run execute on vehicle if entity @s[nbt={active_effects:[{id:"minecraft:slowness"}]}] run effect give @s slowness 7 1
 
 #refresh boss health bar (excluded from hurt because of regen and not updated when the boss die)
 execute store result score @s icew.health run execute on vehicle run data get entity @s Health
@@ -35,7 +26,7 @@ execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown ma
 execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 if biome ~ ~-1 ~ #snow_golem_melts run execute unless predicate icewarrior:random_25 run scoreboard players remove @s icew.attCooldown 1
 execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1..2 run scoreboard players remove @s icew.attCooldown 1
 #boredom cooldown (make the boss use special ability if he just stand here and do nothing while having a target
-execute if entity @n[tag=icew.target,distance=..8] run execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -19..0 run execute if score @s icew.walking matches 0 on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run scoreboard players remove @s icew.attCooldown 1
+execute if entity @e[tag=icew.target,distance=..8,limit=1] run execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -19..0 run execute if score @s icew.walking matches 0 on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run scoreboard players remove @s icew.attCooldown 1
 
 #combo detector
 execute if score @s icew.phase matches 0 if score @s icew.combo = #icew.config icew.config.phase1_combo run function icewarrior:boss/effects/phase0_combo_reached
@@ -43,18 +34,13 @@ execute if score @s icew.phase matches 1..2 if score @s icew.combo = #icew.confi
 execute if score @s icew.phase matches 1..2 if score @s icew.combo matches 999.. run execute on vehicle at @s run particle snowflake ~ ~ ~ 0.5 0.0 0.5 0 1 normal
 
 #walking anim motor
-execute if score @s icew.attCooldown matches -20..0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_motor
+execute if score @s icew.attCooldown matches -20..0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run function icewarrior:boss/walking_motor
 #walking anim (phase 0)
-execute if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking
+execute if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run function icewarrior:boss/walking
 #walking anim (phase 1&2)
-execute if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1..2 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_p1
+execute if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1..2 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run function icewarrior:boss/walking_p1
 #walking anim when attacking
-execute unless score @s icew.attCooldown matches -20..0 if score @s icew.forceWalk matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute as @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] at @s run function icewarrior:boss/walking_forced
+execute unless score @s icew.attCooldown matches -20..0 if score @s icew.forceWalk matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run function icewarrior:boss/walking_forced
 
 #look at target
 execute if score @s icew.lookTarget matches 1 if entity @n[tag=icew.target,distance=..16] run execute facing entity @n[tag=icew.target,distance=..16] eyes run tp @s ~ ~ ~ ~ 0
-#use the rotation of the mob-hitbox if no target
-execute if score @s icew.lookTarget matches 1 unless entity @n[tag=icew.target,distance=..16] run execute positioned ~ ~-1 ~ rotated as @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..1] run tp @s ~ ~ ~ ~ 0
-
-#phase 2 regen if there no target
-execute if score @s icew.phase matches 1 if entity @s[tag=!icew.enraged] unless entity @n[tag=icew.target,distance=..64] if score @s icew.health_pour matches 1..100 if score @s icew.attCooldown matches 0 run function icewarrior:boss/effects/phase1_regen
