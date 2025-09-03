@@ -38,7 +38,7 @@ Or you can summon the boss encased in ice with `/function icewarrior:boss_summon
 - everythime you get hit his combo counter will go up, dodging an attack will reset it to 0.
 
 **First phase:** The boss will attack using his ice claw
-- fast attacks and speed
+- fast attacks
 - only damage the target
 - can parry projectile (increase combo counter)
 - will use his ultimate attack at 7 combos
