@@ -1,2 +1,2 @@
-execute positioned ~ ~1.5 ~ run damage @n[tag=icew.target,distance=..1.25] 12 icewarrior:ice_warrior_attack by @s
-execute positioned ~ ~2.5 ~ if entity @n[tag=icew.target,distance=..1.25,nbt={HurtTime:0s}] run damage @n[tag=icew.target,distance=..1.25] 12 icewarrior:ice_warrior_attack by @s
+execute positioned ~ ~1.5 ~ run damage @n[tag=icew.target,distance=..1.25] 10 icewarrior:ice_warrior_attack by @s
+execute positioned ~ ~2.5 ~ if entity @n[tag=icew.target,distance=..1.25,nbt={HurtTime:0s}] run damage @n[tag=icew.target,distance=..1.25] 10 icewarrior:ice_warrior_attack by @s
