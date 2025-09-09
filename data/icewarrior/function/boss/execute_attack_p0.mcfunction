@@ -36,5 +36,17 @@ execute if score @s icew.abilityID matches 6 run function animated_java:ice_warr
 execute if score @s icew.abilityID matches 7 run scoreboard players set @s icew.attCooldown 47
 execute if score @s icew.abilityID matches 7 run function animated_java:ice_warrior/animations/claw_ultimate/play
 
+#launch to target
+execute if score @s icew.abilityID matches 8 run scoreboard players set @s icew.attCooldown 4
+execute if score @s icew.abilityID matches 8 run function icewarrior:boss/effects/launch_to_target
+
+#above_slash
+execute if score @s icew.abilityID matches 9 run scoreboard players set @s icew.attCooldown 24
+execute if score @s icew.abilityID matches 9 run function animated_java:ice_warrior/animations/above_slash/play
+
+#downward_slash
+execute if score @s icew.abilityID matches 10 run scoreboard players set @s icew.attCooldown 36
+execute if score @s icew.abilityID matches 10 run function animated_java:ice_warrior/animations/downward_slash/play
+
 #keep at end of file
 scoreboard players set @s icew.abilityID 0

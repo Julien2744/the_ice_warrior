@@ -38,5 +38,4 @@ execute if score @s icew.attCooldown matches -20..0 unless score @s icew.combo m
 execute if score @s icew.attCooldown matches -20..0 unless score @s icew.combo matches 999.. run execute positioned ~ ~-0.75 ~ if block ^ ^ ^1 #minecraft:air positioned ^ ^ ^8.25 run execute if entity @e[tag=icew.target,distance=..1.5,limit=1] run execute if predicate icewarrior:random_25 run function icewarrior:boss/execute_attack_p1 {ID:5}
 
 #bored attack
-execute if score @s icew.attCooldown matches -20 run function icewarrior:boss/effects/launch_to_target
-execute if score @s icew.attCooldown matches -20 run scoreboard players set @s icew.attCooldown 2
+execute if score @s icew.attCooldown matches -20 run function icewarrior:boss/bored_attack

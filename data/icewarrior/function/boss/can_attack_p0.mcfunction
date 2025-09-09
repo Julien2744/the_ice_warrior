@@ -9,7 +9,7 @@ execute if score @s icew.combo matches 0 if data entity @n[type=item_display,tag
 #parry
 execute if score @s icew.attCooldown matches -20..0 run execute positioned ~ ~-0.75 ~ positioned ^ ^ ^0.5 run execute if entity @e[type=#icewarrior:can_parry,dx=0.6,dy=1.75,dz=0.5,tag=!icew.parry,nbt=!{inGround:1b},limit=1] run function icewarrior:boss/execute_attack_p0 {ID:1}
 
-#regular_souble_slash
+#regular_double_slash
 execute if score @s icew.attCooldown matches -20..0 run execute positioned ~ ~-1.5 ~ positioned ^ ^ ^0.8 run execute if entity @e[tag=icew.target,distance=..1.75,limit=1] run execute if predicate icewarrior:random_30 run function icewarrior:boss/execute_attack_p0 {ID:2}
 
 #high_slash
@@ -27,5 +27,4 @@ execute if score @s icew.attCooldown matches -20..0 run execute positioned ~ ~-0
 execute if score @s icew.attCooldown matches -20..0 run execute positioned ~ ~-1.5 ~ positioned ^ ^ ^0.8 run execute if entity @e[tag=icew.target,distance=..1.75,limit=1] run execute if predicate icewarrior:random_25 run function icewarrior:boss/execute_attack_p0 {ID:6}
 
 #bored attack
-execute if score @s icew.attCooldown matches -20 run function icewarrior:boss/effects/launch_to_target
-execute if score @s icew.attCooldown matches -20 run scoreboard players set @s icew.attCooldown 4
+execute if score @s icew.attCooldown matches -20 run function icewarrior:boss/bored_attack

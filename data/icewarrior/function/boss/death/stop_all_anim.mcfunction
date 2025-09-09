@@ -23,3 +23,7 @@ execute if entity @s[tag=aj.ice_warrior.animation.switch_phase2.playing] run fun
 execute if entity @s[tag=aj.ice_warrior.animation.stopped_falling_phase2.playing] run function animated_java:ice_warrior/animations/stopped_falling_phase2/stop
 execute if entity @s[tag=aj.ice_warrior.animation.trident_slash_p2.playing] run function animated_java:ice_warrior/animations/trident_slash_p2/stop
 execute if entity @s[tag=aj.ice_warrior.animation.trident_crit.playing] run function animated_java:ice_warrior/animations/trident_crit/stop
+execute if entity @s[tag=aj.ice_warrior.animation.above_slash.playing] run function animated_java:ice_warrior/animations/above_slash/stop
+execute if entity @s[tag=aj.ice_warrior.animation.downward_slash.playing] run function animated_java:ice_warrior/animations/downward_slash/stop
+execute if entity @s[tag=aj.ice_warrior.animation.trident_above.playing] run function animated_java:ice_warrior/animations/trident_above/stop
+execute if entity @s[tag=aj.ice_warrior.animation.trident_downward.playing] run function animated_java:ice_warrior/animations/trident_downward/stop
