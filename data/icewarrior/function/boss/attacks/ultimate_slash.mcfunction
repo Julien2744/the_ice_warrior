@@ -9,7 +9,7 @@ execute positioned ~ ~-1.5 ~ positioned ^ ^ ^0.8 run execute if entity @n[tag=ic
 execute positioned ~ ~-1.5 ~ positioned ^ ^ ^0.8 run execute unless entity @n[tag=icew.target,distance=..2] run function icewarrior:boss/effects/miss_ult_slash
 
 execute on vehicle run data merge entity @s {HandItems:[{id:"minecraft:wooden_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_model_data":1}},{}],HandDropChances:[0.000F,0.085F]}
-execute on vehicle at @n[type=item_display,tag=aj.ice_warrior.root,distance=..4] run execute positioned ~ ~-1.5 ~ positioned ^ ^ ^0.8 if entity @n[tag=icew.target,distance=..2] run damage @n[tag=icew.target,distance=..2] 24 icewarrior:ice_warrior_attack by @s
+execute on vehicle run execute positioned ~ ~-1.5 ~ positioned ^ ^ ^0.8 if entity @n[tag=icew.target,distance=..2] run damage @n[tag=icew.target,distance=..2] 24 icewarrior:ice_warrior_attack by @s
 execute on vehicle run data remove entity @s HandItems[0].id
 
 data modify entity @n[type=item_display,tag=aj.ice_warrior.bone.right_claw,distance=..4] item.components."minecraft:enchantment_glint_override" set value 0b

@@ -18,7 +18,7 @@ execute if score @s icew.abilityID matches 2 run scoreboard players set @s icew.
 execute if score @s icew.abilityID matches 2 run function animated_java:ice_warrior/animations/trident_long/play
 
 #trdient_smash
-execute if score @s icew.abilityID matches 3 run scoreboard players set @s icew.attCooldown 53
+execute if score @s icew.abilityID matches 3 run scoreboard players set @s icew.attCooldown 54
 execute if score @s icew.abilityID matches 3 run function animated_java:ice_warrior/animations/trident_smash/play
 
 #trdient_upper
