@@ -1,0 +1,6 @@
+{
+  "message_id": "icew.ice_spike_attack",
+  "exhaustion": 0.25,
+  "scaling": "never",
+  "effects": "freezing"
+}

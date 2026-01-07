@@ -1,0 +1,1 @@
+$damage @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.25] $(dmg) icewarrior:ice_spike_attack_master

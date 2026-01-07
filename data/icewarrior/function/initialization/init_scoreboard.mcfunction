@@ -52,18 +52,23 @@ scoreboard objectives add icew.motion.z dummy
 #use for math
 scoreboard objectives add icew.math.mem dummy
 scoreboard objectives add icew.math.div dummy
+##ice spike
+scoreboard objectives add icew.iceRingDuration dummy
 
+## ------------------------------- ##
 
-## initialize (only for global) ##
+#initialize (global)
 #boss_summoner
 scoreboard players set #icew.global icew.tickmarker 1
 
-#initialize (only for config)
+#initialize (config)
 scoreboard players set #icew.config icew.config.bossbar 0
 scoreboard players set #icew.config icew.config.can_change_phase 1
 scoreboard players set #icew.config icew.config.change_phase 50
 scoreboard players set #icew.config icew.config.phase1_combo 7
 scoreboard players set #icew.config icew.config.phase2_combo 5
+
+## ------------------------------- ##
 
 ## scoreboard version ##
 scoreboard players set #icew.load icew.scoreboardVersion 3

@@ -1,6 +1,8 @@
 {
     "values": [
         "icewarrior:aggro_boss",
-        "icewarrior:ice_warrior_attack"
+        "icewarrior:ice_warrior_attack",
+        "icewarrior:ice_spike_attack",
+        "icewarrior:ice_spike_attack_master"
     ]
 }
