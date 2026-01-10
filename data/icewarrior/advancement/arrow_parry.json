@@ -21,7 +21,7 @@
     }
   },
   "display": {
-    "description": "Get hit by your projectile that was parried by an Ice Warrior",
+    "description": "Get hit by your own projectile that was parried by an Ice Warrior",
     "icon": {
       "count": 1,
       "id": "minecraft:arrow"
