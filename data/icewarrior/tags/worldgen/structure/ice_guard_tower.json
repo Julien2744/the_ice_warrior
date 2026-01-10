@@ -1,7 +1,6 @@
 {
     "values": [
-      {
-        "id": "icewarrior:ice_gard_tower"
-      }
+      "icewarrior:ice_gard_tower",
+      "icewarrior:ice_gard_tower_low"
     ]
 }
