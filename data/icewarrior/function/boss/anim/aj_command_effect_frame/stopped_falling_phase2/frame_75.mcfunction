@@ -1,0 +1,1 @@
+playsound minecraft:block.sculk.spread hostile @a[distance=..16] ~ ~ ~ 4 2

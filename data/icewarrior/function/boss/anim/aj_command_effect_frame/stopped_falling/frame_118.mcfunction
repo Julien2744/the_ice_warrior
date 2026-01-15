@@ -1,0 +1,1 @@
+playsound minecraft:entity.player.attack.sweep hostile @a[distance=..8] ~ ~ ~ 2 1

@@ -1,0 +1,1 @@
+function icewarrior:boss/attacks/trident_upper_ultimate

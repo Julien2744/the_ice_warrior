@@ -1,0 +1,1 @@
+function icewarrior:boss/attacks/ultimate_slash

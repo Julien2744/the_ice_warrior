@@ -1,0 +1,1 @@
+execute on vehicle if entity @n[tag=icew.target,distance=..5] positioned as @n[tag=icew.target,distance=..5] rotated as @n[tag=icew.target,distance=..5] rotated ~ 0 if block ~ ~1 ~ #minecraft:air run tp @s ^ ^ ^1

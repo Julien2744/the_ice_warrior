@@ -1,0 +1,1 @@
+function icewarrior:boss/attacks/regular_slash

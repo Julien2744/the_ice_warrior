@@ -1,0 +1,1 @@
+function icewarrior:boss/attacks/high_slash

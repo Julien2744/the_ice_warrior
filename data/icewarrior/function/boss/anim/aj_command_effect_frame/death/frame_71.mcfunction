@@ -1,0 +1,1 @@
+function icewarrior:boss/death/end_death

@@ -1,0 +1,1 @@
+playsound minecraft:entity.piglin.ambient hostile @a[distance=..8] ~ ~ ~ 2 0

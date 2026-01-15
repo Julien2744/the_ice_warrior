@@ -1,0 +1,1 @@
+function icewarrior:boss/effects/launch_to_target

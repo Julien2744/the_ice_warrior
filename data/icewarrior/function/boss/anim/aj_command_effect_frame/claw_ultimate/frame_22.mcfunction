@@ -1,0 +1,1 @@
+execute on vehicle if entity @n[tag=icew.target,distance=..16] positioned as @n[tag=icew.target,distance=..16] rotated as @n[tag=icew.target,distance=..16] rotated ~ 0 run tp @s ^ ^ ^1
