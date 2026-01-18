@@ -7,8 +7,9 @@ execute on vehicle if entity @s[nbt={HurtTime:9s}] at @s run function icewarrior
 #refresh boss health bar (excluded from hurt because of regen and not updated when the boss die)
 execute store result score @s icew.health run execute on vehicle run data get entity @s Health
 execute if score #icew.config icew.config.bossbar matches 0 run execute store result bossbar icew_bossbar value run scoreboard players get @s icew.health
-execute if score #icew.config icew.config.bossbar matches 0 if entity @s[tag=!icew.broken_armor] run bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" - ","color":"gray"},{"score":{"name":"@s","objective":"icew.health"},"color":"red"},{"text":"❤","color":"dark_red"}]
+execute if score #icew.config icew.config.bossbar matches 0 if entity @s[tag=!icew.broken_armor,tag=!icew.master] run bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" - ","color":"gray"},{"score":{"name":"@s","objective":"icew.health"},"color":"red"},{"text":"❤","color":"dark_red"}]
 execute if score #icew.config icew.config.bossbar matches 0 if entity @s[tag=icew.broken_armor] run bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" - ","color":"gray"},{"score":{"name":"@s","objective":"icew.health"},"color":"red"},{"text":"💔","color":"dark_red"}]
+execute if score #icew.config icew.config.bossbar matches 0 if entity @s[tag=icew.master] run bossbar set icew_bossbar name [{"text":"The Ice Warrior","color":"#9FC0FA"},{"text":" - ","color":"gray"},{"score":{"name":"@s","objective":"icew.health"},"color":"#9FC0FA"},{"text":"❄"}]
 
 #change from phase0 to phase1
 execute unless score @s icew.health_pour matches 0 if score @s icew.canAttack matches 1 if score #icew.config icew.config.can_change_phase matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 if score @s icew.health_pour <= #icew.config icew.config.change_phase run function icewarrior:boss/effects/change_phase

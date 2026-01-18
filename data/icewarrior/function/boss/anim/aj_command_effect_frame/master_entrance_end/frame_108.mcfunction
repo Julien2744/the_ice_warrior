@@ -1,0 +1,1 @@
+particle minecraft:flash ~ ~-1 ~
