@@ -1,0 +1,1 @@
+execute positioned ^ ^ ^1.5 run function icewarrior:boss/attacks/master_trident_slash

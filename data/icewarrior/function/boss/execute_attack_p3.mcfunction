@@ -1,0 +1,27 @@
+# The reason this exist is to prevent the delay when calling the animation function and the abilitiCooldown
+
+$scoreboard players set @s icew.abilityID $(ID)
+
+#$say test p3 - $(ID)
+#execute as @n[type=item_display,tag=aj.ice_warrior.root] at @s run function icewarrior:boss/execute_attack_p3 {ID:}
+
+function icewarrior:boss/stop_walking
+
+#master_trident_slash
+execute if score @s icew.abilityID matches 1 run scoreboard players set @s icew.attCooldown 70
+execute if score @s icew.abilityID matches 1 run scoreboard players set @s icew.forceWalk 1
+execute if score @s icew.abilityID matches 1 run function animated_java:ice_warrior/animations/master_trident_slash/play
+
+#master_trident_slash_poke
+execute if score @s icew.abilityID matches 2 run scoreboard players set @s icew.attCooldown 45
+execute if score @s icew.abilityID matches 2 run scoreboard players set @s icew.forceWalk 0
+execute if score @s icew.abilityID matches 2 run function animated_java:ice_warrior/animations/master_trident_slash/stop
+execute if score @s icew.abilityID matches 2 run function animated_java:ice_warrior/animations/master_trident_slash_poke/play
+
+#master_trident_slash_mace
+execute if score @s icew.abilityID matches 3 run scoreboard players set @s icew.attCooldown 60
+execute if score @s icew.abilityID matches 3 run function animated_java:ice_warrior/animations/master_trident_slash/stop
+execute if score @s icew.abilityID matches 3 run function animated_java:ice_warrior/animations/master_trident_slash_mace/play
+
+#keep at end of file
+scoreboard players set @s icew.abilityID 0
