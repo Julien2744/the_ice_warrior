@@ -1,3 +1,4 @@
+#remove "icew.target" tag if the attacker has the "icew.immune" tag
 execute if entity @e[tag=icew.target,tag=icew.immune,distance=..128,limit=1] run tag @e[tag=icew.target,tag=icew.immune,distance=..128,limit=1] remove icew.target
 
 execute on attacker unless entity @s[type=bat,tag=icew.bait] run playsound entity.player.hurt hostile @a[distance=..16] ~ ~ ~ 2 1
@@ -10,3 +11,9 @@ execute unless entity @s[nbt={active_effects:[{id:"minecraft:invisibility"}]}] r
 
 #5% to change the target if hes too far away
 execute if entity @n[tag=icew.target,distance=24..128] run execute if predicate icewarrior:random_5 on attacker if entity @s[tag=!icew.target,tag=!icew.immune] run function icewarrior:set_target
+
+#master_parry
+execute on passengers if entity @s[tag=icew.master_parry] if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/attacks/master_parry
+
+#master_will_parry
+execute on passengers if entity @s[tag=!icew.will_parry,tag=!icew.master_parry] if entity @n[tag=icew.target,distance=..128] run execute if predicate icewarrior:random_15 run tag @s add icew.will_parry
