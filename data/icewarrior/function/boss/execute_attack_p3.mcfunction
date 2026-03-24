@@ -24,7 +24,7 @@ execute if score @s icew.abilityID matches 3 run function animated_java:ice_warr
 execute if score @s icew.abilityID matches 3 run function animated_java:ice_warrior/animations/master_trident_slash_mace/play
 
 #master_parry
-execute if score @s icew.abilityID matches 4 run scoreboard players set @s icew.attCooldown 30
+execute if score @s icew.abilityID matches 4 run scoreboard players set @s icew.attCooldown 35
 execute if score @s icew.abilityID matches 4 run tag @s remove icew.will_parry
 execute if score @s icew.abilityID matches 4 run function animated_java:ice_warrior/animations/master_parry/play
 

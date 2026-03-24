@@ -13,7 +13,7 @@ execute unless entity @s[nbt={active_effects:[{id:"minecraft:invisibility"}]}] r
 execute if entity @n[tag=icew.target,distance=24..128] run execute if predicate icewarrior:random_5 on attacker if entity @s[tag=!icew.target,tag=!icew.immune] run function icewarrior:set_target
 
 #master_parry
-execute on passengers if entity @s[tag=icew.master_parry] if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/attacks/master_parry
+execute on passengers if entity @s[tag=icew.master_parry,tag=!aj.ice_warrior.animation.master_parry_slash.playing] if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/effects/master_parry
 
 #master_will_parry
-execute on passengers if entity @s[tag=!icew.will_parry,tag=!icew.master_parry] if entity @n[tag=icew.target,distance=..128] run execute if predicate icewarrior:random_15 run tag @s add icew.will_parry
+execute on passengers if entity @s[tag=!icew.will_parry,tag=!icew.master_parry] if entity @n[tag=icew.target,distance=..128] run execute if predicate icewarrior:random_15 run function icewarrior:boss/effects/will_parry_indicator
