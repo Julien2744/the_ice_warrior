@@ -3,4 +3,5 @@ data merge entity @s {HandItems:[{id:"minecraft:wooden_axe",count:1,components:{
 effect give @n[type=!#icewarrior:non_living,type=!minecraft:player,tag=!icew.immune,distance=..2.5] slowness 3 0 false
 effect give @a[gamemode=!creative,gamemode=!spectator,tag=!icew.immune,distance=..2.5] slowness 3 0 false
 
-return run execute at @e[type=!#icewarrior:non_living,tag=!icew.immune,distance=..2.5] run damage @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.5] 14 icewarrior:ice_warrior_attack by @s
+execute at @e[type=!#icewarrior:non_living,tag=!icew.immune,tag=!icew.target,distance=..2.5] run damage @n[type=!#icewarrior:non_living,tag=!icew.immune,tag=!icew.target,distance=..0.5] 14 icewarrior:ice_warrior_attack by @s
+return run damage @n[type=!#icewarrior:non_living,tag=!icew.immune,tag=icew.target,distance=..2.5] 14 icewarrior:ice_warrior_attack by @s
