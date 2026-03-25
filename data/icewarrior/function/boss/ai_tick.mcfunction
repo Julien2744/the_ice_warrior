@@ -17,12 +17,14 @@ execute unless score @s icew.health_pour matches 0 if score @s icew.canAttack ma
 execute unless score @s icew.health_pour matches 0 if entity @s[tag=icew.enraged] if score @s icew.canAttack matches 1 if score #icew.config icew.config.can_change_phase matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1 if score @s icew.health_pour <= #icew.config icew.config.change_phase run function icewarrior:boss/effects/change_to_phase2
 
 #attack
+#special
+execute if entity @s[tag=icew.launchToTarget] if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 3 run function icewarrior:boss/attacks/master_upper_dash_check
 #phase 0
 execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 if entity @n[tag=icew.target,distance=..24] run execute positioned ~ ~-1.5 ~ run function icewarrior:boss/can_attack_p0
 #phase 1 & 2
 execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1..2 if entity @n[tag=icew.target,distance=..24] run execute positioned ~ ~-1.5 ~ run function icewarrior:boss/can_attack_p1
 #phase 3 (master)
-execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 3 if entity @n[tag=icew.target,distance=..24] run execute positioned ~ ~-1.5 ~ run function icewarrior:boss/can_attack_p3
+execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 3 if entity @n[tag=icew.target,distance=..24] if entity @s[tag=!icew.launchToTarget] run execute positioned ~ ~-1.5 ~ run function icewarrior:boss/can_attack_p3
 
 #cooldown
 execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 unless biome ~ ~-1 ~ #snow_golem_melts run scoreboard players remove @s icew.attCooldown 1
