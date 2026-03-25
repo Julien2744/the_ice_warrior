@@ -10,6 +10,7 @@ scoreboard players set @s icew.combo 0
 function animated_java:ice_warrior/variants/broken_armor/apply
 particle block{block_state:"minecraft:packed_ice"} ~ ~-0.5 ~ 0.25 0.25 0.25 0 6 normal
 tag @s add icew.broken_armor
+execute on vehicle run tag @s add icew.v_broken_armor
 
 playsound minecraft:entity.zombie.attack_wooden_door hostile @a[distance=..16] ~ ~ ~ 4 2
 playsound minecraft:block.glass.break hostile @a[distance=..16] ~ ~ ~ 4 0
