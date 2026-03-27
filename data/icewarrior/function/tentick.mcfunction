@@ -1,5 +1,8 @@
 ## this is executed every 10t
 
+#place warrior inside the ice room
+execute if score #icew.global icew.tickmarker matches 1 run execute as @e[type=marker,tag=icew.summon_warrior] at @s run execute rotated 0 0 run function icewarrior:boss_summoner/replace_marker
+
 #boss ai 10tick
 execute if score #icew.global icew.spawned matches 1 run execute as @e[type=item_display,tag=aj.ice_warrior.root] at @s run function icewarrior:boss/ai_10tick
 
@@ -12,4 +15,5 @@ execute as @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{ice_warr
 #crafting map to find the ice tower
 execute as @e[type=item,nbt={Item:{components:{"minecraft:item_name":'{"translate":"filled_map.mansion"}'}}}] at @s if loaded ~ ~ ~ if block ~ ~ ~ minecraft:powder_snow run function icewarrior:create_map
 
+#keep at end
 schedule function icewarrior:tentick 10t

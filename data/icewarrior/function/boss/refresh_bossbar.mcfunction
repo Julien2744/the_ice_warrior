@@ -1,0 +1,4 @@
+execute store result bossbar icew_bossbar value run scoreboard players get @s icew.health
+execute if entity @s[tag=!icew.broken_armor,tag=!icew.master] run bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" - ","color":"gray"},{"score":{"name":"@s","objective":"icew.health"},"color":"red"},{"text":"❤","color":"dark_red"}]
+execute if entity @s[tag=icew.broken_armor] run bossbar set icew_bossbar name [{"text":"Ice Warrior","color":"aqua"},{"text":" - ","color":"gray"},{"score":{"name":"@s","objective":"icew.health"},"color":"red"},{"text":"💔","color":"dark_red"}]
+execute if entity @s[tag=icew.master] run bossbar set icew_bossbar name [{"text":"The Ice Warrior","color":"#9FC0FA"},{"text":" - ","color":"gray"},{"score":{"name":"@s","objective":"icew.health"},"color":"#9FC0FA"},{"text":"❄"}]
