@@ -4,5 +4,7 @@ execute on vehicle run data merge entity @s {HandItems:[{id:"minecraft:wooden_ax
 execute on vehicle positioned ~ ~-1.5 ~ positioned ^ ^ ^1.5 run execute at @e[type=!#icewarrior:non_living,tag=!icew.immune,distance=..2.5] run damage @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.5] 16 icewarrior:ice_warrior_attack by @s
 execute on vehicle run data remove entity @s HandItems[0].id
 
+execute if score @s icew.phase matches 3 run scoreboard players remove @s icew.combo 2
+
 execute positioned ~ ~-1.5 ~ positioned ^ ^ ^1.5 run launch @e[type=!#icewarrior:non_living,tag=!icew.immune,distance=..2.5] setMotion 0 1.25 0
 execute on vehicle run launch @s setMotion 0 1.25 0
