@@ -37,5 +37,9 @@ execute if score @s icew.abilityID matches 6 run scoreboard players set @s icew.
 execute if score @s icew.abilityID matches 6 run tag @s remove icew.launchToTarget
 execute if score @s icew.abilityID matches 6 run function animated_java:ice_warrior/animations/master_upper_dash_end/play
 
+#master_trident_crit/
+execute if score @s icew.abilityID matches 7 run scoreboard players set @s icew.attCooldown 86
+execute if score @s icew.abilityID matches 7 run function animated_java:ice_warrior/animations/master_trident_crit/play
+
 #keep at end of file
 scoreboard players set @s icew.abilityID 0

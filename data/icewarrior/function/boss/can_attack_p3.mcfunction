@@ -10,5 +10,8 @@ execute if score @s icew.attCooldown matches -20..0 unless score @s icew.combo m
 #master_upper_dash
 execute if score @s icew.attCooldown matches -20..0 unless score @s icew.combo matches 999.. run execute if entity @n[tag=icew.target,distance=6..32] if predicate icewarrior:random_15 run function icewarrior:boss/execute_attack_p3 {ID:5}
 
+#master_trident_crit
+execute if score @s icew.attCooldown matches -20..0 unless score @s icew.combo matches 999.. run execute if entity @n[tag=icew.target,distance=16..42] if predicate icewarrior:random_5 run function icewarrior:boss/execute_attack_p3 {ID:7}
+
 #bored attack
 execute if score @s icew.attCooldown matches -20 run execute positioned as @s run function icewarrior:boss/bored_attack

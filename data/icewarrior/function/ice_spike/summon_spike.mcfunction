@@ -14,7 +14,10 @@ execute as @e[type=block_display,tag=icew.ice_spike,tag=icew.immune,distance=..3
 #if the tag is "icew.iceMasterSummon" the spike will do %damage, otherwise it will deal 10dmg
 execute if entity @s[tag=icew.iceMasterSummon] run tag @e[type=block_display,tag=icew.ice_spike,tag=icew.immune,distance=..3] add icew.iceMasterSummon
 
-#cooldown for when do destroy the ring and the spikes
+#cooldown for when to destroy the ring and the spikes
+#@s is the spikes
 scoreboard players add @e[type=block_display,tag=icew.ice_spike,tag=icew.immune,distance=..3] icew.iceRingDuration 50
+
+#@s is the ring
 execute if entity @n[type=block_display,tag=icew.ice_spike,tag=icew.immune,distance=..3] run scoreboard players add @s icew.iceRingDuration 55
 execute unless entity @n[type=block_display,tag=icew.ice_spike,tag=icew.immune,distance=..3] run scoreboard players add @s icew.iceRingDuration 20
