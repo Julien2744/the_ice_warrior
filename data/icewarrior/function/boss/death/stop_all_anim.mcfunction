@@ -33,4 +33,6 @@ execute if entity @s[tag=aj.ice_warrior.animation.master_trident_slash.playing] 
 execute if entity @s[tag=aj.ice_warrior.animation.master_trident_slash_poke.playing] run function animated_java:ice_warrior/animations/master_trident_slash_poke/stop
 execute if entity @s[tag=aj.ice_warrior.animation.master_trident_slash_mace.playing] run function animated_java:ice_warrior/animations/master_trident_slash_mace/stop
 execute if entity @s[tag=aj.ice_warrior.animation.master_parry.playing] run function animated_java:ice_warrior/animations/master_parry/stop
-execute if entity @s[tag=aj.ice_warrior.animation.master_parry_slash.playing] run function animated_java:ice_warrior/animations/master_parry_slash/stop
+execute if entity @s[tag=aj.ice_warrior.animation.master_upper_dash.playing] run function animated_java:ice_warrior/animations/master_upper_dash/stop
+execute if entity @s[tag=aj.ice_warrior.animation.master_upper_dash.playing] run function animated_java:ice_warrior/animations/master_upper_dash_end/stop
+execute if entity @s[tag=aj.ice_warrior.animation.master_trident_crit.playing] run function animated_java:ice_warrior/animations/master_trident_crit/stop

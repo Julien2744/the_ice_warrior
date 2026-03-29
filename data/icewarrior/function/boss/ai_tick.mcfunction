@@ -35,4 +35,4 @@ execute if score @s icew.attCooldown matches -20..0 if score @s icew.phase match
 execute unless score @s icew.attCooldown matches -20..0 if score @s icew.forceWalk matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run function icewarrior:boss/walking_forced
 
 #look at target
-execute if score @s icew.lookTarget matches 1 if entity @n[tag=icew.target,distance=..16] run execute facing entity @n[tag=icew.target,distance=..16] eyes run tp @s ~ ~ ~ ~ 0
+execute if score @s icew.lookTarget matches 1 if entity @n[tag=icew.target,distance=..24] run execute facing entity @n[tag=icew.target,distance=..24] eyes run tp @s ~ ~ ~ ~ 0
