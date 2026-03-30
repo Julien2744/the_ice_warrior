@@ -14,7 +14,7 @@ scoreboard objectives add icew.checkGriefing dummy
 ##config
 #no_bossbar #0: false (off) ; 1: true (on)
 scoreboard objectives add icew.config.bossbar dummy
-#no_bossbar #0: false ; 1: true
+#can_change_phase false (off) ; 1: true (on)
 scoreboard objectives add icew.config.can_change_phase dummy
 #take any number between 1 and 100 (inclusive)
 scoreboard objectives add icew.config.change_phase dummy
@@ -22,6 +22,8 @@ scoreboard objectives add icew.config.change_phase dummy
 scoreboard objectives add icew.config.phase1_combo dummy
 #take any positive number that smaller than 999
 scoreboard objectives add icew.config.phase2_combo dummy
+#boss_regen #0: false (off) ; 1: true (on)
+scoreboard objectives add icew.config.boss_regen dummy
 ##other
 #check if the dependency is installed #0: false ; 1: true
 scoreboard objectives add icew.dependency dummy
@@ -69,6 +71,7 @@ scoreboard players set #icew.config icew.config.can_change_phase 1
 scoreboard players set #icew.config icew.config.change_phase 50
 scoreboard players set #icew.config icew.config.phase1_combo 7
 scoreboard players set #icew.config icew.config.phase2_combo 5
+scoreboard players set #icew.config icew.config.boss_regen 1
 
 ## ------------------------------- ##
 

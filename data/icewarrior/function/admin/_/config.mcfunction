@@ -42,3 +42,8 @@ tellraw @s [{"text":" "}]
 #set_phase2_max_combo
 tellraw @s [{"color":"gray","text":" - phase 2 max combo: "},{"clickEvent":{"action":"suggest_command","value":"/function icewarrior:admin/config/phase2_combo {value:INSERT_VALUE_HERE}"},"color":"#3061FF","score":{"name":"#icew.config","objective":"icew.config.phase2_combo"}}]
 tellraw @s [{"text":" "}]
+
+#boss_regen
+execute if score #icew.config icew.config.boss_regen matches 0 run tellraw @s [{"color":"gray","text":" - boss regen: "},{"color":"dark_gray","text":"["},{"bold":true,"clickEvent":{"action":"run_command","value":"/function icewarrior:admin/config/boss_regen {state:1}"},"color":"red","text":"off"},{"color":"dark_gray","text":"]"}]
+execute if score #icew.config icew.config.boss_regen matches 1 run tellraw @s [{"color":"gray","text":" - boss regen: "},{"color":"dark_gray","text":"["},{"bold":true,"clickEvent":{"action":"run_command","value":"/function icewarrior:admin/config/boss_regen {state:0}"},"color":"green","text":"on"},{"color":"dark_gray","text":"]"}]
+tellraw @s [{"text":" "}]
