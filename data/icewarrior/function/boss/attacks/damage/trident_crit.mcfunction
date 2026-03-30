@@ -8,3 +8,6 @@ execute positioned ^ ^ ^1.5 at @e[type=!#icewarrior:non_living,tag=!icew.immune,
 
 execute positioned ^ ^ ^2.5 if entity @e[type=!#icewarrior:non_living,tag=!icew.immune,distance=..1.25] run particle minecraft:crit ~ ~1 ~ 0 0 0 0.5 5 normal
 execute positioned ^ ^ ^2.5 at @e[type=!#icewarrior:non_living,tag=!icew.immune,distance=..1.25] run damage @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.5] 18 icewarrior:ice_warrior_attack by @s
+
+execute positioned ^ ^ ^1.5 run effect give @n[type=!#icewarrior:non_living,type=!minecraft:player,tag=!icew.immune,distance=..2] slowness 5 1 false
+execute positioned ^ ^ ^1.5 run effect give @a[gamemode=!creative,gamemode=!spectator,tag=!icew.immune,distance=..2] slowness 5 1 false

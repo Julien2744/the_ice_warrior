@@ -1,2 +1,3 @@
 execute on vehicle if entity @n[tag=icew.target,distance=..46] positioned as @n[tag=icew.target,distance=..46] rotated as @n[tag=icew.target,distance=..46] rotated ~ 0 run tp @s ^ ^ ^1
 execute positioned as @n[tag=icew.target,distance=..46] run playsound minecraft:entity.breeze.shoot hostile @a[distance=..16] ~ ~-1.75 ~ 4 0
+execute on vehicle run attribute @s minecraft:generic.gravity modifier add icew.master_parry_gravity -0.075 add_value

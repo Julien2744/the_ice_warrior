@@ -22,5 +22,8 @@ execute if biome ~ ~-1 ~ #snow_golem_melts run execute on vehicle if entity @s[n
 #use the rotation of the mob-hitbox if no target
 execute if score @s[tag=!icew.launchToTarget] icew.lookTarget matches 1 unless entity @n[tag=icew.target,distance=..16] run execute positioned ~ ~-1 ~ rotated as @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..1] run tp @s ~ ~ ~ ~ 0
 
-#phase 2 regen if there no target
-execute if score @s icew.phase matches 1 if entity @s[tag=!icew.enraged] unless entity @n[tag=icew.target,distance=..64] if score @s icew.health_pour matches 1..100 if score @s icew.attCooldown matches 0 run function icewarrior:boss/effects/phase1_regen
+#phase 1 regen if there no target
+execute if score @s icew.phase matches 1 if entity @s[tag=!icew.enraged] unless entity @n[tag=icew.target,distance=..64] if score @s icew.health_pour matches 1..99 if score @s icew.attCooldown matches -20..0 run function icewarrior:boss/effects/boss10t_regen
+
+#master regen if in cold biome
+execute if score @s icew.phase matches 3 if biome ~ ~-1 ~ #spawns_cold_variant_frogs if score @s icew.health_pour matches 1..99 if score @s icew.attCooldown matches -20..0 if predicate icewarrior:random_50 run function icewarrior:boss/effects/boss10t_regen

@@ -9,6 +9,8 @@ scoreboard objectives add icew.player.toolCooldown dummy
 ##gamerule
 #0: false ; 1: true
 scoreboard objectives add icew.checkMobLoot dummy
+#0: false ; 1: true
+scoreboard objectives add icew.checkGriefing dummy
 ##config
 #no_bossbar #0: false (off) ; 1: true (on)
 scoreboard objectives add icew.config.bossbar dummy
