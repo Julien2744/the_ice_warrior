@@ -36,3 +36,4 @@ execute if entity @s[tag=aj.ice_warrior.animation.master_parry.playing] run func
 execute if entity @s[tag=aj.ice_warrior.animation.master_upper_dash.playing] run function animated_java:ice_warrior/animations/master_upper_dash/stop
 execute if entity @s[tag=aj.ice_warrior.animation.master_upper_dash.playing] run function animated_java:ice_warrior/animations/master_upper_dash_end/stop
 execute if entity @s[tag=aj.ice_warrior.animation.master_trident_crit.playing] run function animated_java:ice_warrior/animations/master_trident_crit/stop
+execute if entity @s[tag=aj.ice_warrior.animation.master_ultimate.playing] run function animated_java:ice_warrior/animations/master_ultimate/stop

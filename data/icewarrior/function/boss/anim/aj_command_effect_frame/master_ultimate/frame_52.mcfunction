@@ -1,0 +1,4 @@
+data modify entity @n[type=item_display,tag=aj.ice_warrior.bone.trident,distance=..4] item.components."minecraft:enchantment_glint_override" set value 0b
+execute positioned ^ ^ ^1 rotated 0 90 positioned ~ ~-1.9 ~ run function icewarrior:boss/effects/snowflake_particles
+playsound minecraft:block.trial_spawner.spawn_item hostile @a[distance=8..42] ~ ~ ~ 12 0
+execute if entity @n[type=!#icewarrior:non_living,tag=!icew.immune,tag=icew.target,distance=..32] at @n[type=!#icewarrior:non_living,tag=!icew.immune,tag=icew.target,distance=..32] run function icewarrior:ice_spike/summon_ring {tag:"icew.iceMasterSummon"}

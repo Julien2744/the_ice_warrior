@@ -14,7 +14,10 @@ execute unless score @s icew.health_pour matches 0 if entity @s[tag=icew.enraged
 #combo detector
 execute if score @s icew.phase matches 0 if score @s icew.combo = #icew.config icew.config.phase1_combo run function icewarrior:boss/effects/phase0_combo_reached
 execute if score @s icew.phase matches 1..2 if score @s icew.combo = #icew.config icew.config.phase2_combo run function icewarrior:boss/effects/phase1_combo_reached
+execute if score @s icew.phase matches 3 if score @s icew.combo = #icew.config icew.config.phase3_combo run function icewarrior:boss/effects/master_combo_reached
+
 execute if score @s icew.phase matches 1..2 if score @s icew.combo matches 999.. run particle snowflake ~ ~-1.65 ~ 0.5 0.0 0.5 0 1 normal
+execute if score @s icew.phase matches 3 if score @s icew.combo matches 999.. run particle snowflake ~ ~-0.75 ~ 0.3 0.5 0.3 0 6
 
 #nerf the boss if hes in warm biome
 execute if biome ~ ~-1 ~ #snow_golem_melts run execute on vehicle if entity @s[nbt={active_effects:[{id:"minecraft:slowness"}]}] run effect give @s slowness 7 1
