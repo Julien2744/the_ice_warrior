@@ -46,9 +46,14 @@ execute if score @s icew.abilityID matches 8 run scoreboard players set @s icew.
 execute if score @s icew.abilityID matches 8 run scoreboard players set @s icew.lookTarget 0
 execute if score @s icew.abilityID matches 8 run function animated_java:ice_warrior/animations/break_ice/play
 
-#master_trident_crit
+#master_ultimate
 execute if score @s icew.abilityID matches 9 run scoreboard players set @s icew.attCooldown 110
 execute if score @s icew.abilityID matches 9 run function animated_java:ice_warrior/animations/master_ultimate/play
+
+#master_change_iceclaw
+execute if score @s icew.abilityID matches 10 run scoreboard players set @s icew.attCooldown 30
+execute if score @s icew.abilityID matches 10 run tag @s add icew.iceclaw
+execute if score @s icew.abilityID matches 10 run function animated_java:ice_warrior/animations/master_change_iceclaw/play
 
 #keep at end of file
 scoreboard players set @s icew.abilityID 0

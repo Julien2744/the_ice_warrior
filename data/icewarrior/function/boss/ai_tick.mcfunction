@@ -16,7 +16,8 @@ execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matche
 #phase 1 & 2
 execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1..2 if entity @n[tag=icew.target,distance=..24] run execute positioned ~ ~-1.5 ~ run function icewarrior:boss/can_attack_p1
 #phase 3 (master)
-execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 3 if entity @n[tag=icew.target,distance=..42] if entity @s[tag=!icew.launchToTarget] run execute positioned ~ ~-1.5 ~ run function icewarrior:boss/can_attack_p3
+execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 3 if entity @n[tag=icew.target,distance=..42] if entity @s[tag=!icew.launchToTarget,tag=!icew.iceclaw] run execute positioned ~ ~-1.5 ~ run function icewarrior:boss/can_attack_p3
+execute if score @s icew.canAttack matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 3 if entity @n[tag=icew.target,distance=..42] if entity @s[tag=!icew.launchToTarget,tag=icew.iceclaw] run execute positioned ~ ~-1.5 ~ run function icewarrior:boss/can_attack_p3_claw
 
 #cooldown
 execute if score @s icew.canAttack matches 1 unless score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 unless biome ~ ~-1 ~ #snow_golem_melts run scoreboard players remove @s icew.attCooldown 1
@@ -30,7 +31,9 @@ execute if score @s icew.attCooldown matches -20..0 run execute on vehicle if en
 #walking anim (phase 0)
 execute if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run function icewarrior:boss/walking
 #walking anim (phase 1&2&3)
-execute if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1..3 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run function icewarrior:boss/walking_p1
+execute if score @s[tag=!icew.iceclaw] icew.attCooldown matches -20..0 if score @s icew.phase matches 1..3 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run function icewarrior:boss/walking_p1
+#walking anim phase 3 iceclaw only
+execute if score @s[tag=icew.iceclaw] icew.attCooldown matches -20..0 if score @s icew.phase matches 3 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run function icewarrior:boss/walking
 #walking anim when attacking
 execute unless score @s icew.attCooldown matches -20..0 if score @s icew.forceWalk matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run function icewarrior:boss/walking_forced
 
