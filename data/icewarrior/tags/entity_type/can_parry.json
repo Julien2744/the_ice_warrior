@@ -2,6 +2,7 @@
   "values": [
     "#minecraft:impact_projectiles",
     "minecraft:potion",
-    "minecraft:spectral_arrow"
+    "minecraft:spectral_arrow",
+    "minecraft:ender_pearl"
   ]
 }

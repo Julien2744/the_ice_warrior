@@ -7,7 +7,7 @@ execute if score @s icew.combo matches 0 if data entity @n[type=item_display,tag
 execute if score @s icew.combo matches 0 if data entity @n[type=item_display,tag=aj.ice_warrior.bone.left_claw,distance=..4] item.components."minecraft:enchantment_glint_override" run data modify entity @n[type=item_display,tag=aj.ice_warrior.bone.left_claw,distance=..4] item.components."minecraft:enchantment_glint_override" set value 0b
 
 #parry
-execute if score @s icew.attCooldown matches -20..0 run execute positioned as @s positioned ~ ~-0.75 ~ positioned ^ ^ ^0.5 run execute if entity @e[type=#icewarrior:can_parry,dx=0.6,dy=1.75,dz=0.5,tag=!icew.parry,nbt=!{inGround:1b},limit=1] run function icewarrior:boss/execute_attack_p0 {ID:1}
+execute if score @s icew.attCooldown matches -20..0 run execute positioned as @s positioned ~ ~-0.8 ~-1 positioned ^ ^ ^0.5 run execute if entity @e[type=#icewarrior:can_parry,dx=1,dy=1.75,dz=1,tag=!icew.parry,nbt=!{inGround:1b},limit=1] run function icewarrior:boss/execute_attack_p0 {ID:1}
 
 #regular_double_slash
 execute if score @s icew.attCooldown matches -20..0 run execute positioned ^ ^ ^0.8 run execute if entity @e[tag=icew.target,distance=..1.75,limit=1] run execute if predicate icewarrior:random_30 run function icewarrior:boss/execute_attack_p0 {ID:2}
