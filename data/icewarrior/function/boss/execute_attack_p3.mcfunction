@@ -59,5 +59,10 @@ execute if score @s icew.abilityID matches 10 run function animated_java:ice_war
 execute if score @s icew.abilityID matches 11 run scoreboard players set @s icew.attCooldown 65
 execute if score @s icew.abilityID matches 11 run function animated_java:ice_warrior/animations/master_upper_claw/play
 
+#master_claw_slash
+execute if score @s icew.abilityID matches 12 run scoreboard players set @s icew.attCooldown 65
+execute if score @s icew.abilityID matches 12 run scoreboard players set @s icew.forceWalk 1
+execute if score @s icew.abilityID matches 12 run function animated_java:ice_warrior/animations/master_claw_slash/play
+
 #keep at end of file
 scoreboard players set @s icew.abilityID 0

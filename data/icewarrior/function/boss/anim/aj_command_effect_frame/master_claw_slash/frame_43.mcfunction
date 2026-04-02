@@ -1,0 +1,1 @@
+function icewarrior:boss/attacks/master_claw_slash

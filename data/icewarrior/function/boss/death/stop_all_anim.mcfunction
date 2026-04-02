@@ -37,3 +37,6 @@ execute if entity @s[tag=aj.ice_warrior.animation.master_upper_dash.playing] run
 execute if entity @s[tag=aj.ice_warrior.animation.master_upper_dash.playing] run function animated_java:ice_warrior/animations/master_upper_dash_end/stop
 execute if entity @s[tag=aj.ice_warrior.animation.master_trident_crit.playing] run function animated_java:ice_warrior/animations/master_trident_crit/stop
 execute if entity @s[tag=aj.ice_warrior.animation.master_ultimate.playing] run function animated_java:ice_warrior/animations/master_ultimate/stop
+execute if entity @s[tag=aj.ice_warrior.animation.master_change_iceclaw.playing] run function animated_java:ice_warrior/animations/master_change_iceclaw/stop
+execute if entity @s[tag=aj.ice_warrior.animation.master_upper_claw.playing] run function animated_java:ice_warrior/animations/master_upper_claw/stop
+execute if entity @s[tag=aj.ice_warrior.animation.master_claw_slash.playing] run function animated_java:ice_warrior/animations/master_claw_slash/stop

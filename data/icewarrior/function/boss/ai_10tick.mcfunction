@@ -20,7 +20,8 @@ execute if score @s icew.phase matches 1..2 if score @s icew.combo matches 999..
 execute if score @s icew.phase matches 3 if score @s icew.combo matches 999.. run particle snowflake ~ ~-0.75 ~ 0.3 0.5 0.3 0 6
 
 #nerf the boss if hes in warm biome
-execute if biome ~ ~-1 ~ #snow_golem_melts run execute on vehicle if entity @s[nbt={active_effects:[{id:"minecraft:slowness"}]}] run effect give @s slowness 7 1
+execute unless entity @s[nbt={attributes:[{id:"minecraft:generic.armor",modifiers:[{id:"minecraft:icew.warm_biome_nerf"}]}]}] if biome ~ ~-1 ~ #snow_golem_melts on vehicle run attribute @s generic.armor modifier add icew.warm_biome_nerf -3 add_value
+execute if entity @s[nbt={attributes:[{id:"minecraft:generic.armor",modifiers:[{id:"minecraft:icew.warm_biome_nerf"}]}]}] unless biome ~ ~-1 ~ #snow_golem_melts on vehicle run attribute @s generic.armor modifier remove icew.warm_biome_nerf
 
 #use the rotation of the mob-hitbox if no target
 execute if score @s[tag=!icew.launchToTarget] icew.lookTarget matches 1 unless entity @n[tag=icew.target,distance=..16] run execute positioned ~ ~-1 ~ rotated as @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..1] run tp @s ~ ~ ~ ~ 0
