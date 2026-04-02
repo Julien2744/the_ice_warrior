@@ -64,5 +64,11 @@ execute if score @s icew.abilityID matches 12 run scoreboard players set @s icew
 execute if score @s icew.abilityID matches 12 run scoreboard players set @s icew.forceWalk 1
 execute if score @s icew.abilityID matches 12 run function animated_java:ice_warrior/animations/master_claw_slash/play
 
+#go back to trident
+execute if score @s icew.abilityID matches 13 run scoreboard players set @s icew.attCooldown 4
+execute if score @s icew.abilityID matches 13 run scoreboard players set @s icew.canAttack 0
+execute if score @s icew.abilityID matches 13 run playsound minecraft:entity.pillager.ambient hostile @a[distance=..64] ~ ~ ~ 4 0
+execute if score @s icew.abilityID matches 13 run function animated_java:ice_warrior/animations/switch_trident/play
+
 #keep at end of file
 scoreboard players set @s icew.abilityID 0

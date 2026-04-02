@@ -35,6 +35,7 @@ scoreboard objectives add icew.dependency dummy
 #0: no entrance anim; 1: falling, 2: threathen player
 scoreboard objectives add icew.entranceId dummy
 scoreboard objectives add icew.attCooldown dummy
+scoreboard objectives add icew.p3_change_weapon dummy
 #0: false ; 1: true
 scoreboard objectives add icew.canAttack dummy
 #increase every hit; if set to 999.. can use special

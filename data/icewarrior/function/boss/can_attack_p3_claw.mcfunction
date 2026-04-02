@@ -13,5 +13,8 @@ execute if score @s icew.attCooldown matches -20..0 run execute positioned ^ ^ ^
 #master_upper_claw
 execute if score @s icew.attCooldown matches -20..0 run execute if entity @n[tag=icew.target,distance=8..42] if predicate icewarrior:random_15 run function icewarrior:boss/execute_attack_p3 {ID:11}
 
+#change back to trident
+execute if score @s icew.p3_change_weapon matches 0 if score @s icew.attCooldown matches -20..0 if predicate icewarrior:random_2 run function icewarrior:boss/execute_attack_p3 {ID:13}
+
 #bored attack
 execute if score @s icew.attCooldown matches -20 run execute positioned as @s run function icewarrior:boss/bored_attack

@@ -20,10 +20,10 @@ execute if score @s icew.attCooldown matches -20..0 unless score @s icew.combo m
 execute if score @s icew.attCooldown matches -20..0 unless score @s icew.combo matches 999.. run execute if entity @n[tag=icew.target,distance=16..42] if predicate icewarrior:random_5 run function icewarrior:boss/execute_attack_p3 {ID:7}
 
 #break_ice (regen)
-execute if score #icew.config icew.config.boss_regen matches 1 if score @s icew.attCooldown matches -20..0 unless score @s icew.combo matches 999.. if score @s icew.health_pour matches 1..100 run execute if block ^1 ^ ^ #ice if predicate icewarrior:random_25 run function icewarrior:boss/execute_attack_p3 {ID:8}
+execute if score #icew.config icew.config.boss_regen matches 1 if score @s icew.attCooldown matches -20..0 unless score @s icew.combo matches 999.. if score @s icew.health_pour matches 1..100 run execute if block ^1 ^ ^ #ice if predicate icewarrior:random_8 run function icewarrior:boss/execute_attack_p3 {ID:8}
 
 #master_change_iceclaw
-execute if score @s icew.attCooldown matches -20..0 unless score @s icew.combo matches 999.. if predicate icewarrior:random_2 run function icewarrior:boss/execute_attack_p3 {ID:10}
+execute if score @s icew.p3_change_weapon matches 0 if score @s icew.attCooldown matches -20..0 unless score @s icew.combo matches 999.. if predicate icewarrior:random_2 run function icewarrior:boss/execute_attack_p3 {ID:10}
 
 #bored attack
 execute if score @s icew.attCooldown matches -20 run execute positioned as @s run function icewarrior:boss/bored_attack

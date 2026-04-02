@@ -14,7 +14,7 @@ execute unless score @s icew.health_pour matches 0 if entity @s[tag=icew.enraged
 #combo detector
 execute if score @s icew.phase matches 0 if score @s icew.combo = #icew.config icew.config.phase1_combo run function icewarrior:boss/effects/phase0_combo_reached
 execute if score @s icew.phase matches 1..2 if score @s icew.combo = #icew.config icew.config.phase2_combo run function icewarrior:boss/effects/phase1_combo_reached
-execute if score @s[tag=!icew.iceclaw] icew.phase matches 3 if score @s icew.combo = #icew.config icew.config.phase3_combo run function icewarrior:boss/effects/master_combo_reached
+execute if score @s[tag=!icew.iceclaw] icew.phase matches 3 if score @s icew.combo >= #icew.config icew.config.phase3_combo if score @s icew.combo matches ..998 run function icewarrior:boss/effects/master_combo_reached
 
 execute if score @s icew.phase matches 1..2 if score @s icew.combo matches 999.. run particle snowflake ~ ~-1.65 ~ 0.5 0.0 0.5 0 1 normal
 execute if score @s icew.phase matches 3 if score @s icew.combo matches 999.. run particle snowflake ~ ~-0.75 ~ 0.3 0.5 0.3 0 6
@@ -31,3 +31,6 @@ execute if score #icew.config icew.config.boss_regen matches 1 if score @s icew.
 
 #master regen if in cold biome
 execute if score #icew.config icew.config.boss_regen matches 1 if score @s icew.phase matches 3 if biome ~ ~-1 ~ #spawns_cold_variant_frogs if score @s icew.health_pour matches 1..99 if score @s icew.attCooldown matches -20..0 if predicate icewarrior:random_35 run function icewarrior:boss/effects/boss10t_regen
+
+#master can change weapon cooldown
+execute if score @s icew.canAttack matches 1 unless score @s icew.p3_change_weapon matches 0 if score @s icew.phase matches 3 run scoreboard players remove @s icew.p3_change_weapon 1 
