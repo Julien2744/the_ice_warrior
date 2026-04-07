@@ -15,7 +15,7 @@ execute if score @s icew.attCooldown matches 139 run fill ~-2 ~-1 ~1 ~1 ~3 ~-2 m
 execute if score @s icew.attCooldown matches 139 run data merge entity @s {block_state:{Name:"minecraft:air"}}
 execute if score @s icew.attCooldown matches 139 run kill @n[type=block_display,tag=icew.ice_room_break,distance=..1]
 
-execute if score @s icew.attCooldown matches 139 run execute as @n[type=item_display,tag=aj.ice_warrior_display.root,tag=icew.boss_summoning,distance=..4] at @s run function animated_java:ice_warrior_display/remove/this
+execute if score @s icew.attCooldown matches 139 run kill @n[type=item_display,tag=icew.ice_warrior_display,tag=icew.boss_summoning,distance=..4]
 
 execute if score @s icew.attCooldown matches 140 run particle dust_pillar{block_state:"minecraft:packed_ice"} ~1 ~6 ~1 1 0 1 0.5 50 normal
 execute if score @s icew.attCooldown matches 141 run execute positioned ~1 ~ ~1 run function icewarrior:admin/_/summon_master
