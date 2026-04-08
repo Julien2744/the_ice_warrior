@@ -80,7 +80,7 @@ scoreboard players set #icew.config icew.config.boss_regen 1
 ## ------------------------------- ##
 
 ## scoreboard version ##
-scoreboard players set #icew.load icew.scoreboardVersion 3
+scoreboard players set #icew.load icew.scoreboardVersion 4
 
 #fix wierd bug that when you create a new world you need to /reload so that
 #the next animated java rig doesn't have bugged animation
