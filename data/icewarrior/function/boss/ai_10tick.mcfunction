@@ -6,11 +6,6 @@ execute unless entity @s[predicate=icewarrior:check_hitbox] if score @s icew.dea
 #during entrance, check if boss has stopped falling
 execute if score @s icew.entranceId matches 1 run execute on vehicle if entity @s[nbt={OnGround:1b}] run execute on passengers run function icewarrior:boss/anim/stopped_falling
 
-#change from phase0 to phase1
-execute unless score @s icew.health_pour matches 0 if score @s icew.canAttack matches 1 if score #icew.config icew.config.can_change_phase matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 0 if score @s icew.health_pour <= #icew.config icew.config.change_phase run function icewarrior:boss/effects/change_phase
-#change from phase1 to phase2 (if enraged)
-execute unless score @s icew.health_pour matches 0 if entity @s[tag=icew.enraged] if score @s icew.canAttack matches 1 if score #icew.config icew.config.can_change_phase matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1 if score @s icew.health_pour <= #icew.config icew.config.change_phase run function icewarrior:boss/effects/change_to_phase2
-
 #combo detector
 execute if score @s icew.phase matches 0 if score @s icew.combo = #icew.config icew.config.phase1_combo run function icewarrior:boss/effects/phase0_combo_reached
 execute if score @s icew.phase matches 1..2 if score @s icew.combo = #icew.config icew.config.phase2_combo run function icewarrior:boss/effects/phase1_combo_reached

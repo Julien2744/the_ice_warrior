@@ -10,6 +10,9 @@ execute if score @s icew.attCooldown matches -20..0 run execute if score @s icew
 execute if score @s icew.combo matches 0 if data entity @n[type=item_display,tag=aj.ice_warrior.bone.trident,distance=..4] item.components."minecraft:enchantment_glint_override" run execute on vehicle run attribute @s generic.movement_speed modifier remove icew.trident_ult_movement_speed
 execute if score @s icew.combo matches 0 if data entity @n[type=item_display,tag=aj.ice_warrior.bone.trident,distance=..4] item.components."minecraft:enchantment_glint_override" run data modify entity @n[type=item_display,tag=aj.ice_warrior.bone.trident,distance=..4] item.components."minecraft:enchantment_glint_override" set value 0b
 
+#change from phase1 to phase2 (if enraged)
+execute if score @s icew.phase matches 1 if entity @s[tag=icew.enraged] if score #icew.config icew.config.can_change_phase matches 1 if score @s icew.attCooldown matches -20..0 if score @s icew.health_pour <= #icew.config icew.config.change_phase run function icewarrior:boss/effects/change_to_phase2
+
 #trdient_slash (phase 1)
 execute if score @s icew.attCooldown matches -20..0 if score @s icew.phase matches 1 unless score @s icew.combo matches 999.. run execute positioned ^ ^ ^1.25 run execute if entity @e[tag=icew.target,distance=..1.75,limit=1] run execute if predicate icewarrior:random_35 run function icewarrior:boss/execute_attack_p1 {ID:1}
 #trdient_slash (phase 2)
