@@ -1,4 +1,6 @@
 tag @s add icew.master
+execute on vehicle run tag @s add icew.master_parent
+
 function animated_java:ice_warrior/variants/master/apply
 
 execute on vehicle run function icewarrior:boss/effects/master_buff

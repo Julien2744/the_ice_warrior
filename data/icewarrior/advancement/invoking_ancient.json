@@ -1,0 +1,24 @@
+{
+  "parent": "icewarrior:colder_death",
+  "criteria": {
+    "icew.invoking_ancient": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": "Summon an ancient cold spirit by using a Soul Ice Shard on a frozen Ice Warrior",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:trident"
+    },
+    "title": "Invoking Ancient",
+    "frame": "goal",
+    "hidden": false
+  },
+  "requirements": [
+    [
+      "icew.invoking_ancient"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

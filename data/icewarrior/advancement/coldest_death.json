@@ -1,0 +1,35 @@
+{
+  "parent": "icewarrior:invoking_ancient",
+  "criteria": {
+    "icew.coldest_death": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:stray",
+          "nbt": "{Tags:[\"icew.hitbox\",\"icew.immune\",\"icew.master_parent\"]}"
+        }
+      }
+    }
+  },
+  "display": {
+    "description": "Kill The Ice warrior",
+    "icon": {
+      "id": "minecraft:prismarine_shard",
+      "components": {
+        "minecraft:custom_model_data": 41791
+      }
+    },
+    "title": "Coldest Death",
+    "frame": "challenge",
+    "hidden": true
+  },
+  "requirements": [
+    [
+      "icew.coldest_death"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": false
+}
