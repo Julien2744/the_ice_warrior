@@ -29,7 +29,7 @@ To find the boss, you will need to find the `ice_guard_tower` structure located 
 > [!NOTE]
 > You can craft a map that will show you the structure by dropping a `Woodland explorer map` inside a `powder_snow`
 
-![datapack priority](https://github.com/Julien2744/the_ice_warrior/blob/master/github_image/cold_map_craft.jpg)
+![cold map craft](https://github.com/Julien2744/the_ice_warrior/blob/master/github_image/cold_map_craft.jpg)
 
 When entering the tower you will see the ice warrior encased in ice. To release him you will need to use a lava bucket in order to melt the ice (right-click).
 
@@ -41,15 +41,15 @@ When entering the tower you will see the ice warrior encased in ice. To release 
 
 **First phase:** The boss will attack using his ice claw
 
-![datapack priority](https://github.com/Julien2744/the_ice_warrior/blob/master/github_image/phase1.png)
+![boss phase 1](https://github.com/Julien2744/the_ice_warrior/blob/master/github_image/phase1.png)
 
 **Second phase:** The boss will attack using his trident (activate on 50% max hp)
 
-![datapack priority](https://github.com/Julien2744/the_ice_warrior/blob/master/github_image/phase2.png)
+![boss phase 2](https://github.com/Julien2744/the_ice_warrior/blob/master/github_image/phase2.png)
 
 **Master:** Strongest varient of the boss, can only be summoned by first defeating an enraged Ice Warrior
 
-![datapack priority](https://github.com/Julien2744/the_ice_warrior/blob/master/github_image/master.png)
+![boss master](https://github.com/Julien2744/the_ice_warrior/blob/master/github_image/master.png)
 
 > [!NOTE]
 > The boss isn't that strong, and all his attacks are dodgeable. I personally recommend to face him with a full set of diamond armor.
