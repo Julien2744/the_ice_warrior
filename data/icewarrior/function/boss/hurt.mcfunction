@@ -11,8 +11,11 @@ function icewarrior:boss/update_health_pour
 #re-gain ivis
 execute unless entity @s[nbt={active_effects:[{id:"minecraft:invisibility"}]}] run effect give @s invisibility infinite 1 true
 
-#5% to change the target if hes too far away
-execute if entity @n[tag=icew.target,distance=24..128] run execute if predicate icewarrior:random_5 on attacker if entity @s[tag=!icew.target,tag=!icew.immune] run function icewarrior:set_target
+#5% to change the target
+execute if entity @n[tag=icew.target,distance=8..64] run execute if predicate icewarrior:random_5 on attacker if entity @s[tag=!icew.target,tag=!icew.immune] run function icewarrior:set_target
+
+#favorit targeting a player than a mob
+execute if entity @n[tag=icew.target,distance=..21,type=!player] on attacker if entity @s[type=player,gamemode=!creative,gamemode=!spectator,tag=!icew.target,tag=!icew.immune] if predicate icewarrior:random_50 run function icewarrior:set_target
 
 #master_parry
 execute if entity @s[tag=!icew.bait_hurt] on passengers at @s if entity @s[tag=icew.master_parry,tag=!aj.ice_warrior.animation.master_parry_slash.playing,tag=!icew.iceclaw] if entity @n[tag=icew.target,distance=..128] run function icewarrior:boss/effects/master_parry
