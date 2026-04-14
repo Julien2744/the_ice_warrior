@@ -22,7 +22,7 @@ You can found them on the [modrinth](https://modrinth.com/datapack/the-ice-warri
 
 ### **<ins>How to start:</ins>**
 
-First of all, theee is **new advancements that you can follow** to check everything that the datapack has to offer !
+First of all, there is **new advancements that you can follow** to check everything that the datapack has to offer !
 
 To find the boss, you will need to find the `ice_guard_tower` structure located in an `ice_spikes` biome.
 
