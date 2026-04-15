@@ -1,5 +1,5 @@
 advancement grant @p[predicate=icewarrior:check_soul_ice_shard_item,distance=..8] only icewarrior:invoking_ancient
-item replace entity @p[predicate=icewarrior:check_soul_ice_shard_item,distance=..8,gamemode=!creative,gamemode=!spectator] weapon.mainhand with air
+clear @p[predicate=icewarrior:check_soul_ice_shard_item,distance=..8,gamemode=!creative,gamemode=!spectator] prismarine_shard[minecraft:custom_data={ice_warrior_item:"soul_ice_shard"}] 1
 
 tag @n[type=item_display,tag=icew.ice_warrior_display,distance=..3] add icew.boss_summoning
 
