@@ -6,7 +6,7 @@ execute on vehicle if entity @s[nbt={HurtTime:9s}] at @s run function icewarrior
 
 #refresh boss health bar (excluded from hurt because of regen and not updated when the boss die)
 execute store result score @s icew.health run execute on vehicle run data get entity @s Health
-execute if score #icew.config icew.config.bossbar matches 0 run function icewarrior:boss/refresh_bossbar
+execute if score #icew.config icew.config.bossbar matches 1 run function icewarrior:boss/refresh_bossbar
 
 #attack
 #special

@@ -20,8 +20,8 @@ tellraw @s [{"color":"#9FC0FA","text":"❄"},{"bold":true,"color":"aqua","text":
 tellraw @s [{"text":" "}]
 
 #no_bossbar
-execute if score #icew.config icew.config.bossbar matches 0 run tellraw @s [{"color":"gray","text":" - no bossbar: "},{"color":"dark_gray","text":"["},{"bold":true,"clickEvent":{"action":"run_command","value":"/function icewarrior:admin/config/no_bossbar {state:1}"},"color":"red","text":"off"},{"color":"dark_gray","text":"]"}]
-execute if score #icew.config icew.config.bossbar matches 1 run tellraw @s [{"color":"gray","text":" - no bossbar: "},{"color":"dark_gray","text":"["},{"bold":true,"clickEvent":{"action":"run_command","value":"/function icewarrior:admin/config/no_bossbar {state:0}"},"color":"green","text":"on"},{"color":"dark_gray","text":"]"}]
+execute if score #icew.config icew.config.bossbar matches 0 run tellraw @s [{"color":"gray","text":" - bossbar: "},{"color":"dark_gray","text":"["},{"bold":true,"clickEvent":{"action":"run_command","value":"/function icewarrior:admin/config/bossbar {state:1}"},"color":"red","text":"off"},{"color":"dark_gray","text":"]"}]
+execute if score #icew.config icew.config.bossbar matches 1 run tellraw @s [{"color":"gray","text":" - bossbar: "},{"color":"dark_gray","text":"["},{"bold":true,"clickEvent":{"action":"run_command","value":"/function icewarrior:admin/config/bossbar {state:0}"},"color":"green","text":"on"},{"color":"dark_gray","text":"]"}]
 tellraw @s [{"text":" "}]
 
 #can_change_phase

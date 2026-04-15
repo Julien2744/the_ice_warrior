@@ -69,7 +69,7 @@ scoreboard objectives add icew.iceRingDuration dummy
 scoreboard players set #icew.global icew.tickmarker 1
 
 #initialize (config)
-scoreboard players set #icew.config icew.config.bossbar 0
+scoreboard players set #icew.config icew.config.bossbar 1
 scoreboard players set #icew.config icew.config.can_change_phase 1
 scoreboard players set #icew.config icew.config.change_phase 50
 scoreboard players set #icew.config icew.config.phase1_combo 7
