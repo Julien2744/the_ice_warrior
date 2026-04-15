@@ -48,12 +48,11 @@ When entering the tower you will see the ice warrior encased in ice. To release 
 ![boss phase 2](https://github.com/Julien2744/the_ice_warrior/blob/master/github_image/phase2.png)
 
 **Master:** Strongest variant of the boss, can only be summoned by first defeating an enraged Ice Warrior
-**coming for beta2-1**
 
 ![boss master](https://github.com/Julien2744/the_ice_warrior/blob/master/github_image/master.png)
 
 > [!NOTE]
-> The boss isn't that strong, and all his attacks are dodgeable. I personally recommend to face him with a full set of diamond armor.
+> The first and second phases of the boss isn't that strong, and all his attacks are dodgeable. I personally recommend to face him with a full set of diamond armor.
 
 > [!NOTE]
 > You can enrage an Ice Warrior by summoning one while having an `Ice Warrior Head` near it on the ground
