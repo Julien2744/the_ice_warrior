@@ -30,5 +30,5 @@ execute if score #icew.config icew.config.boss_regen matches 1 if score @s icew.
 #master can change weapon cooldown
 execute if score @s icew.canAttack matches 1 unless score @s icew.p3_change_weapon matches 0 if score @s icew.phase matches 3 run scoreboard players remove @s icew.p3_change_weapon 1 
 
-#remove boss bar for the player that are too far away
+#remove boss bar for the players that are too far away
 execute if score #icew.config icew.config.bossbar matches 1 run bossbar set icew_bossbar players @a[distance=..48]
