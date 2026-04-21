@@ -23,6 +23,11 @@
       "minecraft:block_display",
       "minecraft:armor_stand",
       "minecraft:area_effect_cloud",
-      "#icewarrior:can_parry"
+      "#minecraft:impact_projectiles",
+      "minecraft:potion",
+      "minecraft:spectral_arrow",
+      "minecraft:ender_pearl",
+      "minecraft:llama_spit",
+      "minecraft:experience_bottle"
     ]
 }
