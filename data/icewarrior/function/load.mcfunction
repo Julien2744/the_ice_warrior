@@ -1,6 +1,6 @@
 ## ------ The Ice Warrior Datapack ------ ##
 # Minecraft version: 1.21.1
-# datapack version: beta2-3
+# datapack version: r2.0
 # resourcepack version: v1.2
 # 
 # scoreboard version: 4
