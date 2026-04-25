@@ -5,7 +5,7 @@
 ### Minecraft datapack that add an ice themed boss
 
 > [!WARNING]
-> This datapack require a resourcepack [link](https://modrinth.com/datapack/the-ice-warrior/version/beta2-1_mc1.21.1)
+> This datapack require a resourcepack [link](https://modrinth.com/datapack/the-ice-warrior/version/r2.0_mc1.21.1)
 >
 > **Require the mod [launch-command](https://modrinth.com/mod/launch-command)**
 >
@@ -67,9 +67,9 @@ Because working with vanilla mob with datapack can be an absolute nightmare, all
 
 ## Other informations
 
-Because the boss use a stray as its hitbox/health, any mod that modify stray can affect the boss and ***might*** cause issues. Hoewer I already fixed this issue for some mod, if those allowed me to blacklist the mob from getting any modification.
+Because the boss use a Stray as its hitbox/health, any mod that modify Stray can affect the boss and ***might*** cause issues. Hoewer I already fixed this issue for some mod, if those allowed me to blacklist the mob from getting any modification.
 
-Also because the boss use a stray as its hitbox/health, he has some difficulty when attacking mob with wide hitbox.
+Also because the boss use a Stray as its hitbox/health, he has some difficulty when attacking mob with wide hitbox.
 
 You can modify:
 - items that can melt the boss ice in `data/icewarrior/tags/item/can_melt_ice_room.json`
