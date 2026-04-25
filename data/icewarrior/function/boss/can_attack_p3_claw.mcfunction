@@ -14,7 +14,7 @@ execute if score @s icew.attCooldown matches -20..0 positioned ^ ^ ^0.8 run exec
 execute if score @s icew.attCooldown matches -20..0 if entity @n[tag=icew.target,distance=8..42] if predicate icewarrior:random_15 run return run function icewarrior:boss/execute_attack_p3 {ID:11}
 
 #claw_ultimate
-execute if score @s icew.attCooldown matches -20..3 if entity @e[tag=icew.target,distance=..2.5,limit=1] if predicate icewarrior:random_15 run return run function icewarrior:boss/execute_attack_p0 {ID:7}
+execute if score @s icew.attCooldown matches -20..0 if score @s icew.combo matches 3.. if entity @e[tag=icew.target,distance=..2.5,limit=1] if predicate icewarrior:random_15 run return run function icewarrior:boss/execute_attack_p0 {ID:7}
 
 #change back to trident
 execute if score @s icew.p3_change_weapon matches 0 if score @s icew.attCooldown matches -20..0 if predicate icewarrior:random_5 run return run function icewarrior:boss/execute_attack_p3 {ID:13}
