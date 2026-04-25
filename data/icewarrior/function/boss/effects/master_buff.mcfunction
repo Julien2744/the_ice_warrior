@@ -7,4 +7,4 @@ attribute @s generic.knockback_resistance modifier add icew.trident_knockback_re
 attribute @s generic.movement_speed modifier add icew.trident_movement_speed 0.025 add_value
 
 attribute @s generic.max_health base set 250
-data modify entity @s Health set value 250
+execute store result entity @s Health double 1 run attribute @s generic.max_health get
