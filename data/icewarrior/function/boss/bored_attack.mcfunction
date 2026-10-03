@@ -1,5 +1,3 @@
-### TO OPTIMISE ###
-
 #above_slash
 execute if score @s icew.attCooldown matches -20 \
     if score @s icew.phase matches 0 positioned ^ ^ ^0.5 positioned ~ ~1.5 ~ \

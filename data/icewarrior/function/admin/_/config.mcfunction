@@ -1,5 +1,3 @@
-### TO OPTIMISE ###
-
 #filler to only show the ui
 playsound minecraft:ui.button.click neutral @s
 tellraw @s [{"text":" "}]

@@ -1,5 +1,3 @@
-### TO OPTIMISE ###
-
 tag @s add icew.iceSpikeSummoned
 
 #summon at mobs

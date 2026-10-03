@@ -1,4 +1,4 @@
-### TO OPTIMISE ###
+
 # predicate check grounded
 
 #master_upper_dash_end

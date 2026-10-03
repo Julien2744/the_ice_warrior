@@ -1,5 +1,3 @@
-### TO OPTIMISE ###
-
 #99% of target bugs come here
 execute if entity @s[predicate=icewarrior:check_hitbox] run function icewarrior:boss/target_tick
 

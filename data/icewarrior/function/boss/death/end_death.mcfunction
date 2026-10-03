@@ -1,6 +1,3 @@
-### TO OPTIMISE ###
-#items
-
 # particles
 execute unless score @s icew.phase matches 3 run playsound minecraft:entity.breeze.death hostile @a[distance=..16] ~ ~ ~ 4 0
 execute unless score @s icew.phase matches 3 run particle minecraft:snowflake ~ ~-1 ~ 0 0 0 0.1 17 normal

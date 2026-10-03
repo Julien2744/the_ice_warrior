@@ -1,5 +1,3 @@
-### TO OPTIMISE ###
-
 #phase 0
 execute if score @s icew.phase matches 0 \
     if entity @n[tag=icew.target,distance=..24] \

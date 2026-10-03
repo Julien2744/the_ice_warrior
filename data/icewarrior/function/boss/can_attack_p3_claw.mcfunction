@@ -1,5 +1,3 @@
-### TO OPTIMISE ###
-
 #execute as @n[type=item_display,tag=aj.ice_warrior.root] at @s run
 ## -- PHASE 3 ATTACKS ONLY FOR ICE CLAW -- ##
 
