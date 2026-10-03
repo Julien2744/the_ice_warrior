@@ -5,7 +5,7 @@ execute on vehicle positioned ~ ~-2.5 ~ \
     on passengers run scoreboard players add @s icew.combo 1
 
 execute if entity @n[tag=icew.target,distance=..24,nbt={HurtTime:0s}] if score @s icew.combo matches 1.. run scoreboard players remove @s icew.combo 1
-execute on vehicle run data modify entity @s equipment.mainhand.components.minecraft:weapon.disable_blocking_for_seconds set value 0
+execute on vehicle run function icewarrior:boss/attacks/common_enable_shield
 
 execute on vehicle facing entity @n[tag=icew.target,distance=..6] feet rotated ~ 0 run tp @s ^ ^ ^3
 execute on vehicle run launch @s setMotion 0 0.4 0

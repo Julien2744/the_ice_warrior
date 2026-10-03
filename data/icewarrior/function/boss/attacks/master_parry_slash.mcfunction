@@ -9,4 +9,4 @@ execute positioned ~ ~-1.5 ~ positioned ^ ^ ^1.5 run launch @n[type=!#icewarrior
 execute positioned ~ ~-1.5 ~ positioned ^ ^ ^1.5 run launch @a[gamemode=!creative,gamemode=!spectator,tag=!icew.immune,distance=..2] looking 1.5
 
 execute if entity @n[tag=icew.target,distance=..24,nbt={HurtTime:0s}] if score @s icew.combo matches 1.. run scoreboard players remove @s icew.combo 1
-execute on vehicle run data modify entity @s equipment.mainhand.components.minecraft:weapon.disable_blocking_for_seconds set value 0
+execute on vehicle run function icewarrior:boss/attacks/common_enable_shield

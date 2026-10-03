@@ -4,4 +4,4 @@ execute on vehicle positioned ~ ~-1.5 ~ run function icewarrior:boss/attacks/dam
 
 execute if entity @n[tag=icew.target,distance=..3.5] unless entity @n[tag=icew.target,distance=..3.5,nbt={HurtTime:0s}] run scoreboard players add @s icew.combo 1
 execute if entity @n[tag=icew.target,distance=..24,nbt={HurtTime:0s}] if score @s icew.combo matches 1.. run scoreboard players remove @s icew.combo 1
-execute on vehicle run data modify entity @s equipment.mainhand.components.minecraft:weapon.disable_blocking_for_seconds set value 0
+execute on vehicle run function icewarrior:boss/attacks/common_enable_shield

@@ -6,4 +6,4 @@ playsound minecraft:entity.lightning_bolt.impact hostile @a[distance=..28] ~ ~ ~
 
 execute on vehicle run function icewarrior:boss/attacks/common_disable_shield
 execute on vehicle run execute positioned ~ ~-1 ~ run function icewarrior:boss/attacks/damage/ultimate_slash
-execute on vehicle run data modify entity @s equipment.mainhand.components.minecraft:weapon.disable_blocking_for_seconds set value 0
+execute on vehicle run function icewarrior:boss/attacks/common_enable_shield

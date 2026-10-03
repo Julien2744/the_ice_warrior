@@ -6,7 +6,7 @@ execute on vehicle positioned ~ ~-1.5 ~ \
 
 particle sweep_attack ~ ~-0.75 ~
 execute if entity @n[tag=icew.target,distance=..24,nbt={HurtTime:0s}] if score @s icew.combo matches 1.. run scoreboard players remove @s icew.combo 1
-execute on vehicle run data modify entity @s equipment.mainhand.components.minecraft:weapon.disable_blocking_for_seconds set value 0
+execute on vehicle run function icewarrior:boss/attacks/common_enable_shield
 
 execute at @s if entity @n[tag=icew.target,distance=..4] on vehicle run launch @s looking 0.75
 execute at @s if entity @n[tag=icew.target,distance=5..16] unless block ~ ~-2 ~ #ice on vehicle run launch @s looking 2
