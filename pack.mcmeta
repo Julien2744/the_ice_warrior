@@ -1,7 +1,9 @@
 {
 	"pack": {
-		"pack_format": 48,
-		"description": "r2.0 - A cold warrior...\nwaiting..."
+		"pack_format": 121,
+		"description": "r2.0 - A cold warrior...\nwaiting...",
+		"min_format": 121,
+		"max_format": 121
 	},
 	"overlays": {
 		"entries": [

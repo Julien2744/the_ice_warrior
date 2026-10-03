@@ -1,0 +1,1 @@
+summon item ~ ~ ~ {Item:{id:"minecraft:prismarine_shard",count:1,components:{"minecraft:item_name":"Soul Ice Shard","minecraft:item_model":"icewarrior:soul_ice_shard","minecraft:rarity":"epic","minecraft:custom_data":{icewarrior.item:"soul_ice_shard"}}}}

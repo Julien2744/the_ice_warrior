@@ -7,12 +7,12 @@
         "damage": {
           "blocked": false,
           "source_entity": {
-            "type": "minecraft:player"
+            "minecraft:entity_type": "minecraft:player"
           },
           "type": {
             "tags": [],
             "direct_entity": {
-              "type": "#icewarrior:can_parry",
+              "minecraft:entity_type": "#icewarrior:can_parry",
               "nbt": "{Tags:[\"icew.parry\"]}"
             }
           }

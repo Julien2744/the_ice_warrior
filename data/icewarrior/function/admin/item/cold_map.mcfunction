@@ -1,0 +1,1 @@
+loot spawn ~ ~ ~ loot icewarrior:ice_guard_tower_map

@@ -6,32 +6,31 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
+          "name": "minecraft:buried_treasure_map",
+          "modifier": [
             {
-              "destination": "icewarrior:ice_guard_tower",
+              "type": "minecraft:exploration_map",
+              "destination": "#icewarrior:ice_guard_tower",
               "decoration": "minecraft:target_x",
-              "function": "minecraft:exploration_map",
               "skip_existing_chunks": false,
               "zoom": 1
             },
             {
-              "function": "minecraft:set_name",
+              "type": "minecraft:set_name",
               "name": {
                 "text": "Cold Map",
                 "italic": false
               }
             },
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
-                "minecraft:map_color": 10471930,
                 "minecraft:custom_data": {
-                  "ice_warrior_item": "cold_map"
+                  "icewarrior.item": "cold_map"
                 }
               }
             }
-          ],
-          "name": "minecraft:map"
+          ]
         }
       ],
       "rolls": 1

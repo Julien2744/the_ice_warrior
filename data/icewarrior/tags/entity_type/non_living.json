@@ -19,15 +19,16 @@
       "minecraft:experience_orb",
       "minecraft:command_block_minecart",
       "minecraft:chest_minecart",
-      "minecraft:boat",
       "minecraft:block_display",
       "minecraft:armor_stand",
       "minecraft:area_effect_cloud",
       "#minecraft:impact_projectiles",
-      "minecraft:potion",
+      "minecraft:splash_potion",
+      "minecraft:lingering_potion",
       "minecraft:spectral_arrow",
       "minecraft:ender_pearl",
       "minecraft:llama_spit",
-      "minecraft:experience_bottle"
+      "minecraft:experience_bottle",
+      "minecraft:cushion"
     ]
 }

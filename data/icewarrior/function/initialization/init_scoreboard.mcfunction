@@ -5,7 +5,7 @@ scoreboard objectives add icew.tickmarker dummy
 #0: false ; 1: true
 scoreboard objectives add icew.spawned dummy
 ##player
-scoreboard objectives add icew.player.toolCooldown dummy
+scoreboard objectives add icew.player.previous_tool_dmg dummy
 ##gamerule
 #0: false ; 1: true
 scoreboard objectives add icew.checkMobLoot dummy
@@ -80,13 +80,15 @@ scoreboard players set #icew.config icew.config.boss_regen 1
 ## ------------------------------- ##
 
 ## scoreboard version ##
-scoreboard players set #icew.load icew.scoreboardVersion 4
+scoreboard players set #icew.load icew.scoreboardVersion 5
 
 #fix wierd bug that when you create a new world you need to /reload so that
 #the next animated java rig doesn't have bugged animation
-execute unless score #icew.load icew.loadScoreboard matches 1 run execute positioned 0 0 0 run reload
+#execute unless score #icew.load icew.loadScoreboard matches 1 run execute positioned 0 0 0 run reload
 
-execute unless score #icew.load icew.loadScoreboard matches 1 run schedule function icewarrior:tentick 10t
+execute unless score #icew.load icew.loadScoreboard matches 1 run schedule function icewarrior:four_tick 4t
+execute unless score #icew.load icew.loadScoreboard matches 1 run schedule function icewarrior:ten_tick 10t
+execute unless score #icew.load icew.loadScoreboard matches 1 run schedule function icewarrior:one_second 1s
 
 #end of initialisating
 scoreboard players set #icew.load icew.loadScoreboard 1

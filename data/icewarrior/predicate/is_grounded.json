@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "minecraft:entity_type": "minecraft:item_display",
+    "vehicle": {
+      "minecraft:entity_type": "minecraft:stray",
+      "minecraft:flags": {
+        "is_on_ground": true
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-execute on vehicle run data merge entity @s {HandItems:[{id:"minecraft:wooden_axe",count:1,components:{"minecraft:unbreakable":{},"minecraft:custom_model_data":1}},{}],HandDropChances:[0.000F,0.085F]}
+execute on vehicle run function icewarrior:boss/attacks/common_disable_shield
 
 effect give @n[type=!#icewarrior:non_living,type=!minecraft:player,tag=!icew.immune,distance=..2.5] slowness 5 1 false
 effect give @a[gamemode=!creative,gamemode=!spectator,tag=!icew.immune,distance=..2.5] slowness 5 1 false

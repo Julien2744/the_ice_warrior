@@ -1,4 +1,4 @@
-item replace entity @p[predicate=icewarrior:check_hot_item,distance=..8,gamemode=!creative,gamemode=!spectator] weapon.mainhand with air
+clear @p[predicate=icewarrior:check_hot_item,distance=..8,gamemode=!creative,gamemode=!spectator] #icewarrior:can_melt_ice_room 1
 
 tag @n[type=item_display,tag=icew.ice_warrior_display,distance=..3] add icew.boss_summoning
 

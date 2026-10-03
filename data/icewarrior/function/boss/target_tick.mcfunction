@@ -12,15 +12,14 @@
 #   Here how it work (this is repeated every tick !)
 # 1. We assign a target by giving the tag "icew.target" (done in function icewarrior:set_target)
 # 2. We check if the Stray doesn't already have a target
-#       if the target isn't the bait we make him forget it by giving it
-#       negative follow_range
+#       if the target isn't the bait we make him forget it by giving it no follow_range
 #       or
 #       if there isn't a bait we assign whoewer the Stray is targeting as the boss target
 # 3. We make the Stray aggo to the bait by damaging him and saying that the damage was
 # done by the bait
 #
 #   Other informations
-# - We re-give the Stray positive follow_range if he doesn't have a target or he's targeting
+# - We re-give the Stray follow_range if he doesn't have a target or he's targeting
 #   the bait
 # 
 # - We remove the the bait if the Stray is targeting a Player (because the Stray doesn't damage
@@ -49,17 +48,17 @@ execute unless entity @e[tag=icew.target,distance=..128,limit=1] \
 
 #remove mob-hitbox target if his target isn't the bait or has the tag icew.immune
 execute if entity @e[type=!player,tag=icew.target,distance=..128,limit=1] \
-    on vehicle unless entity @s[nbt={attributes:[{id:"minecraft:generic.follow_range",modifiers:[{id:"minecraft:icew.forget_target"}]}]}] \
+    on vehicle unless entity @s[nbt={attributes:[{id:"minecraft:follow_range",modifiers:[{id:"minecraft:icew.forget_target"}]}]}] \
     if entity @s[predicate=icewarrior:has_target] \
     on target if entity @s[predicate=icewarrior:cannot_target] \
-    run attribute @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..2] generic.follow_range modifier add icew.forget_target -999 add_value
+    run attribute @n[type=stray,tag=icew.hitbox,tag=icew.immune,distance=..2] minecraft:follow_range modifier add icew.forget_target -999 add_value
 
 #re-give followrange if the mob-hitbox doesn't have a target
 execute on vehicle \ 
-    if entity @s[nbt={attributes:[{id:"minecraft:generic.follow_range",modifiers:[{id:"minecraft:icew.forget_target"}]}]}] \ 
+    if entity @s[nbt={attributes:[{id:"minecraft:follow_range",modifiers:[{id:"minecraft:icew.forget_target"}]}]}] \ 
     if entity @s[nbt={HurtTime:0s}] \
     unless entity @s[predicate=icewarrior:has_target] \
-    run attribute @s minecraft:generic.follow_range modifier remove icew.forget_target
+    run attribute @s minecraft:follow_range modifier remove icew.forget_target
 
 #make the mob-hitbox target the bait
 execute if entity @e[type=!player,tag=icew.target,distance=..64,limit=1] \

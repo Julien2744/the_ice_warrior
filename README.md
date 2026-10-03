@@ -9,11 +9,11 @@
 >
 > **Require the mod [launch-command](https://modrinth.com/mod/launch-command)**
 >
-> Current version work for `Minecraft 1.21.1`
+> Current version work for `Minecraft 26.3`
 
 All animations in this datapack where made using [Animated Java](https://animated-java.dev/)
 
-The `animated_java` files are not included due to how many there are (2800+ files), and because the files are 99% models and animations.
+The `animated_java` files are not included due to how many there are (3000+ files), and because the files are 99% models and animations.
 You can found them on the [modrinth](https://modrinth.com/datapack/the-ice-warrior) page where you can download the datapack
 
 ## Features

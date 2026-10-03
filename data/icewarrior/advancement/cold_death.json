@@ -5,8 +5,12 @@
       "trigger": "minecraft:player_killed_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:stray",
-          "nbt": "{Tags:[\"icew.hitbox\",\"icew.immune\"]}"
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:stray",
+            "minecraft:nbt": "{Tags:[\"icew.hitbox\",\"icew.immune\"]}"
+          }
         }
       }
     }

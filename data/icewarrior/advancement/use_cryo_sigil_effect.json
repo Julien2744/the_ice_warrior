@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "icew.use.soul_ice_tool": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:prismarine_shard",
+          "predicates": {
+            "minecraft:custom_data": {
+              "icewarrior.item": "cryo_sigil"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "icewarrior:cryo_sigil/charge_effect"
+  },
+  "sends_telemetry_event": false
+}

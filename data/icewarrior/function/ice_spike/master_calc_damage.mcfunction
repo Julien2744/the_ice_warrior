@@ -1,2 +1,3 @@
-execute on passengers store result entity @s data.dmg float 0.33 run attribute @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.25] generic.max_health get
+execute on passengers store result entity @s data.dmg float 0.33 run \
+    attribute @n[type=!#icewarrior:non_living,tag=!icew.immune,distance=..0.25] minecraft:max_health get
 execute on passengers run function icewarrior:ice_spike/master_damage with entity @s data

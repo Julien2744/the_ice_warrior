@@ -1,13 +1,10 @@
 {
   "display": {
     "icon": {
-      "id": "minecraft:filled_map",
-      "components": {
-        "minecraft:map_color": 10471930
-      }
+      "id": "minecraft:buried_treasure_map"
     },
     "title": "Rewritten By A Cold Force",
-    "description": "Craft a Cold Map by trowing a Woodland Explorer Map in Powder Snow",
+    "description": "Craft a Cold Map by trowing a Woodland Mansion Map in Powder Snow",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
@@ -20,10 +17,10 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:filled_map",
+            "items": "minecraft:buried_treasure_map",
             "components": {
               "minecraft:custom_data": {
-                "ice_warrior_item": "cold_map"
+                "icewarrior.item": "cold_map"
               }
             }
           }

@@ -1,13 +1,13 @@
-#ice room interaction
-execute as @e[type=interaction,tag=icew.ice_room_interact,limit=6] at @s if data entity @s interaction run function icewarrior:boss_summoner/check_player
-execute as @e[type=block_display,tag=icew.ice_room,scores={icew.attCooldown=1..},limit=6] at @s run function icewarrior:boss_summoner/anim_master
+execute as @e[type=block_display,tag=icew.ice_room,scores={icew.attCooldown=1..},limit=6] at @s \
+    run function icewarrior:boss_summoner/anim_master
 
 #boss ai tick
-execute if score #icew.global icew.spawned matches 1 run execute as @e[type=item_display,tag=aj.ice_warrior.root] at @s run function icewarrior:boss/ai_tick
-
-#soul ice tools & cryo sigil coodlown
-execute at @a[scores={icew.player.toolCooldown=1..120}] run scoreboard players remove @p[distance=..0.1] icew.player.toolCooldown 1
+execute if score #icew.global icew.spawned matches 1 run \
+    execute as @e[type=item_display,tag=aj.ice_warrior.root,limit=100] at @s run function icewarrior:boss/ai_tick
 
 #ice ring tick
 execute as @e[type=item_display,tag=icew.ice_ring,tag=icew.immune] at @s run function icewarrior:ice_spike/ice_ring_tick
 execute as @e[type=block_display,tag=icew.ice_spike,tag=icew.immune] at @s run function icewarrior:ice_spike/ice_spike_tick
+
+# fix ghost item
+execute if entity @a[tag=icew.give_cryo_sigil,limit=1] at @a[tag=icew.give_cryo_sigil,limit=1] run function icewarrior:admin/item/cryo_sigil

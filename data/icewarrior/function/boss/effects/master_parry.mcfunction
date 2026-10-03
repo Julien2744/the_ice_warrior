@@ -4,5 +4,5 @@ playsound minecraft:block.anvil.land hostile @a[distance=..32] ~ ~ ~ 6 2
 scoreboard players add @s icew.combo 1
 
 scoreboard players set @s icew.attCooldown 57
-function animated_java:ice_warrior/animations/master_parry/stop
-function animated_java:ice_warrior/animations/master_parry_slash/play
+function aj:ice_warrior/animations/master_parry/stop
+function aj:ice_warrior/animations/master_parry_slash/play

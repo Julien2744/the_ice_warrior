@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:sub",
+  "left": {
+    "type": "minecraft:score",
+    "target": {
+      "type": "minecraft:context",
+      "target": "this"
+    },
+    "score": "icew.math.mem"
+  },
+  "right": 2
+}

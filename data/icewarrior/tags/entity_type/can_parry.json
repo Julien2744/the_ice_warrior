@@ -1,7 +1,8 @@
 {
   "values": [
     "#minecraft:impact_projectiles",
-    "minecraft:potion",
+    "minecraft:splash_potion",
+    "minecraft:lingering_potion",
     "minecraft:spectral_arrow",
     "minecraft:ender_pearl",
     "minecraft:experience_bottle"

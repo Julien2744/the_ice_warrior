@@ -1,2 +1,0 @@
-execute unless entity @s[tag=aj.ice_warrior.animation.walking_p1.playing] if score @s icew.walking matches 1 run function animated_java:ice_warrior/animations/walking_p1/play
-execute if entity @s[tag=aj.ice_warrior.animation.walking_p1.playing] if score @s icew.walking matches 0 run function animated_java:ice_warrior/animations/walking_p1/stop

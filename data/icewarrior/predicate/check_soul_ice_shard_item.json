@@ -1,14 +1,14 @@
 {
-  "condition": "minecraft:entity_properties",
+  "type": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "type": "minecraft:player",
+    "minecraft:entity_type": "minecraft:player",
     "equipment": {
       "mainhand": {
         "items": "minecraft:prismarine_shard",
         "components": {
           "minecraft:custom_data": {
-            "ice_warrior_item": "soul_ice_shard"
+            "icewarrior.item": "soul_ice_shard"
           }
         }
       }

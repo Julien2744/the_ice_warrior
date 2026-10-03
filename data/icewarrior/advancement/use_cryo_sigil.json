@@ -1,26 +1,21 @@
 {
   "criteria": {
     "icew.use.soul_ice_tool": {
-      "trigger": "minecraft:using_item",
+      "trigger": "minecraft:consume_item",
       "conditions": {
         "item": {
           "items": "minecraft:prismarine_shard",
-          "components": {
+          "predicates": {
             "minecraft:custom_data": {
-              "ice_warrior_item": "cryo_sigil"
+              "icewarrior.item": "cryo_sigil"
             }
           }
         }
       }
     }
   },
-  "requirements": [
-    [
-      "icew.use.soul_ice_tool"
-    ]
-  ],
   "rewards": {
-    "function": "icewarrior:cryo_sigil/cryo_sigil_use"
+    "function": "icewarrior:cryo_sigil/raycast"
   },
   "sends_telemetry_event": false
 }

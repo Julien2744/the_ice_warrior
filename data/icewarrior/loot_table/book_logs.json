@@ -2,14 +2,14 @@
   "type": "minecraft:chest",
   "pools": [
     {
-      "bonus_rolls": 0,
       "entries": [
         {
           "type": "minecraft:item",
           "name": "minecraft:writable_book",
-          "functions": [
+          "weight": 2,
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:writable_book_content": {
                   "pages": [
@@ -28,9 +28,38 @@
                     {
                       "raw": "⎳⌇ ⌽⎔ ⌇⏣ ⌽⎔ ⎳⎳ ⎳⌽ ⍙⏿ ⎳⌇ ⍙⏂ ⌽⌭\n\n\n⎳⎳ ⍙⏦ ⎳⏣ ⌽⎔ ⍙⌇ ⍙⏿ ⍙⏂ ⎳⍾ ⌽⎔ ⍙⏦ ⍙⏂ ⌽⎔ ⍙⌭ ⍙⏂ ⎳⍙ ⍙⏂ ⎳⌽ ⌽⎔ ⍙⌬ ⍙⏂ ⍙⏂ ⎳⎔ ⌽⎔ ⍙⏦ ⍙⏣ ⎳⍾ ⌽⎔ ⎳⌇ ⍙⏦ ⍙⏣ ⍙⌭ ⍙⎳ ⎳⍾ ⌽⎔ ⍙⍿ ⍙⍙ ⎳⌇ ⍙⏂ ⎳⌽ ⌽⎔ ⎳⎳ ⍙⏂ ⌽⎔ ⍙⍙ ⍙⏣ ⍙⌭ ⍙⏣ ⎳⍾ ⍙⏦ ⌽⎔ ⍙⏿ ⎳⏂ ⎳⌽ ⌽⎔ ⎳⍾ ⎳⌇ ⎳⏂ ⍙⌇ ⎳⏣ ⌽⎔ ⍾⏿"
                     },
-                    {"raw":""},{"raw":""},{"raw":""},{"raw":""},{"raw":""},{"raw":""},{"raw":""},{"raw":""},{"raw":""},{"raw":""},
                     {
-                      "raw":"0 ⎔   8 ⏦\n1 ⍿    9 ⏣\n2 ⌽    A ⍱\n3 ⍾   B ⌬\n4 ⌇    C ⍧\n5 ⏂  D ⎏\n6 ⍙    E ⌭\n7 ⎳   F ⏿"
+                      "raw": ""
+                    },
+                    {
+                      "raw": ""
+                    },
+                    {
+                      "raw": ""
+                    },
+                    {
+                      "raw": ""
+                    },
+                    {
+                      "raw": ""
+                    },
+                    {
+                      "raw": ""
+                    },
+                    {
+                      "raw": ""
+                    },
+                    {
+                      "raw": ""
+                    },
+                    {
+                      "raw": ""
+                    },
+                    {
+                      "raw": ""
+                    },
+                    {
+                      "raw": "0 ⎔   8 ⏦\n1 ⍿    9 ⏣\n2 ⌽    A ⍱\n3 ⍾   B ⌬\n4 ⌇    C ⍧\n5 ⏂  D ⎏\n6 ⍙    E ⌭\n7 ⎳   F ⏿"
                     }
                   ]
                 }
@@ -41,29 +70,30 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:writable_book",
-          "functions": [
+          "weight": 2,
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:writable_book_content": {
                   "pages": [
                     {
-                      "raw":"⏂⍾ ⍙⏿ ⎳⌽ ⎳⌽ ⎳⏣ ⌽⎔ ⎳⌇ ⍙⏿ ⌽⎔ ⍙⌽ ⎳⌽ ⍙⏂ ⍙⍿ ⍙⌬ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⎳⌽ ⌽⎔ ⎳⌽ ⎳⏂ ⍙⍧ ⍙⏂ ⎳⍾ ⌽⎔ ⍙⎏ ⍙⍿ ⎳⍾ ⎳⌇ ⍙⏂ ⎳⌽ ⌽⎔ ⍙⌽ ⎳⏂ ⎳⌇ ⌽⎔ ⌇⏣ ⌽⎔ ⍙⎏ ⎳⏂ ⎳⍾ ⎳⌇ ⌽⎔ ⎳⎳ ⎳⌽ ⍙⏣ ⎳⌇ ⍙⏂ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⎳⌽ ⌽⎔ ⎳⎳ ⍙⏿ ⎳⌽ ⍙⌇ ⎳⍾"
+                      "raw": "⏂⍾ ⍙⏿ ⎳⌽ ⎳⌽ ⎳⏣ ⌽⎔ ⎳⌇ ⍙⏿ ⌽⎔ ⍙⌽ ⎳⌽ ⍙⏂ ⍙⍿ ⍙⌬ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⎳⌽ ⌽⎔ ⎳⌽ ⎳⏂ ⍙⍧ ⍙⏂ ⎳⍾ ⌽⎔ ⍙⎏ ⍙⍿ ⎳⍾ ⎳⌇ ⍙⏂ ⎳⌽ ⌽⎔ ⍙⌽ ⎳⏂ ⎳⌇ ⌽⎔ ⌇⏣ ⌽⎔ ⍙⎏ ⎳⏂ ⎳⍾ ⎳⌇ ⌽⎔ ⎳⎳ ⎳⌽ ⍙⏣ ⎳⌇ ⍙⏂ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⎳⌽ ⌽⎔ ⎳⎳ ⍙⏿ ⎳⌽ ⍙⌇ ⎳⍾"
                     },
                     {
-                      "raw":"⌇⏣ ⌽⎔ ⍙⎏ ⎳⏂ ⎳⍾ ⎳⌇ ⌽⎔ ⎳⎔ ⎳⌽ ⍙⏂ ⎳⎔ ⍙⍿ ⎳⌽ ⍙⏂ ⌽⎔ ⍙⍿ ⍙⌭ ⌽⎔ ⍙⍿ ⎳⌽ ⍙⎏ ⎳⏣ ⌽⍧ ⌽⎔ ⎳⌇ ⍙⏦ ⍙⍿ ⎳⌇ ⌽⎔ ⎳⎳ ⍙⏣ ⍙⍧ ⍙⍧ ⌽⎔ ⍙⌽ ⍙⏂ ⌽⎔ ⎳⌽ ⍙⏂ ⍙⍧ ⍙⏂ ⍙⍿ ⎳⍾ ⍙⏂ ⍙⌇ ⌽⎔ ⍙⏿ ⍙⌭ ⍙⍧ ⎳⏣ ⌽⎔ ⎳⎳ ⍙⏦ ⍙⏂ ⍙⌭ ⌽⎔ ⎳⌇ ⍙⏦ ⍙⏂ ⌽⎔ ⎳⍾ ⍙⌬ ⎳⏣ ⌽⎔ ⎳⎳ ⍙⏣ ⍙⍧ ⍙⍧ ⌽⎔ ⎳⌇ ⎳⏂ ⎳⌽ ⍙⌭ ⌽⎔ ⎳⌽ ⍙⏂ ⍙⌇ ⌽⎔ ⍙⍿ ⍙⌭ ⍙⌇ ⌽⎔ ⍙⌽ ⍙⍧ ⍙⍿ ⍙⍾ ⍙⌬"
+                      "raw": "⌇⏣ ⌽⎔ ⍙⎏ ⎳⏂ ⎳⍾ ⎳⌇ ⌽⎔ ⎳⎔ ⎳⌽ ⍙⏂ ⎳⎔ ⍙⍿ ⎳⌽ ⍙⏂ ⌽⎔ ⍙⍿ ⍙⌭ ⌽⎔ ⍙⍿ ⎳⌽ ⍙⎏ ⎳⏣ ⌽⍧ ⌽⎔ ⎳⌇ ⍙⏦ ⍙⍿ ⎳⌇ ⌽⎔ ⎳⎳ ⍙⏣ ⍙⍧ ⍙⍧ ⌽⎔ ⍙⌽ ⍙⏂ ⌽⎔ ⎳⌽ ⍙⏂ ⍙⍧ ⍙⏂ ⍙⍿ ⎳⍾ ⍙⏂ ⍙⌇ ⌽⎔ ⍙⏿ ⍙⌭ ⍙⍧ ⎳⏣ ⌽⎔ ⎳⎳ ⍙⏦ ⍙⏂ ⍙⌭ ⌽⎔ ⎳⌇ ⍙⏦ ⍙⏂ ⌽⎔ ⎳⍾ ⍙⌬ ⎳⏣ ⌽⎔ ⎳⎳ ⍙⏣ ⍙⍧ ⍙⍧ ⌽⎔ ⎳⌇ ⎳⏂ ⎳⌽ ⍙⌭ ⌽⎔ ⎳⌽ ⍙⏂ ⍙⌇ ⌽⎔ ⍙⍿ ⍙⌭ ⍙⌇ ⌽⎔ ⍙⌽ ⍙⍧ ⍙⍿ ⍙⍾ ⍙⌬"
                     },
                     {
-                      "raw":"⏂⌇ ⍙⏦ ⍙⏣ ⎳⍾ ⌽⎔ ⎳⎳ ⍙⏿ ⎳⌽ ⍙⍧ ⍙⌇ ⌽⎔ ⍙⏣ ⎳⍾ ⌽⎔ ⍙⌇ ⍙⏿ ⍙⏿ ⍙⎏ ⍙⏂ ⍙⌇ ⌽⌭"
+                      "raw": "⏂⌇ ⍙⏦ ⍙⏣ ⎳⍾ ⌽⎔ ⎳⎳ ⍙⏿ ⎳⌽ ⍙⍧ ⍙⌇ ⌽⎔ ⍙⏣ ⎳⍾ ⌽⎔ ⍙⌇ ⍙⏿ ⍙⏿ ⍙⎏ ⍙⏂ ⍙⌇ ⌽⌭"
                     },
                     {
-                      "raw":"⏂⌇ ⍙⏦ ⍙⍿ ⎳⌇ ⌽⎳ ⎳⍾ ⌽⎔ ⎳⎳ ⍙⏦ ⎳⏣ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⌽⎔ ⍙⎏ ⎳⏂ ⎳⍾ ⎳⌇ ⌽⎔ ⍙⍧ ⍙⏂ ⍙⍿ ⎳⌽ ⍙⌭ ⌽⎔ ⎳⌇ ⍙⏿ ⌽⎔ ⍙⍙ ⍙⏣ ⍙⎳ ⍙⏦ ⎳⌇ ⍾⌬ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⌽⎔ ⍙⍾ ⍙⏦ ⍙⏿ ⍙⏿ ⎳⍾ ⍙⏂ ⌽⎔ ⎳⌇ ⍙⏿ ⌽⎔ ⍙⍙ ⍙⍧ ⍙⏂ ⍙⏂ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⎳⌽ ⌽⎔ ⎳⍙ ⍙⏣ ⍙⍧ ⍙⍧ ⍙⍿ ⍙⎳ ⍙⏂ ⌽⎔ ⍙⍿ ⍙⍙ ⎳⌇ ⍙⏂ ⎳⌽ ⌽⎔ ⎳⌇ ⍙⏦ ⍙⏂ ⌽⎔ ⍙⏣ ⍙⌭ ⎳⍙ ⍙⍿ ⎳⍾ ⍙⏣ ⍙⏿ ⍙⌭"
+                      "raw": "⏂⌇ ⍙⏦ ⍙⍿ ⎳⌇ ⌽⎳ ⎳⍾ ⌽⎔ ⎳⎳ ⍙⏦ ⎳⏣ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⌽⎔ ⍙⎏ ⎳⏂ ⎳⍾ ⎳⌇ ⌽⎔ ⍙⍧ ⍙⏂ ⍙⍿ ⎳⌽ ⍙⌭ ⌽⎔ ⎳⌇ ⍙⏿ ⌽⎔ ⍙⍙ ⍙⏣ ⍙⎳ ⍙⏦ ⎳⌇ ⍾⌬ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⌽⎔ ⍙⍾ ⍙⏦ ⍙⏿ ⍙⏿ ⎳⍾ ⍙⏂ ⌽⎔ ⎳⌇ ⍙⏿ ⌽⎔ ⍙⍙ ⍙⍧ ⍙⏂ ⍙⏂ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⎳⌽ ⌽⎔ ⎳⍙ ⍙⏣ ⍙⍧ ⍙⍧ ⍙⍿ ⍙⎳ ⍙⏂ ⌽⎔ ⍙⍿ ⍙⍙ ⎳⌇ ⍙⏂ ⎳⌽ ⌽⎔ ⎳⌇ ⍙⏦ ⍙⏂ ⌽⎔ ⍙⏣ ⍙⌭ ⎳⍙ ⍙⍿ ⎳⍾ ⍙⏣ ⍙⏿ ⍙⌭"
                     },
                     {
-                      "raw":"W⏂⎳ ⍙⏦ ⍙⏂ ⍙⌭ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⎳⌽ ⌽⎔ ⎳⌇ ⎳⌽ ⍙⍿ ⍙⏣ ⍙⌭ ⍙⏣ ⍙⌭ ⍙⎳ ⌽⎔ ⍙⏣ ⎳⍾ ⌽⎔ ⍙⏿ ⎳⍙ ⍙⏂ ⎳⌽ ⌽⍧ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⌽⎔ ⎳⎳ ⍙⏣ ⍙⍧ ⍙⍧ ⌽⎔ ⎳⍾ ⍙⍧ ⍙⏂ ⍙⏂ ⎳⎔ ⌽⎔ ⍙⍙ ⍙⏿ ⎳⌽ ⍙⏂ ⎳⍙ ⍙⏂ ⎳⌽ ⌽⎔ ⎳⏂ ⍙⌭ ⎳⌇ ⍙⏣ ⍙⍧ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⎳⌽ ⌽⎔ ⎳⍾ ⍙⏿ ⎳⏂ ⍙⍧ ⌽⎔ ⍙⌽ ⍙⏂ ⍙⎳ ⍙⏣ ⍙⌭ ⎳⍾ ⌽⎔ ⎳⌇ ⍙⏿ ⌽⎔ ⍙⎏ ⍙⏂ ⍙⍧ ⎳⌇ ⌽⌭"
+                      "raw": "W⏂⎳ ⍙⏦ ⍙⏂ ⍙⌭ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⎳⌽ ⌽⎔ ⎳⌇ ⎳⌽ ⍙⍿ ⍙⏣ ⍙⌭ ⍙⏣ ⍙⌭ ⍙⎳ ⌽⎔ ⍙⏣ ⎳⍾ ⌽⎔ ⍙⏿ ⎳⍙ ⍙⏂ ⎳⌽ ⌽⍧ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⌽⎔ ⎳⎳ ⍙⏣ ⍙⍧ ⍙⍧ ⌽⎔ ⎳⍾ ⍙⍧ ⍙⏂ ⍙⏂ ⎳⎔ ⌽⎔ ⍙⍙ ⍙⏿ ⎳⌽ ⍙⏂ ⎳⍙ ⍙⏂ ⎳⌽ ⌽⎔ ⎳⏂ ⍙⌭ ⎳⌇ ⍙⏣ ⍙⍧ ⌽⎔ ⎳⏣ ⍙⏿ ⎳⏂ ⎳⌽ ⌽⎔ ⎳⍾ ⍙⏿ ⎳⏂ ⍙⍧ ⌽⎔ ⍙⌽ ⍙⏂ ⍙⎳ ⍙⏣ ⍙⌭ ⎳⍾ ⌽⎔ ⎳⌇ ⍙⏿ ⌽⎔ ⍙⎏ ⍙⏂ ⍙⍧ ⎳⌇ ⌽⌭"
                     },
                     {
-                      "raw":"⌇⍿ ⍙⌭ ⍙⌇ ⌽⎔ ⎳⍾ ⍙⍿ ⍙⎏ ⍙⏂ ⌽⎔ ⍙⎳ ⍙⏿ ⍙⏂ ⎳⍾ ⌽⎔ ⍙⍙ ⍙⏿ ⎳⌽ ⌽⎔ ⎳⌇ ⍙⏦ ⍙⏂ ⌽⎔ ⍙⏦ ⎳⏂ ⍙⌭ ⍙⌇ ⎳⌽ ⍙⏂ ⍙⌇ ⎳⍾ ⌽⎔ ⌇⏣ ⌽⎔ ⎳⌇ ⎳⌽ ⍙⍿ ⍙⏣ ⍙⌭ ⍙⏂ ⍙⌇ ⌽⎔ ⍙⏿ ⎳⍙ ⍙⏂ ⎳⌽ ⌽⎔ ⎳⌇ ⍙⏦ ⍙⏂ ⌽⎔ ⎳⎔ ⍙⍿ ⎳⍾ ⎳⌇ ⍙⌇ ⍙⏂ ⍙⍾ ⍙⍿ ⍙⌇ ⍙⏂ ⎳⍾ ⌽⌭"
+                      "raw": "⌇⍿ ⍙⌭ ⍙⌇ ⌽⎔ ⎳⍾ ⍙⍿ ⍙⎏ ⍙⏂ ⌽⎔ ⍙⎳ ⍙⏿ ⍙⏂ ⎳⍾ ⌽⎔ ⍙⍙ ⍙⏿ ⎳⌽ ⌽⎔ ⎳⌇ ⍙⏦ ⍙⏂ ⌽⎔ ⍙⏦ ⎳⏂ ⍙⌭ ⍙⌇ ⎳⌽ ⍙⏂ ⍙⌇ ⎳⍾ ⌽⎔ ⌇⏣ ⌽⎔ ⎳⌇ ⎳⌽ ⍙⍿ ⍙⏣ ⍙⌭ ⍙⏂ ⍙⌇ ⌽⎔ ⍙⏿ ⎳⍙ ⍙⏂ ⎳⌽ ⌽⎔ ⎳⌇ ⍙⏦ ⍙⏂ ⌽⎔ ⎳⎔ ⍙⍿ ⎳⍾ ⎳⌇ ⍙⌇ ⍙⏂ ⍙⍾ ⍙⍿ ⍙⌇ ⍙⏂ ⎳⍾ ⌽⌭"
                     }
                   ]
                 }
@@ -74,9 +104,10 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:writable_book",
-          "functions": [
+          "weight": 3,
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:writable_book_content": {
                   "pages": [
@@ -110,9 +141,10 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:writable_book",
-          "functions": [
+          "weight": 3,
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:writable_book_content": {
                   "pages": [
@@ -131,23 +163,24 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:writable_book",
-          "functions": [
+          "weight": 3,
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:writable_book_content": {
                   "pages": [
                     {
-                      "raw":".nekorb si gel ym dna ,ereh gnizeerf s'ti ,tserof eht ot epacse ot eganam I.meht rof hctam on erew eW .gnihtyreve nrub yehT .rediar yb dekcatta tog nwot ym,siht daer reveohw oT"
+                      "raw": ".nekorb si gel ym dna ,ereh gnizeerf s'ti ,tserof eht ot epacse ot eganam I.meht rof hctam on erew eW .gnihtyreve nrub yehT .rediar yb dekcatta tog nwot ym,siht daer reveohw oT"
                     },
                     {
-                      "raw":".evom ylerab nac I dna gnivrats m'I kcatta eht retfa\n\n1 yad"
+                      "raw": ".evom ylerab nac I dna gnivrats m'I kcatta eht retfa\n\n1 yad"
                     },
                     {
-                      "raw":"yrreb emos dnif ot eganam I tsael tA .htaed ot gnizeerf m'I ,dloc saw thgin ehT\n\n2 yad"
+                      "raw": "yrreb emos dnif ot eganam I tsael tA .htaed ot gnizeerf m'I ,dloc saw thgin ehT\n\n2 yad"
                     },
                     {
-                      "raw":"thgif ot woh em hcaet dna ,em pleh dluoc eh dias nosrep deromra na ,pleh emos dnuof I\n\n3 yad"
+                      "raw": "thgif ot woh em hcaet dna ,em pleh dluoc eh dias nosrep deromra na ,pleh emos dnuof I\n\n3 yad"
                     }
                   ]
                 }

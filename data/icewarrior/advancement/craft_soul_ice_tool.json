@@ -3,7 +3,7 @@
     "icon": {
       "id": "minecraft:prismarine_shard",
       "components": {
-        "minecraft:custom_model_data": 41782
+        "minecraft:item_model": "icewarrior:soul_ice_pickaxe"
       }
     },
     "title": "4 in 1 Tool",
@@ -23,7 +23,7 @@
             "items": "minecraft:prismarine_shard",
             "components": {
               "minecraft:custom_data": {
-                "ice_warrior_item": "soul_ice_tool"
+                "icewarrior.item": "soul_ice_tool"
               }
             }
           }

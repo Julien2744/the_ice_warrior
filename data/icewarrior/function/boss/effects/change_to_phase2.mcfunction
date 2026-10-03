@@ -7,7 +7,7 @@ scoreboard players set @s icew.attCooldown 4
 scoreboard players set @s icew.lookTarget 0
 scoreboard players set @s icew.combo 0
 
-function animated_java:ice_warrior/variants/broken_armor/apply
+function aj:ice_warrior/variants/broken_armor/apply
 particle block{block_state:"minecraft:packed_ice"} ~ ~-0.5 ~ 0.25 0.25 0.25 0 6 normal
 tag @s add icew.broken_armor
 execute on vehicle run tag @s add icew.v_broken_armor
@@ -19,6 +19,6 @@ particle crit ^ ^ ^2 0 0 0 0 1 normal
 
 execute on vehicle run function icewarrior:boss/effects/p2_debuff
 
-function animated_java:ice_warrior/animations/switch_phase2/play
+function aj:ice_warrior/animations/switch_phase2/play
 
 scoreboard players set @s icew.phase 2

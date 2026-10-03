@@ -9,5 +9,5 @@ execute unless score @s icew.phase matches 3 run playsound minecraft:entity.vind
 
 execute if score @s icew.phase matches 3 run playsound minecraft:block.glass.break hostile @a[distance=..24] ~ ~ ~ 6 0.75
 
-execute unless score @s icew.phase matches 3 run function animated_java:ice_warrior/animations/death/play
-execute if score @s icew.phase matches 3 run function animated_java:ice_warrior/animations/master_death/play
+execute unless score @s icew.phase matches 3 run function aj:ice_warrior/animations/death/play
+execute if score @s icew.phase matches 3 run function aj:ice_warrior/animations/master_death/play

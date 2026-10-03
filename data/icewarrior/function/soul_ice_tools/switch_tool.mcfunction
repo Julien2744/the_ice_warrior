@@ -1,16 +1,38 @@
-execute if score @s icew.player.toolCooldown matches 0 run playsound minecraft:block.glass.break player @s ~ ~ ~ 1 2
-
-#shovel to pickaxe
-execute if score @s icew.player.toolCooldown matches 0 run execute if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_model_data":41781}}}] run function icewarrior:soul_ice_tools/shovel_to_pickaxe
-#pickaxe to axe
-execute if score @s icew.player.toolCooldown matches 0 run execute if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_model_data":41782}}}] run function icewarrior:soul_ice_tools/pickaxe_to_axe
-#axe to hoe
-execute if score @s icew.player.toolCooldown matches 0 run execute if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_model_data":41783}}}] run function icewarrior:soul_ice_tools/axe_to_hoe
-#hoe to shovel
-execute if score @s icew.player.toolCooldown matches 0 run execute if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_model_data":41784}}}] run function icewarrior:soul_ice_tools/hoe_to_shovel
-
-#create scoreboard to the player
-execute unless score @s icew.player.toolCooldown matches 0..10 run scoreboard players set @s icew.player.toolCooldown 0
-
-#keep at end
 advancement revoke @s only icewarrior:use_soul_ice_tool
+
+# get tool damage
+execute store result score @s icew.player.previous_tool_dmg run \
+    data get entity @s SelectedItem.components."minecraft:damage"
+
+# shovel -> pickaxe
+execute if entity @s[gamemode=!creative,nbt={SelectedItem:{components:{"minecraft:item_name":"Soul Ice Shovel"}}}] positioned ~ ~1.15 ~ run \
+    function icewarrior:admin/item/soul_ice_pickaxe
+execute if entity @s[gamemode=creative,nbt={SelectedItem:{components:{"minecraft:item_name":"Soul Ice Shovel"}}}] run \
+    return run item modify entity @s weapon.mainhand {type:"minecraft:set_components",components:{"minecraft:item_name":"Soul Ice Pickaxe","minecraft:item_model":"icewarrior:soul_ice_pickaxe","minecraft:tool":{rules:[{blocks:"#minecraft:mineable/pickaxe"}]}}}
+
+# pickaxe -> axe
+execute if entity @s[gamemode=!creative,nbt={SelectedItem:{components:{"minecraft:item_name":"Soul Ice Pickaxe"}}}] positioned ~ ~1.15 ~ run \
+    function icewarrior:admin/item/soul_ice_axe
+execute if entity @s[gamemode=creative,nbt={SelectedItem:{components:{"minecraft:item_name":"Soul Ice Pickaxe"}}}] run \
+    return run item modify entity @s weapon.mainhand {type:"minecraft:set_components",components:{"minecraft:item_name":"Soul Ice Axe","minecraft:item_model":"icewarrior:soul_ice_axe","minecraft:tool":{rules:[{blocks:"#minecraft:mineable/axe"}]}}}
+
+# axe -> hoe
+execute if entity @s[gamemode=!creative,nbt={SelectedItem:{components:{"minecraft:item_name":"Soul Ice Axe"}}}] positioned ~ ~1.15 ~ run \
+    function icewarrior:admin/item/soul_ice_hoe
+execute if entity @s[gamemode=creative,nbt={SelectedItem:{components:{"minecraft:item_name":"Soul Ice Axe"}}}] run \
+    return run item modify entity @s weapon.mainhand {type:"minecraft:set_components",components:{"minecraft:item_name":"Soul Ice Hoe","minecraft:item_model":"icewarrior:soul_ice_hoe","minecraft:tool":{rules:[{blocks:"#minecraft:mineable/hoe"}]}}}
+
+# hoe -> pickaxe
+execute if entity @s[gamemode=!creative,nbt={SelectedItem:{components:{"minecraft:item_name":"Soul Ice Hoe"}}}] positioned ~ ~1.15 ~ run \
+    function icewarrior:admin/item/soul_ice_shovel
+execute if entity @s[gamemode=creative,nbt={SelectedItem:{components:{"minecraft:item_name":"Soul Ice Hoe"}}}] run \
+    return run item modify entity @s weapon.mainhand {type:"minecraft:set_components",components:{"minecraft:item_name":"Soul Ice Shovel","minecraft:item_model":"icewarrior:soul_ice_shovel","minecraft:tool":{rules:[{blocks:"#minecraft:mineable/shovel"}]}}}
+
+# will only execute if the player isn't in creative (get the previous tool damage)
+# set new tool the damage
+execute store result entity \
+    @n[type=item,distance=..1.5,nbt={Item:{components:{"minecraft:custom_data":{icewarrior.item:"soul_ice_tool"}}}}] \
+    Item.components."minecraft:damage" float 1 run \
+        scoreboard players get @s icew.player.previous_tool_dmg
+
+scoreboard players reset @s icew.player.previous_tool_dmg

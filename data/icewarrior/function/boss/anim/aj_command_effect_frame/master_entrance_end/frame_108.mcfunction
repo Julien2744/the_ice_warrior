@@ -1,1 +1,1 @@
-particle minecraft:flash ~ ~-1 ~
+particle minecraft:flash{color:[1.000,1.000,1.000,1.00]} ~ ~-1 ~

@@ -1,3 +1,5 @@
 scoreboard players set @s icew.lookTarget 1
-execute positioned ~ ~-1.5 ~ positioned ^ ^ ^1.75 unless entity @n[tag=icew.target,distance=..2.5] run function animated_java:ice_warrior/animations/trident_launch/stop
-execute positioned ~ ~-1.5 ~ positioned ^ ^ ^1.75 unless entity @n[tag=icew.target,distance=..2.5] run function animated_java:ice_warrior/animations/miss_trident_launch/play
+execute positioned ~ ~-1.5 ~ positioned ^ ^ ^1.75 \
+    unless entity @n[tag=icew.target,distance=..2.5] run function aj:ice_warrior/animations/trident_launch/stop
+execute positioned ~ ~-1.5 ~ positioned ^ ^ ^1.75 \
+    unless entity @n[tag=icew.target,distance=..2.5] run function aj:ice_warrior/animations/miss_trident_launch/play

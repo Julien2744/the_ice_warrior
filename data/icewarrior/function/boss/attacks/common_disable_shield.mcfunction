@@ -1,0 +1,1 @@
+data modify entity @s equipment.mainhand.components.minecraft:weapon.disable_blocking_for_seconds set value 0
