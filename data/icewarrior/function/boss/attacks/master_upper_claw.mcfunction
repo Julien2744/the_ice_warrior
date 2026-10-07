@@ -1,5 +1,7 @@
 playsound minecraft:entity.wither.shoot hostile @a[distance=..16] ~ ~ ~ 2 0
 
+execute positioned ~ ~-1.5 ~ positioned ^ ^ ^1 run effect give @n[tag=icew.target,distance=..1.9] minecraft:slowness 2 0
+
 execute on vehicle positioned ~ ~-1.5 ~ positioned ^ ^ ^1 if entity @n[tag=icew.target,distance=..1.9] \
     if function icewarrior:boss/attacks/damage/high_slash \
     on passengers run scoreboard players add @s icew.combo 1

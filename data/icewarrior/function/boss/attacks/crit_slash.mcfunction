@@ -1,7 +1,8 @@
 playsound minecraft:item.shield.break hostile @a[distance=..16] ~ ~ ~ 4 0
 playsound minecraft:entity.player.attack.crit hostile @a[distance=..16] ~ ~ ~ 4 1
 
-execute positioned ~ ~-1.5 ~ positioned ^ ^ ^0.8 if entity @n[tag=icew.target,distance=..1.9] positioned as @n[tag=icew.target,distance=..1.9] run particle minecraft:crit ~ ~1 ~ 0 0 0 0.5 5 normal
+execute positioned ~ ~-1.5 ~ positioned ^ ^ ^0.8 positioned as @n[tag=icew.target,distance=..1.9] run particle minecraft:crit ~ ~1 ~ 0 0 0 0.5 5 normal
+execute if score @s icew.phase matches 3 positioned ~ ~-1.5 ~ positioned ^ ^ ^0.8 run effect give @n[tag=icew.target,distance=..1.9] minecraft:slowness 5 0
 
 execute on vehicle positioned ~ ~-1.5 ~ positioned ^ ^ ^0.8 \
     if function icewarrior:boss/attacks/damage/crit_slash on passengers run \
