@@ -1,4 +1,4 @@
-# Bait targeting system (mc1.21.1):
+# Bait targeting system (mc26.3):
 # 
 #   Description
 # This system work by making the mob-hitbox (mob that is used for the hitbox/heath/pathfinding)
@@ -33,8 +33,7 @@
 # 
 
 #tp the bait to the target
-execute positioned as @n[type=!player,tag=icew.target,distance=..128] \
-    run tp @n[type=bat,tag=icew.bait] ~ ~ ~
+tp @n[type=bat,tag=icew.bait] @n[type=!player,tag=icew.target,distance=..128]
 
 #automatically set_target using the mob-hitbox target
 execute unless entity @e[tag=icew.target,distance=..128,limit=1] \

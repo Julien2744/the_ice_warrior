@@ -1,4 +1,4 @@
-execute on vehicle run attribute @s minecraft:movement_speed modifier add icewarrior:stop_moving -999 add_value
+function icewarrior:boss/stop_walking
 
 scoreboard players set @s icew.attCooldown 4
 scoreboard players set @s icew.combo 0
