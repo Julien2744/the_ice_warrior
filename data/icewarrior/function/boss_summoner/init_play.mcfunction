@@ -5,6 +5,8 @@ tag @n[type=item_display,tag=icew.ice_warrior_display,distance=..3] add icew.bos
 playsound minecraft:item.bucket.empty_lava block @a[distance=..16]
 particle lava ~ ~1.5 ~ 0.5 0.5 0.5 1 15 normal @a[distance=..16]
 
+data merge entity @n[type=block_display,tag=icew.ice_room,distance=..6] {block_state:{id:"minecraft:frosted_ice",properties:{age:"2"}}}
+
 #remove interaction
 kill @s
 
