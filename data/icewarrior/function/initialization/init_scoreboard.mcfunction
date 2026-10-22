@@ -27,8 +27,6 @@ scoreboard objectives add icew.config.phase3_combo dummy
 #boss_regen #0: false (off) ; 1: true (on)
 scoreboard objectives add icew.config.boss_regen dummy
 ##other
-#check if the dependency is installed #0: false ; 1: true
-scoreboard objectives add icew.dependency dummy
 
 ## local ##
 ##boss

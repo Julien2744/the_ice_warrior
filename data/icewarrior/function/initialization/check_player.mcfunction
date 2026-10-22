@@ -1,2 +1,2 @@
-execute if entity @p run function icewarrior:on_player_joining
-execute unless entity @p run schedule function icewarrior:initialization/check_player 1s
+execute if entity @p run return run schedule function icewarrior:on_player_joining 5s
+schedule function icewarrior:initialization/check_player 2s
